@@ -44,14 +44,6 @@ int computeWeightedAverageWirelengthCudaLauncher(
     const T *grad_tensor,
     T *grad_x_tensor, T *grad_y_tensor);
 
-/// @brief add net weights to WL
-template <typename T>
-void integrateNetWeightsforWLCudaLauncher(
-    const int *pin2net_map,
-    const unsigned char *net_mask,
-    const T *net_weights,
-    T *partial_wl, ///< 2*number of pins
-    int num_pins);
 /// @brief add net weights to gradient
 template <typename T>
 void integrateNetWeightsCudaLauncher(
@@ -137,12 +129,7 @@ std::vector<at::Tensor> weighted_average_wirelength_forward(
             nullptr, nullptr);
         if (net_weights.numel())
         {
-            integrateNetWeightsforWLCudaLauncher(
-                pin2net_map.data<int>(),
-                net_mask.data<unsigned char>(),
-                net_weights.data<scalar_t>(),
-                partial_wl.data<scalar_t>(),
-                num_pins);
+            partial_wl.mul_(net_weights.view({num_nets}));
         }
     });
 
