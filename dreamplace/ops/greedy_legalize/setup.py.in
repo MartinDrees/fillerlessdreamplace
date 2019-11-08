@@ -35,7 +35,6 @@ modules.extend([
         [
             add_prefix('greedy_legalize.cpp'),
             add_prefix('legalize_bin_cpu.cpp'), 
-            add_prefix('bin_assignment_cpu.cpp'), 
             add_prefix('merge_bin_cpu.cpp'), 
             add_prefix('greedy_legalize_cpu.cpp') 
             ], 

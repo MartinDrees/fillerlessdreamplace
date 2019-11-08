@@ -16,6 +16,7 @@ class GreedyLegalizeFunction(Function):
     """
     @staticmethod
     def forward(
+          init_pos,
           pos,
           node_size_x,
           node_size_y,
@@ -32,6 +33,7 @@ class GreedyLegalizeFunction(Function):
           ):
         if pos.is_cuda:
             output = greedy_legalize_cpp.forward(
+                    init_pos.view(init_pos.numel()).cpu(), 
                     pos.view(pos.numel()).cpu(), 
                     node_size_x.cpu(),
                     node_size_y.cpu(),
@@ -45,9 +47,10 @@ class GreedyLegalizeFunction(Function):
                     num_bins_y, 
                     num_movable_nodes, 
                     num_filler_nodes
-                    )
+                    ).cuda()
         else:
             output = greedy_legalize_cpp.forward(
+                    init_pos.view(init_pos.numel()), 
                     pos.view(pos.numel()), 
                     node_size_x,
                     node_size_y,
@@ -81,8 +84,13 @@ class GreedyLegalize(object):
         self.num_bins_y = num_bins_y
         self.num_movable_nodes = num_movable_nodes
         self.num_filler_nodes = num_filler_nodes
-    def __call__(self, pos): 
+    def __call__(self, init_pos, pos): 
+        """ 
+        @param init_pos the reference position for displacement minization
+        @param pos current roughly legal position
+        """
         return GreedyLegalizeFunction.forward(
+                init_pos, 
                 pos,
                 node_size_x=self.node_size_x,
                 node_size_y=self.node_size_y,
