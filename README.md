@@ -69,7 +69,7 @@ DREAMPlace runs on both CPU and GPU. If it is installed on a machine without GPU
 - [Zizheng Guo](https://guozz.cn/), Haichuan Liu, Xizhe Shi, [Shenglu Hua](https://shengluhua.github.io/), Zuodong Zhang, [Chunyuan Zhao](https://chunyuanzhao.me/), Runsheng Wang and [Yibo Lin](https://yibolin.com), 
 "**HeteroSTA: A CPU-GPU Heterogeneous Static Timing Analysis Engine with Holistic Industrial Design Support**",
 IEEE/ACM Asia and South Pacific Design Automation Conference (ASPDAC), Hong Kong, Jan, 2026.
-([preprint](https://arxiv.org/abs/2511.11660))(Corresponding to DREAMPlace 4.3)
+([preprint](https://arxiv.org/abs/2511.11660))(Invited Paper)(Corresponding to DREAMPlace 4.3)
 
 # Dependency
 
