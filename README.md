@@ -33,38 +33,43 @@ DREAMPlace runs on both CPU and GPU. If it is installed on a machine without GPU
 
 # Publications
 
-- [Yibo Lin](http://yibolin.com), Shounak Dhar, [Wuxi Li](http://wuxili.net), Haoxing Ren, Brucek Khailany and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
+- [Yibo Lin](https://yibolin.com), Shounak Dhar, [Wuxi Li](http://wuxili.net), Haoxing Ren, Brucek Khailany and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
   "**DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement**",
   ACM/IEEE Design Automation Conference (DAC), Las Vegas, NV, Jun 2-6, 2019
-  ([preprint](http://yibolin.com/publications/papers/PLACE_DAC2019_Lin.pdf)) ([slides](http://yibolin.com/publications/papers/PLACE_DAC2019_Lin.slides.pptx))
+  ([preprint](https://yibolin.com/publications/papers/PLACE_DAC2019_Lin.pdf)) ([slides](https://yibolin.com/publications/papers/PLACE_DAC2019_Lin.slides.pptx))
 
-- [Yibo Lin](http://yibolin.com), Zixuan Jiang, [Jiaqi Gu](https://jeremiemelo.github.io), [Wuxi Li](http://wuxili.net), Shounak Dhar, Haoxing Ren, Brucek Khailany and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
+- [Yibo Lin](https://yibolin.com), Zixuan Jiang, [Jiaqi Gu](https://jeremiemelo.github.io), [Wuxi Li](http://wuxili.net), Shounak Dhar, Haoxing Ren, Brucek Khailany and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
   "**DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement**",
   IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2020
 
-- [Yibo Lin](http://yibolin.com), [Wuxi Li](http://wuxili.net), [Jiaqi Gu](https://jeremiemelo.github.io), Haoxing Ren, Brucek Khailany and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
+- [Yibo Lin](https://yibolin.com), [Wuxi Li](http://wuxili.net), [Jiaqi Gu](https://jeremiemelo.github.io), Haoxing Ren, Brucek Khailany and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
   "**ABCDPlace: Accelerated Batch-based Concurrent Detailed Placement on Multi-threaded CPUs and GPUs**",
   IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2020
-  ([preprint](http://yibolin.com/publications/papers/ABCDPLACE_TCAD2020_Lin.pdf))
+  ([preprint](https://yibolin.com/publications/papers/ABCDPLACE_TCAD2020_Lin.pdf))
 
-- [Yibo Lin](http://yibolin.com), [David Z. Pan](http://users.ece.utexas.edu/~dpan), Haoxing Ren and Brucek Khailany,
+- [Yibo Lin](https://yibolin.com), [David Z. Pan](http://users.ece.utexas.edu/~dpan), Haoxing Ren and Brucek Khailany,
   "**DREAMPlace 2.0: Open-Source GPU-Accelerated Global and Detailed Placement for Large-Scale VLSI Designs**",
-  China Semiconductor Technology International Conference (CSTIC), Shanghai, China, Jun, 2020 ([preprint](http://yibolin.com/publications/papers/PLACE_CSTIC2020_Lin.pdf))(Invited Paper)
+  China Semiconductor Technology International Conference (CSTIC), Shanghai, China, Jun, 2020 ([preprint](https://yibolin.com/publications/papers/PLACE_CSTIC2020_Lin.pdf))(Invited Paper)
 
-- [Jiaqi Gu](https://jeremiemelo.github.io), Zixuan Jiang, [Yibo Lin](http://yibolin.com) and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
+- [Jiaqi Gu](https://jeremiemelo.github.io), Zixuan Jiang, [Yibo Lin](https://yibolin.com) and [David Z. Pan](http://users.ece.utexas.edu/~dpan),
   "**DREAMPlace 3.0: Multi-Electrostatics Based Robust VLSI Placement with Region Constraints**",
   IEEE/ACM International Conference on Computer-Aided Design (ICCAD), Nov 2-5, 2020
-  ([preprint](http://yibolin.com/publications/papers/PLACE_ICCAD2020_Gu.pdf))
+  ([preprint](https://yibolin.com/publications/papers/PLACE_ICCAD2020_Gu.pdf))
 
-- [Peiyu Liao](https://enzoleo.github.io), [Siting Liu](https://lusica1031.github.io), Zhitang Chen, Wenlong Lv, [Yibo Lin](http://yibolin.com) and [Bei Yu](https://www.cse.cuhk.edu.hk/~byu/),
+- [Peiyu Liao](https://enzoleo.github.io), [Siting Liu](https://lusica1031.github.io), Zhitang Chen, Wenlong Lv, [Yibo Lin](https://yibolin.com) and [Bei Yu](https://www.cse.cuhk.edu.hk/~byu/),
   "**DREAMPlace 4.0: Timing-driven Global Placement with Momentum-based Net Weighting**",
   IEEE/ACM Proceedings Design, Automation and Test in Eurpoe (DATE), Antwerp, Belgium, Mar 14-23, 2022
   ([preprint](https://yibolin.com/publications/papers/PLACE_DATE2022_Liao.pdf))
 
-- Yifan Chen, [Zaiwen Wen](http://faculty.bicmr.pku.edu.cn/~wenzw/), [Yun Liang](https://ericlyun.github.io/), [Yibo Lin](http://yibolin.com),
+- Yifan Chen, [Zaiwen Wen](http://faculty.bicmr.pku.edu.cn/~wenzw/), [Yun Liang](https://ericlyun.github.io/), [Yibo Lin](https://yibolin.com),
   "**Stronger Mixed-Size Placement Backbone Considering Second-Order Information**",
   IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, Oct, 2023
-  ([preprint](https://yibolin.com/publications/papers/PLACE_ICCAD2023_Chen.pdf))
+  ([preprint](https://yibolin.com/publications/papers/PLACE_ICCAD2023_Chen.pdf))(Corresponding to DREAMPlace 4.1)
+
+- [Zizheng Guo](https://guozz.cn/), Haichuan Liu, Xizhe Shi, [Shenglu Hua](https://shengluhua.github.io/), Zuodong Zhang, [Chunyuan Zhao](https://chunyuanzhao.me/), Runsheng Wang and [Yibo Lin]((https://yibolin.com)), 
+"**HeteroSTA: A CPU-GPU Heterogeneous Static Timing Analysis Engine with Holistic Industrial Design Support**",
+IEEE/ACM Asia and South Pacific Design Automation Conference (ASPDAC), Hong Kong, Jan, 2026.
+([preprint](https://arxiv.org/abs/2511.11660))(Corresponding to DREAMPlace 4.3)
 
 # Dependency
 
@@ -281,9 +286,9 @@ The list of options as follows will be shown.
 
 # Authors
 
-- [Yibo Lin](http://yibolin.com), supervised by [David Z. Pan](http://users.ece.utexas.edu/~dpan), composed the initial release.
+- [Yibo Lin](https://yibolin.com), supervised by [David Z. Pan](http://users.ece.utexas.edu/~dpan), composed the initial release.
 - [Zixuan Jiang](https://github.com/ZixuanJiang) and [Jiaqi Gu](https://github.com/JeremieMelo) improved the efficiency of the wirelength and density operators on GPU.
-- [Yibo Lin](http://yibolin.com) and [Jiaqi Gu](https://github.com/JeremieMelo) developed and integrated ABCDPlace for detailed placement.
+- [Yibo Lin](https://yibolin.com) and [Jiaqi Gu](https://github.com/JeremieMelo) developed and integrated ABCDPlace for detailed placement.
 - [Peiyu Liao](https://enzoleo.github.io) and [Siting Liu](https://lusica1031.github.io) developed and integrated timing optimization in global placement for DREAMPlace 4.0.
 - Yifan Chen developed the 2-stage flow and improved the optimizer for macro placement in DREAMPlace 4.1. Set ```use_bb``` to 1 to turn on BB-step and ```macro_place_flag``` to 1 to enable 2-stage flow for macro placement. 
 - Yiting Liu contributed the GiFt operator for placement initialization, published at ICCAD 2024. Set ```gift_init_flag``` to 1 to turn on this feature, and use ```gift_init_scale``` to control the scale parameter of this operator. 
