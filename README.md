@@ -66,7 +66,7 @@ DREAMPlace runs on both CPU and GPU. If it is installed on a machine without GPU
   IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, Oct, 2023
   ([preprint](https://yibolin.com/publications/papers/PLACE_ICCAD2023_Chen.pdf))(Corresponding to DREAMPlace 4.1)
 
-- [Zizheng Guo](https://guozz.cn/), Haichuan Liu, Xizhe Shi, [Shenglu Hua](https://shengluhua.github.io/), Zuodong Zhang, [Chunyuan Zhao](https://chunyuanzhao.me/), Runsheng Wang and [Yibo Lin]((https://yibolin.com)), 
+- [Zizheng Guo](https://guozz.cn/), Haichuan Liu, Xizhe Shi, [Shenglu Hua](https://shengluhua.github.io/), Zuodong Zhang, [Chunyuan Zhao](https://chunyuanzhao.me/), Runsheng Wang and [Yibo Lin](https://yibolin.com), 
 "**HeteroSTA: A CPU-GPU Heterogeneous Static Timing Analysis Engine with Holistic Industrial Design Support**",
 IEEE/ACM Asia and South Pacific Design Automation Conference (ASPDAC), Hong Kong, Jan, 2026.
 ([preprint](https://arxiv.org/abs/2511.11660))(Corresponding to DREAMPlace 4.3)
