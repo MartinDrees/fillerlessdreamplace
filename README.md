@@ -61,6 +61,10 @@ DREAMPlace runs on both CPU and GPU. If it is installed on a machine without GPU
   IEEE/ACM Proceedings Design, Automation and Test in Eurpoe (DATE), Antwerp, Belgium, Mar 14-23, 2022
   ([preprint](https://yibolin.com/publications/papers/PLACE_DATE2022_Liao.pdf))
 
+- [Peiyu Liao](https://enzoleo.github.io), Dawei Guo, [Zizheng Guo](https://guozz.cn/), [Siting Liu](https://lusica1031.github.io), Zhitang Chen, Wenlong Lv, [Yibo Lin](https://yibolin.com) and [Bei Yu](https://www.cse.cuhk.edu.hk/~byu/), 
+"**DREAMPlace 4.0: Timing-driven Placement with Momentum-based Net Weighting and Lagrangian-based Refinement**",
+IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Oct, 2023.
+
 - Yifan Chen, [Zaiwen Wen](http://faculty.bicmr.pku.edu.cn/~wenzw/), [Yun Liang](https://ericlyun.github.io/), [Yibo Lin](https://yibolin.com),
   "**Stronger Mixed-Size Placement Backbone Considering Second-Order Information**",
   IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Francisco, CA, Oct, 2023
