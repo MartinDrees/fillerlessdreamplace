@@ -6,6 +6,8 @@ The tool runs on both CPU and GPU.
 Over `30X` speedup over the CPU implementation ([RePlAce](https://doi.org/10.1109/TCAD.2018.2859220)) is achieved in global placement and legalization on ISPD 2005 contest benchmarks with a Nvidia Tesla V100 GPU.
 DREAMPlace also integrates a GPU-accelerated detailed placer, _ABCDPlace_, which can achieve around `16X` speedup on million-size benchmarks over the widely-adopted sequential placer [NTUPlace3](https://doi.org/10.1109/TCAD.2008.923063) on CPU.
 
+We also recommend [HeteroPlace](https://heteroplace.pkueda.org.cn/) if you are looking for holistic GPU-accelerated placement and routing solutions for industrial designs. 
+
 - [DREAMPlace](#dreamplace)
 - [Publications](#publications)
 - [Dependency](#dependency)
