@@ -287,12 +287,12 @@
     "required" : "required for timing-driven mode"
     },
 "use_bb" : {
-    "description" : "whether use bb step", 
-    "default" : 0
-    }, 
+    "description" : "whether use bb step; \"auto\" enables it only when movable macros are detected, 0/1 forces off/on",
+    "default" : "auto"
+    },
 "macro_place_flag" : {
-    "description" : "whether enable macro placement", 
-    "default" : 0
+    "description" : "whether enable macro placement; \"auto\" enables it only when movable macros are detected, 0/1 forces off/on",
+    "default" : "auto"
     },
 "two_stage_density_scaler" : {
     "description" : "scale density weight after macro place", 
