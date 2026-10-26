@@ -69,8 +69,16 @@
     "default" : 0.025
     },
 "enable_fillers" : {
-    "description" : "enable filler cells", 
+    "description" : "enable filler cells",
     "default" : 1
+    },
+"multigrid" : {
+    "description" : "use multigrid projected-Jacobi electrostatic potential instead of FFT-based solver (no filler cells needed; set enable_fillers=0)",
+    "default" : 0
+    },
+"multigrid_iters_per_level" : {
+    "description" : "number of projected-Jacobi iterations per grid level in the multigrid potential solver",
+    "default" : 25
     },
 "global_place_flag" : {
     "description" : "whether use global placement", 

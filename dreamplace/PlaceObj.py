@@ -26,6 +26,7 @@ import dreamplace.ops.logsumexp_wirelength.logsumexp_wirelength as logsumexp_wir
 import dreamplace.ops.density_overflow.density_overflow as density_overflow
 import dreamplace.ops.electric_potential.electric_overflow as electric_overflow
 import dreamplace.ops.electric_potential.electric_potential as electric_potential
+import dreamplace.ops.electric_potential.multigrid_potential as multigrid_potential
 import dreamplace.ops.density_potential.density_potential as density_potential
 import dreamplace.ops.rudy.rudy as rudy
 import dreamplace.ops.pin_utilization.pin_utilization as pin_utilization
@@ -739,6 +740,36 @@ class PlaceObj(nn.Module):
                             (num_bins_y, max_num_bins))
         #### for fence region, the target density is different from different regions
         target_density = data_collections.target_density.item() if fence_regions is None else placedb.target_density_fence_region[region_id]
+
+        if params.multigrid:
+            # Multigrid approach: fence regions not supported yet
+            if region_id is not None:
+                logging.warning(
+                    "multigrid mode does not support fence regions; "
+                    "falling back to FFT-based potential for region %d" % region_id)
+            else:
+                return multigrid_potential.MultigridPotential(
+                    node_size_x=data_collections.node_size_x,
+                    node_size_y=data_collections.node_size_y,
+                    bin_center_x=data_collections.bin_center_x_padded(placedb, 0, num_bins_x),
+                    bin_center_y=data_collections.bin_center_y_padded(placedb, 0, num_bins_y),
+                    target_density=target_density,
+                    xl=placedb.xl,
+                    yl=placedb.yl,
+                    xh=placedb.xh,
+                    yh=placedb.yh,
+                    bin_size_x=bin_size_x,
+                    bin_size_y=bin_size_y,
+                    num_movable_nodes=placedb.num_movable_nodes,
+                    num_terminals=placedb.num_terminals,
+                    num_filler_nodes=placedb.num_filler_nodes,
+                    padding=0,
+                    deterministic_flag=params.deterministic_flag,
+                    sorted_node_map=data_collections.sorted_node_map,
+                    movable_macro_mask=data_collections.movable_macro_mask,
+                    multigrid_iters_per_level=params.multigrid_iters_per_level,
+                    num_threads=params.num_threads)
+
         return electric_potential.ElectricPotential(
             node_size_x=data_collections.node_size_x,
             node_size_y=data_collections.node_size_y,

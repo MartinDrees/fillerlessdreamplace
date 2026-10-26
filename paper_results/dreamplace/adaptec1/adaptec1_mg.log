@@ -1,0 +1,2067 @@
+========================================================
+                       DREAMPlace
+            Yibo Lin (http://yibolin.com)
+   David Z. Pan (http://users.ece.utexas.edu/~dpan)
+========================================================
+[INFO   ] DREAMPlace - parameters = {'aux_input': 'benchmarks/ispd2005/adaptec1/adaptec1.aux', 'lef_input': '', 'def_input': '', 'verilog_input': '', 'gpu': 1, 'num_bins_x': 512, 'num_bins_y': 512, 'global_place_stages': [{'num_bins_x': 512, 'num_bins_y': 512, 'iteration': 1000, 'learning_rate': 0.01, 'wirelength': 'weighted_average', 'optimizer': 'nesterov', 'Llambda_density_weight_iteration': 1, 'Lsub_iteration': 1}], 'target_density': 1.0, 'density_weight': 8e-05, 'random_seed': 1000, 'result_dir': 'results/comparison/mg', 'scale_factor': 1.0, 'shift_factor': [0.0, 0.0], 'ignore_net_degree': 100, 'gp_noise_ratio': 0.025, 'enable_fillers': 0, 'multigrid': 1, 'multigrid_iters_per_level': 25, 'global_place_flag': 1, 'legalize_flag': 1, 'abacus_legalize_flag': 1, 'detailed_place_flag': 1, 'stop_overflow': 0.07, 'dtype': 'float32', 'detailed_place_engine': '', 'detailed_place_command': '', 'plot_flag': 0, 'RePlAce_ref_hpwl': 350000, 'RePlAce_LOWER_PCOF': 0.95, 'RePlAce_UPPER_PCOF': 1.05, 'gamma': 4.0, 'RePlAce_skip_energy_flag': 0, 'random_center_init_flag': 1, 'gift_init_flag': 0, 'gift_init_scale': 0.7, 'sort_nets_by_degree': 0, 'num_threads': 64, 'dump_global_place_solution_flag': 0, 'dump_legalize_solution_flag': 0, 'routability_opt_flag': 0, 'route_num_bins_x': 512, 'route_num_bins_y': 512, 'node_area_adjust_overflow': 0.15, 'max_num_area_adjust': 3, 'adjust_nctugr_area_flag': 0, 'adjust_rudy_area_flag': 1, 'adjust_pin_area_flag': 1, 'area_adjust_stop_ratio': 0.01, 'route_area_adjust_stop_ratio': 0.01, 'pin_area_adjust_stop_ratio': 0.05, 'unit_horizontal_capacity': 1.5625, 'unit_vertical_capacity': 1.45, 'unit_pin_capacity': 0.058, 'max_route_opt_adjust_rate': 2.0, 'route_opt_adjust_exponent': 2.0, 'pin_stretch_ratio': 1.414213562, 'max_pin_opt_adjust_rate': 1.5, 'deterministic_flag': 1, 'timing_opt_flag': 0, 'early_lib_input': '', 'late_lib_input': '', 'lib_input': '', 'sdc_input': '', 'wire_resistance_per_micron': 0, 'wire_capacitance_per_micron': 0, 'net_weighting_scheme': 'lilith', 'momentum_decay_factor': 0.5, 'enable_net_weighting': 1, 'max_net_weight': 'inf', 'use_bb': 'auto', 'macro_place_flag': 'auto', 'two_stage_density_scaler': 1000, 'macro_halo_x': 0, 'macro_halo_y': 0}
+[INFO   ] DREAMPlace - set shift_factor = (459, 459), as original row bbox = (459, 459, 11151, 11139)
+[INFO   ] DREAMPlace - set scale_factor = 1, as site_width = 1
+[INFO   ] DREAMPlace - shift coordinate system by (459, 459), scale coordinate system by 1
+[INFO   ] DREAMPlace - 
+================================= Benchmark Statistics =================================
+#nodes = 211447, #terminals = 543, # terminal_NIs = 0, #movable = 210904, #nets = 221142
+die area = (0, 0, 10692, 10680) 1.14191e+08
+row height = 12, site width = 1
+#pins = 919701, #movable_pins = 905028
+total_movable_node_area = 3.72863e+07, total_fixed_node_area = 4.91641e+07, total_space_area = 6.50265e+07
+total_movable_cell_area = 3.72863e+07, total_movable_macro_area = 0
+utilization = 0.573402, cell utilization = 0.573402, target_density = 1
+total_filler_node_area = 0, #fillers = 0, filler sizes = 0x0
+num_bins = 512x512, bin sizes = 1.74023x1.73828
+========================================================================================
+[INFO   ] DREAMPlace - reading benchmark takes 4.41745 seconds
+[INFO   ] DREAMPlace - reading database takes 4.42 seconds
+[INFO   ] DREAMPlace - move cells to the center of layout with random noise
+[INFO   ] DREAMPlace - non-linear placement initialization takes 1.63 seconds
+[INFO   ] DREAMPlace - Global placement: 512x512 bins by default
+[INFO   ] DREAMPlace - 512x512 bins #bins 512x512, bin sizes 1.74023x1.73828, max_num_bins = 6, padding = 0
+[WARNING] DREAMPlace - quadratic density penalty is disabled, density weight update is forced to be based on HPWL
+[INFO   ] DREAMPlace - Optimizer 'nesterov' does not rebuild the model. Every training epoch calls the function 'step()'.
+[INFO   ] DREAMPlace - use nesterov optimizer
+[INFO   ] DREAMPlace - add 2.5% noise
+[INFO   ] dreamplace.ops.electric_potential.multigrid_potential - fixed density map: average 187.546, max 435.602, bin area 435.602
+[INFO   ] DREAMPlace - nesterov initialization takes 0.0150118 seconds
+[INFO   ] DREAMPlace - density_weight = 8.636284E-12
+[INFO   ] DREAMPlace - optimizer step 7.227 ms
+[INFO   ] DREAMPlace - iteration    0, (   0,  0,  0), Obj 3.137225E+07, DensityWeight 0.000000E+00, wHPWL 5.300405E+07, Overflow 9.995813E-01, MaxDensity 2.351E+04, gamma 1.669688E+03, time 1.840ms
+[INFO   ] DREAMPlace - full step 11.976 ms
+[INFO   ] DREAMPlace - optimizer step 4.634 ms
+[INFO   ] DREAMPlace - iteration    1, (   1,  0,  0), Obj 2.361938E+07, DensityWeight 8.636284E-12, wHPWL 5.249852E+07, Overflow 9.788333E-01, MaxDensity 2.974E+04, gamma 1.666115E+03, time 0.767ms
+[INFO   ] DREAMPlace - full step 5.838 ms
+[INFO   ] DREAMPlace - optimizer step 4.603 ms
+[INFO   ] DREAMPlace - iteration    2, (   2,  0,  0), Obj 2.043646E+07, DensityWeight 9.066285E-12, wHPWL 5.344004E+07, Overflow 9.644433E-01, MaxDensity 2.837E+04, gamma 1.498298E+03, time 0.761ms
+[INFO   ] DREAMPlace - full step 5.767 ms
+[INFO   ] DREAMPlace - optimizer step 4.561 ms
+[INFO   ] DREAMPlace - iteration    3, (   3,  0,  0), Obj 1.992594E+07, DensityWeight 9.043619E-12, wHPWL 5.355424E+07, Overflow 9.550751E-01, MaxDensity 2.770E+04, gamma 1.391938E+03, time 0.737ms
+[INFO   ] DREAMPlace - full step 5.701 ms
+[INFO   ] DREAMPlace - optimizer step 4.560 ms
+[INFO   ] DREAMPlace - iteration    4, (   4,  0,  0), Obj 1.948880E+07, DensityWeight 9.345822E-12, wHPWL 5.441063E+07, Overflow 9.467244E-01, MaxDensity 2.605E+04, gamma 1.326790E+03, time 0.736ms
+[INFO   ] DREAMPlace - full step 5.702 ms
+[INFO   ] DREAMPlace - optimizer step 4.526 ms
+[INFO   ] DREAMPlace - iteration    5, (   5,  0,  0), Obj 1.904525E+07, DensityWeight 9.322457E-12, wHPWL 5.494808E+07, Overflow 9.407966E-01, MaxDensity 2.463E+04, gamma 1.271290E+03, time 0.733ms
+[INFO   ] DREAMPlace - full step 5.660 ms
+[INFO   ] DREAMPlace - optimizer step 4.536 ms
+[INFO   ] DREAMPlace - iteration    6, (   6,  0,  0), Obj 1.877496E+07, DensityWeight 9.299150E-12, wHPWL 5.578926E+07, Overflow 9.346783E-01, MaxDensity 2.323E+04, gamma 1.233309E+03, time 0.734ms
+[INFO   ] DREAMPlace - full step 5.681 ms
+[INFO   ] DREAMPlace - optimizer step 4.541 ms
+[INFO   ] DREAMPlace - iteration    7, (   7,  0,  0), Obj 1.847025E+07, DensityWeight 9.275901E-12, wHPWL 5.627762E+07, Overflow 9.283965E-01, MaxDensity 2.183E+04, gamma 1.195297E+03, time 0.721ms
+[INFO   ] DREAMPlace - full step 5.675 ms
+[INFO   ] DREAMPlace - optimizer step 4.510 ms
+[INFO   ] DREAMPlace - iteration    8, (   8,  0,  0), Obj 1.832563E+07, DensityWeight 9.252711E-12, wHPWL 5.690525E+07, Overflow 9.226953E-01, MaxDensity 2.042E+04, gamma 1.157488E+03, time 0.713ms
+[INFO   ] DREAMPlace - full step 5.635 ms
+[INFO   ] DREAMPlace - optimizer step 4.625 ms
+[INFO   ] DREAMPlace - iteration    9, (   9,  0,  0), Obj 1.825832E+07, DensityWeight 9.229578E-12, wHPWL 5.731892E+07, Overflow 9.168760E-01, MaxDensity 1.892E+04, gamma 1.124208E+03, time 0.722ms
+[INFO   ] DREAMPlace - full step 5.764 ms
+[INFO   ] DREAMPlace - optimizer step 4.521 ms
+[INFO   ] DREAMPlace - iteration   10, (  10,  0,  0), Obj 1.824896E+07, DensityWeight 9.206504E-12, wHPWL 5.780594E+07, Overflow 9.118753E-01, MaxDensity 1.743E+04, gamma 1.091227E+03, time 0.714ms
+[INFO   ] DREAMPlace - full step 5.642 ms
+[INFO   ] DREAMPlace - optimizer step 4.485 ms
+[INFO   ] DREAMPlace - iteration   11, (  11,  0,  0), Obj 1.829298E+07, DensityWeight 9.183486E-12, wHPWL 5.819416E+07, Overflow 9.079017E-01, MaxDensity 1.592E+04, gamma 1.063659E+03, time 0.700ms
+[INFO   ] DREAMPlace - full step 5.585 ms
+[INFO   ] DREAMPlace - optimizer step 6.912 ms
+[INFO   ] DREAMPlace - iteration   12, (  12,  0,  0), Obj 1.834319E+07, DensityWeight 9.160527E-12, wHPWL 5.859083E+07, Overflow 9.040607E-01, MaxDensity 1.444E+04, gamma 1.042251E+03, time 0.717ms
+[INFO   ] DREAMPlace - full step 8.030 ms
+[INFO   ] DREAMPlace - optimizer step 2.311 ms
+[INFO   ] DREAMPlace - iteration   13, (  13,  0,  0), Obj 1.835649E+07, DensityWeight 9.137626E-12, wHPWL 5.894662E+07, Overflow 8.990670E-01, MaxDensity 1.301E+04, gamma 1.021967E+03, time 0.703ms
+[INFO   ] DREAMPlace - full step 3.413 ms
+[INFO   ] DREAMPlace - optimizer step 4.495 ms
+[INFO   ] DREAMPlace - iteration   14, (  14,  0,  0), Obj 1.844627E+07, DensityWeight 9.130256E-12, wHPWL 5.950401E+07, Overflow 8.956060E-01, MaxDensity 1.165E+04, gamma 9.961843E+02, time 0.689ms
+[INFO   ] DREAMPlace - full step 5.587 ms
+[INFO   ] DREAMPlace - optimizer step 2.309 ms
+[INFO   ] DREAMPlace - iteration   15, (  15,  0,  0), Obj 1.854406E+07, DensityWeight 9.107429E-12, wHPWL 5.959802E+07, Overflow 8.919845E-01, MaxDensity 1.045E+04, gamma 9.786974E+02, time 0.679ms
+[INFO   ] DREAMPlace - full step 3.390 ms
+[INFO   ] DREAMPlace - optimizer step 2.298 ms
+[INFO   ] DREAMPlace - iteration   16, (  16,  0,  0), Obj 1.860786E+07, DensityWeight 9.438305E-12, wHPWL 5.986990E+07, Overflow 8.877580E-01, MaxDensity 9.320E+03, gamma 9.607286E+02, time 0.666ms
+[INFO   ] DREAMPlace - full step 3.355 ms
+[INFO   ] DREAMPlace - optimizer step 2.292 ms
+[INFO   ] DREAMPlace - iteration   17, (  17,  0,  0), Obj 1.873601E+07, DensityWeight 9.541640E-12, wHPWL 6.026318E+07, Overflow 8.848417E-01, MaxDensity 8.257E+03, gamma 9.401742E+02, time 1.036ms
+[INFO   ] DREAMPlace - full step 3.730 ms
+[INFO   ] DREAMPlace - optimizer step 2.408 ms
+[INFO   ] DREAMPlace - iteration   18, (  18,  0,  0), Obj 1.888992E+07, DensityWeight 9.517785E-12, wHPWL 6.049239E+07, Overflow 8.822777E-01, MaxDensity 7.286E+03, gamma 9.262493E+02, time 0.659ms
+[INFO   ] DREAMPlace - full step 3.544 ms
+[INFO   ] DREAMPlace - optimizer step 2.160 ms
+[INFO   ] DREAMPlace - iteration   19, (  19,  0,  0), Obj 1.893283E+07, DensityWeight 9.679407E-12, wHPWL 6.056310E+07, Overflow 8.788146E-01, MaxDensity 6.386E+03, gamma 9.141762E+02, time 0.865ms
+[INFO   ] DREAMPlace - full step 3.464 ms
+[INFO   ] DREAMPlace - optimizer step 2.070 ms
+[INFO   ] DREAMPlace - iteration   20, (  20,  0,  0), Obj 1.896213E+07, DensityWeight 1.006368E-11, wHPWL 6.060575E+07, Overflow 8.759249E-01, MaxDensity 5.557E+03, gamma 8.981198E+02, time 0.608ms
+[INFO   ] DREAMPlace - full step 3.028 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration   21, (  21,  0,  0), Obj 1.908675E+07, DensityWeight 1.050423E-11, wHPWL 6.071595E+07, Overflow 8.731800E-01, MaxDensity 4.795E+03, gamma 8.849376E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.001 ms
+[INFO   ] DREAMPlace - optimizer step 2.080 ms
+[INFO   ] DREAMPlace - iteration   22, (  22,  0,  0), Obj 1.919347E+07, DensityWeight 1.086130E-11, wHPWL 6.086338E+07, Overflow 8.709726E-01, MaxDensity 4.099E+03, gamma 8.725955E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 3.013 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration   23, (  23,  0,  0), Obj 1.928852E+07, DensityWeight 1.117237E-11, wHPWL 6.095363E+07, Overflow 8.683062E-01, MaxDensity 3.716E+03, gamma 8.627953E+02, time 2.008ms
+[INFO   ] DREAMPlace - full step 4.411 ms
+[INFO   ] DREAMPlace - optimizer step 2.067 ms
+[INFO   ] DREAMPlace - iteration   24, (  24,  0,  0), Obj 1.933584E+07, DensityWeight 1.158433E-11, wHPWL 6.096942E+07, Overflow 8.659884E-01, MaxDensity 3.632E+03, gamma 8.511032E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.007 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration   25, (  25,  0,  0), Obj 1.942105E+07, DensityWeight 1.213680E-11, wHPWL 6.096527E+07, Overflow 8.637912E-01, MaxDensity 3.494E+03, gamma 8.410692E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 3.012 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration   26, (  26,  0,  0), Obj 1.949681E+07, DensityWeight 1.271055E-11, wHPWL 6.099006E+07, Overflow 8.615071E-01, MaxDensity 3.319E+03, gamma 8.316658E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration   27, (  27,  0,  0), Obj 1.957430E+07, DensityWeight 1.330004E-11, wHPWL 6.102246E+07, Overflow 8.588139E-01, MaxDensity 3.115E+03, gamma 8.220023E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration   28, (  28,  0,  0), Obj 1.965632E+07, DensityWeight 1.390210E-11, wHPWL 6.102731E+07, Overflow 8.573741E-01, MaxDensity 2.894E+03, gamma 8.107526E+02, time 0.609ms
+[INFO   ] DREAMPlace - full step 3.018 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration   29, (  29,  0,  0), Obj 1.976613E+07, DensityWeight 1.458734E-11, wHPWL 6.100257E+07, Overflow 8.555465E-01, MaxDensity 2.671E+03, gamma 8.048015E+02, time 0.610ms
+[INFO   ] DREAMPlace - full step 3.029 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration   30, (  30,  0,  0), Obj 1.979190E+07, DensityWeight 1.527083E-11, wHPWL 6.097274E+07, Overflow 8.537461E-01, MaxDensity 2.457E+03, gamma 7.973102E+02, time 0.606ms
+[INFO   ] DREAMPlace - full step 3.004 ms
+[INFO   ] DREAMPlace - optimizer step 2.029 ms
+[INFO   ] DREAMPlace - iteration   31, (  31,  0,  0), Obj 1.985028E+07, DensityWeight 1.598473E-11, wHPWL 6.094603E+07, Overflow 8.517398E-01, MaxDensity 2.260E+03, gamma 7.899987E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration   32, (  32,  0,  0), Obj 1.991175E+07, DensityWeight 1.673034E-11, wHPWL 6.092538E+07, Overflow 8.500015E-01, MaxDensity 2.080E+03, gamma 7.819303E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.071 ms
+[INFO   ] DREAMPlace - iteration   33, (  33,  0,  0), Obj 1.999154E+07, DensityWeight 1.750898E-11, wHPWL 6.090046E+07, Overflow 8.484844E-01, MaxDensity 1.914E+03, gamma 7.750059E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.013 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration   34, (  34,  0,  0), Obj 2.005326E+07, DensityWeight 1.832203E-11, wHPWL 6.086510E+07, Overflow 8.468550E-01, MaxDensity 1.772E+03, gamma 7.690133E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration   35, (  35,  0,  0), Obj 2.010168E+07, DensityWeight 1.917091E-11, wHPWL 6.081980E+07, Overflow 8.454877E-01, MaxDensity 1.658E+03, gamma 7.626284E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration   36, (  36,  0,  0), Obj 2.016037E+07, DensityWeight 2.005712E-11, wHPWL 6.077469E+07, Overflow 8.446779E-01, MaxDensity 1.573E+03, gamma 7.573112E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration   37, (  37,  0,  0), Obj 2.020612E+07, DensityWeight 2.098219E-11, wHPWL 6.073284E+07, Overflow 8.434607E-01, MaxDensity 1.523E+03, gamma 7.541801E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration   38, (  38,  0,  0), Obj 2.021511E+07, DensityWeight 2.194774E-11, wHPWL 6.069124E+07, Overflow 8.425769E-01, MaxDensity 1.505E+03, gamma 7.494974E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.959 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration   39, (  39,  0,  0), Obj 2.025394E+07, DensityWeight 2.295542E-11, wHPWL 6.064515E+07, Overflow 8.416381E-01, MaxDensity 1.493E+03, gamma 7.461155E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.962 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration   40, (  40,  0,  0), Obj 2.027217E+07, DensityWeight 2.400696E-11, wHPWL 6.060271E+07, Overflow 8.410727E-01, MaxDensity 1.459E+03, gamma 7.425400E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration   41, (  41,  0,  0), Obj 2.029786E+07, DensityWeight 2.510417E-11, wHPWL 6.056523E+07, Overflow 8.405282E-01, MaxDensity 1.386E+03, gamma 7.403950E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration   42, (  42,  0,  0), Obj 2.029956E+07, DensityWeight 2.624889E-11, wHPWL 6.053165E+07, Overflow 8.397138E-01, MaxDensity 1.274E+03, gamma 7.383349E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration   43, (  43,  0,  0), Obj 2.030185E+07, DensityWeight 2.744307E-11, wHPWL 6.049939E+07, Overflow 8.390003E-01, MaxDensity 1.123E+03, gamma 7.352643E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration   44, (  44,  0,  0), Obj 2.032405E+07, DensityWeight 2.868871E-11, wHPWL 6.047238E+07, Overflow 8.381022E-01, MaxDensity 1.156E+03, gamma 7.325852E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration   45, (  45,  0,  0), Obj 2.034291E+07, DensityWeight 2.998789E-11, wHPWL 6.045157E+07, Overflow 8.369236E-01, MaxDensity 1.207E+03, gamma 7.292260E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.972 ms
+[INFO   ] DREAMPlace - optimizer step 2.014 ms
+[INFO   ] DREAMPlace - iteration   46, (  46,  0,  0), Obj 2.037566E+07, DensityWeight 3.134277E-11, wHPWL 6.043503E+07, Overflow 8.355432E-01, MaxDensity 1.206E+03, gamma 7.248419E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.945 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration   47, (  47,  0,  0), Obj 2.042952E+07, DensityWeight 3.275558E-11, wHPWL 6.041826E+07, Overflow 8.342472E-01, MaxDensity 1.151E+03, gamma 7.197400E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration   48, (  48,  0,  0), Obj 2.049819E+07, DensityWeight 3.422866E-11, wHPWL 6.040259E+07, Overflow 8.328608E-01, MaxDensity 1.047E+03, gamma 7.149827E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration   49, (  49,  0,  0), Obj 2.056320E+07, DensityWeight 3.576441E-11, wHPWL 6.038662E+07, Overflow 8.317260E-01, MaxDensity 1.079E+03, gamma 7.099286E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration   50, (  50,  0,  0), Obj 2.063493E+07, DensityWeight 3.736533E-11, wHPWL 6.037086E+07, Overflow 8.305718E-01, MaxDensity 1.052E+03, gamma 7.058181E+02, time 0.604ms
+[INFO   ] DREAMPlace - full step 3.019 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration   51, (  51,  0,  0), Obj 2.069109E+07, DensityWeight 3.903400E-11, wHPWL 6.035472E+07, Overflow 8.294107E-01, MaxDensity 1.044E+03, gamma 7.016621E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.066 ms
+[INFO   ] DREAMPlace - iteration   52, (  52,  0,  0), Obj 2.074896E+07, DensityWeight 4.077312E-11, wHPWL 6.034032E+07, Overflow 8.283129E-01, MaxDensity 1.200E+03, gamma 6.975057E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 3.004 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration   53, (  53,  0,  0), Obj 2.080907E+07, DensityWeight 4.258546E-11, wHPWL 6.032820E+07, Overflow 8.269796E-01, MaxDensity 1.301E+03, gamma 6.935986E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration   54, (  54,  0,  0), Obj 2.086565E+07, DensityWeight 4.447391E-11, wHPWL 6.031921E+07, Overflow 8.260719E-01, MaxDensity 1.321E+03, gamma 6.888831E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration   55, (  55,  0,  0), Obj 2.093976E+07, DensityWeight 4.644147E-11, wHPWL 6.031212E+07, Overflow 8.254387E-01, MaxDensity 1.259E+03, gamma 6.856908E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.007 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration   56, (  56,  0,  0), Obj 2.098511E+07, DensityWeight 4.849121E-11, wHPWL 6.030594E+07, Overflow 8.249055E-01, MaxDensity 1.118E+03, gamma 6.834727E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration   57, (  57,  0,  0), Obj 2.101218E+07, DensityWeight 5.062637E-11, wHPWL 6.030072E+07, Overflow 8.241302E-01, MaxDensity 9.252E+02, gamma 6.816106E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.035 ms
+[INFO   ] DREAMPlace - iteration   58, (  58,  0,  0), Obj 2.103246E+07, DensityWeight 5.285025E-11, wHPWL 6.029838E+07, Overflow 8.235061E-01, MaxDensity 8.324E+02, gamma 6.789118E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration   59, (  59,  0,  0), Obj 2.107103E+07, DensityWeight 5.516630E-11, wHPWL 6.030258E+07, Overflow 8.227373E-01, MaxDensity 9.554E+02, gamma 6.767472E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration   60, (  60,  0,  0), Obj 2.110030E+07, DensityWeight 5.789064E-11, wHPWL 6.031162E+07, Overflow 8.222690E-01, MaxDensity 1.025E+03, gamma 6.740901E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration   61, (  61,  0,  0), Obj 2.114016E+07, DensityWeight 6.070869E-11, wHPWL 6.032218E+07, Overflow 8.218240E-01, MaxDensity 1.032E+03, gamma 6.724768E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration   62, (  62,  0,  0), Obj 2.115917E+07, DensityWeight 6.365029E-11, wHPWL 6.033165E+07, Overflow 8.214750E-01, MaxDensity 9.766E+02, gamma 6.709474E+02, time 0.601ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration   63, (  63,  0,  0), Obj 2.117713E+07, DensityWeight 6.674468E-11, wHPWL 6.034244E+07, Overflow 8.211510E-01, MaxDensity 8.944E+02, gamma 6.697502E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration   64, (  64,  0,  0), Obj 2.118909E+07, DensityWeight 6.997656E-11, wHPWL 6.035665E+07, Overflow 8.207808E-01, MaxDensity 9.088E+02, gamma 6.686410E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration   65, (  65,  0,  0), Obj 2.120050E+07, DensityWeight 7.333000E-11, wHPWL 6.037466E+07, Overflow 8.203654E-01, MaxDensity 8.719E+02, gamma 6.673756E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 3.003 ms
+[INFO   ] DREAMPlace - optimizer step 2.071 ms
+[INFO   ] DREAMPlace - iteration   66, (  66,  0,  0), Obj 2.121530E+07, DensityWeight 7.680337E-11, wHPWL 6.039464E+07, Overflow 8.204197E-01, MaxDensity 7.960E+02, gamma 6.659587E+02, time 0.612ms
+[INFO   ] DREAMPlace - full step 3.017 ms
+[INFO   ] DREAMPlace - optimizer step 2.122 ms
+[INFO   ] DREAMPlace - iteration   67, (  67,  0,  0), Obj 2.123375E+07, DensityWeight 8.041928E-11, wHPWL 6.041441E+07, Overflow 8.202633E-01, MaxDensity 7.106E+02, gamma 6.661437E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.072 ms
+[INFO   ] DREAMPlace - optimizer step 2.069 ms
+[INFO   ] DREAMPlace - iteration   68, (  68,  0,  0), Obj 2.122001E+07, DensityWeight 8.420787E-11, wHPWL 6.043469E+07, Overflow 8.203753E-01, MaxDensity 7.521E+02, gamma 6.656107E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration   69, (  69,  0,  0), Obj 2.122110E+07, DensityWeight 8.816865E-11, wHPWL 6.045570E+07, Overflow 8.204050E-01, MaxDensity 7.858E+02, gamma 6.659921E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.972 ms
+[INFO   ] DREAMPlace - optimizer step 2.071 ms
+[INFO   ] DREAMPlace - iteration   70, (  70,  0,  0), Obj 2.120432E+07, DensityWeight 9.230636E-11, wHPWL 6.048026E+07, Overflow 8.202407E-01, MaxDensity 8.197E+02, gamma 6.660936E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 3.019 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration   71, (  71,  0,  0), Obj 2.119390E+07, DensityWeight 9.659031E-11, wHPWL 6.050638E+07, Overflow 8.199208E-01, MaxDensity 8.330E+02, gamma 6.655336E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 3.012 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration   72, (  72,  0,  0), Obj 2.119701E+07, DensityWeight 1.010512E-10, wHPWL 6.053487E+07, Overflow 8.195461E-01, MaxDensity 7.834E+02, gamma 6.644453E+02, time 0.606ms
+[INFO   ] DREAMPlace - full step 3.003 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration   73, (  73,  0,  0), Obj 2.121143E+07, DensityWeight 1.056833E-10, wHPWL 6.056097E+07, Overflow 8.191069E-01, MaxDensity 6.416E+02, gamma 6.631724E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 3.008 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration   74, (  74,  0,  0), Obj 2.122981E+07, DensityWeight 1.105644E-10, wHPWL 6.058706E+07, Overflow 8.185342E-01, MaxDensity 6.469E+02, gamma 6.616838E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 3.001 ms
+[INFO   ] DREAMPlace - optimizer step 2.004 ms
+[INFO   ] DREAMPlace - iteration   75, (  75,  0,  0), Obj 2.125303E+07, DensityWeight 1.156711E-10, wHPWL 6.060816E+07, Overflow 8.180707E-01, MaxDensity 6.795E+02, gamma 6.597476E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.949 ms
+[INFO   ] DREAMPlace - optimizer step 1.999 ms
+[INFO   ] DREAMPlace - iteration   76, (  76,  0,  0), Obj 2.128561E+07, DensityWeight 1.210981E-10, wHPWL 6.062843E+07, Overflow 8.177760E-01, MaxDensity 7.264E+02, gamma 6.581848E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.950 ms
+[INFO   ] DREAMPlace - optimizer step 2.075 ms
+[INFO   ] DREAMPlace - iteration   77, (  77,  0,  0), Obj 2.131124E+07, DensityWeight 1.267941E-10, wHPWL 6.064338E+07, Overflow 8.175647E-01, MaxDensity 6.597E+02, gamma 6.571927E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 3.003 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration   78, (  78,  0,  0), Obj 2.132529E+07, DensityWeight 1.328567E-10, wHPWL 6.065784E+07, Overflow 8.174993E-01, MaxDensity 6.507E+02, gamma 6.564828E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration   79, (  79,  0,  0), Obj 2.133385E+07, DensityWeight 1.392186E-10, wHPWL 6.066790E+07, Overflow 8.174234E-01, MaxDensity 6.500E+02, gamma 6.562632E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.099 ms
+[INFO   ] DREAMPlace - iteration   80, (  80,  0,  0), Obj 2.133249E+07, DensityWeight 1.459747E-10, wHPWL 6.067986E+07, Overflow 8.174850E-01, MaxDensity 5.445E+02, gamma 6.560084E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 3.020 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration   81, (  81,  0,  0), Obj 2.133235E+07, DensityWeight 1.530180E-10, wHPWL 6.069001E+07, Overflow 8.176112E-01, MaxDensity 5.731E+02, gamma 6.562152E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.972 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration   82, (  82,  0,  0), Obj 2.132293E+07, DensityWeight 1.604418E-10, wHPWL 6.070291E+07, Overflow 8.177117E-01, MaxDensity 6.752E+02, gamma 6.566389E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration   83, (  83,  0,  0), Obj 2.130931E+07, DensityWeight 1.681611E-10, wHPWL 6.071352E+07, Overflow 8.177651E-01, MaxDensity 6.805E+02, gamma 6.569769E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration   84, (  84,  0,  0), Obj 2.129748E+07, DensityWeight 1.763082E-10, wHPWL 6.072665E+07, Overflow 8.177765E-01, MaxDensity 5.631E+02, gamma 6.571562E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.974 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration   85, (  85,  0,  0), Obj 2.128932E+07, DensityWeight 1.847852E-10, wHPWL 6.073819E+07, Overflow 8.178567E-01, MaxDensity 5.734E+02, gamma 6.571948E+02, time 0.601ms
+[INFO   ] DREAMPlace - full step 2.972 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration   86, (  86,  0,  0), Obj 2.128426E+07, DensityWeight 1.937124E-10, wHPWL 6.075220E+07, Overflow 8.178971E-01, MaxDensity 5.676E+02, gamma 6.574645E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration   87, (  87,  0,  0), Obj 2.127471E+07, DensityWeight 2.030012E-10, wHPWL 6.076337E+07, Overflow 8.179405E-01, MaxDensity 5.220E+02, gamma 6.576006E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration   88, (  88,  0,  0), Obj 2.126787E+07, DensityWeight 2.128197E-10, wHPWL 6.077570E+07, Overflow 8.179190E-01, MaxDensity 5.568E+02, gamma 6.577465E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration   89, (  89,  0,  0), Obj 2.126107E+07, DensityWeight 2.230768E-10, wHPWL 6.078525E+07, Overflow 8.181120E-01, MaxDensity 5.790E+02, gamma 6.576741E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.977 ms
+[INFO   ] DREAMPlace - optimizer step 2.075 ms
+[INFO   ] DREAMPlace - iteration   90, (  90,  0,  0), Obj 2.125890E+07, DensityWeight 2.339192E-10, wHPWL 6.079660E+07, Overflow 8.181345E-01, MaxDensity 4.972E+02, gamma 6.583237E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration   91, (  91,  0,  0), Obj 2.124214E+07, DensityWeight 2.452269E-10, wHPWL 6.080520E+07, Overflow 8.182444E-01, MaxDensity 5.091E+02, gamma 6.583997E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration   92, (  92,  0,  0), Obj 2.123711E+07, DensityWeight 2.571796E-10, wHPWL 6.081544E+07, Overflow 8.183353E-01, MaxDensity 5.752E+02, gamma 6.587698E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.967 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration   93, (  93,  0,  0), Obj 2.122625E+07, DensityWeight 2.696532E-10, wHPWL 6.082310E+07, Overflow 8.184724E-01, MaxDensity 5.214E+02, gamma 6.590765E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration   94, (  94,  0,  0), Obj 2.121678E+07, DensityWeight 2.828338E-10, wHPWL 6.083260E+07, Overflow 8.185578E-01, MaxDensity 4.369E+02, gamma 6.595392E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration   95, (  95,  0,  0), Obj 2.120425E+07, DensityWeight 2.965826E-10, wHPWL 6.083980E+07, Overflow 8.186479E-01, MaxDensity 5.406E+02, gamma 6.598273E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.959 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration   96, (  96,  0,  0), Obj 2.119532E+07, DensityWeight 3.110994E-10, wHPWL 6.084845E+07, Overflow 8.187421E-01, MaxDensity 5.159E+02, gamma 6.601317E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.967 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration   97, (  97,  0,  0), Obj 2.118621E+07, DensityWeight 3.262606E-10, wHPWL 6.085483E+07, Overflow 8.187144E-01, MaxDensity 4.315E+02, gamma 6.604499E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration   98, (  98,  0,  0), Obj 2.117684E+07, DensityWeight 3.422688E-10, wHPWL 6.086243E+07, Overflow 8.187795E-01, MaxDensity 4.952E+02, gamma 6.603560E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration   99, (  99,  0,  0), Obj 2.117604E+07, DensityWeight 3.590017E-10, wHPWL 6.086787E+07, Overflow 8.188180E-01, MaxDensity 4.875E+02, gamma 6.605763E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  100, ( 100,  0,  0), Obj 2.116884E+07, DensityWeight 3.766662E-10, wHPWL 6.087373E+07, Overflow 8.189285E-01, MaxDensity 4.337E+02, gamma 6.607065E+02, time 0.610ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  101, ( 101,  0,  0), Obj 2.116353E+07, DensityWeight 3.951764E-10, wHPWL 6.087725E+07, Overflow 8.189590E-01, MaxDensity 4.882E+02, gamma 6.610798E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.068 ms
+[INFO   ] DREAMPlace - iteration  102, ( 102,  0,  0), Obj 2.115321E+07, DensityWeight 4.147316E-10, wHPWL 6.088136E+07, Overflow 8.190296E-01, MaxDensity 4.484E+02, gamma 6.611831E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  103, ( 103,  0,  0), Obj 2.114853E+07, DensityWeight 4.352188E-10, wHPWL 6.088396E+07, Overflow 8.191073E-01, MaxDensity 4.355E+02, gamma 6.614219E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  104, ( 104,  0,  0), Obj 2.114113E+07, DensityWeight 4.568141E-10, wHPWL 6.088736E+07, Overflow 8.191510E-01, MaxDensity 4.831E+02, gamma 6.616851E+02, time 0.610ms
+[INFO   ] DREAMPlace - full step 3.000 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  105, ( 105,  0,  0), Obj 2.113329E+07, DensityWeight 4.794276E-10, wHPWL 6.088901E+07, Overflow 8.191499E-01, MaxDensity 4.234E+02, gamma 6.618333E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  106, ( 106,  0,  0), Obj 2.112777E+07, DensityWeight 5.032833E-10, wHPWL 6.089112E+07, Overflow 8.191770E-01, MaxDensity 4.295E+02, gamma 6.618293E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.965 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  107, ( 107,  0,  0), Obj 2.112545E+07, DensityWeight 5.282922E-10, wHPWL 6.089134E+07, Overflow 8.193650E-01, MaxDensity 4.597E+02, gamma 6.619212E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.021 ms
+[INFO   ] DREAMPlace - iteration  108, ( 108,  0,  0), Obj 2.112118E+07, DensityWeight 5.546898E-10, wHPWL 6.089190E+07, Overflow 8.195413E-01, MaxDensity 3.803E+02, gamma 6.625583E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 2.952 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  109, ( 109,  0,  0), Obj 2.110578E+07, DensityWeight 5.823781E-10, wHPWL 6.089054E+07, Overflow 8.197094E-01, MaxDensity 4.233E+02, gamma 6.631562E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  110, ( 110,  0,  0), Obj 2.109114E+07, DensityWeight 6.048070E-10, wHPWL 6.089018E+07, Overflow 8.197948E-01, MaxDensity 4.180E+02, gamma 6.637270E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  111, ( 111,  0,  0), Obj 2.107714E+07, DensityWeight 6.280370E-10, wHPWL 6.088893E+07, Overflow 8.199590E-01, MaxDensity 3.682E+02, gamma 6.640171E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  112, ( 112,  0,  0), Obj 2.106896E+07, DensityWeight 6.520940E-10, wHPWL 6.088915E+07, Overflow 8.201286E-01, MaxDensity 4.239E+02, gamma 6.645753E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  113, ( 113,  0,  0), Obj 2.105538E+07, DensityWeight 6.846773E-10, wHPWL 6.088771E+07, Overflow 8.202144E-01, MaxDensity 4.226E+02, gamma 6.651519E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.964 ms
+[INFO   ] DREAMPlace - optimizer step 2.067 ms
+[INFO   ] DREAMPlace - iteration  114, ( 114,  0,  0), Obj 2.104137E+07, DensityWeight 7.107617E-10, wHPWL 6.088672E+07, Overflow 8.203126E-01, MaxDensity 4.196E+02, gamma 6.654442E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  115, ( 115,  0,  0), Obj 2.103318E+07, DensityWeight 7.377660E-10, wHPWL 6.088398E+07, Overflow 8.203279E-01, MaxDensity 4.174E+02, gamma 6.657784E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.966 ms
+[INFO   ] DREAMPlace - optimizer step 2.068 ms
+[INFO   ] DREAMPlace - iteration  116, ( 116,  0,  0), Obj 2.102420E+07, DensityWeight 7.657198E-10, wHPWL 6.088191E+07, Overflow 8.204680E-01, MaxDensity 3.802E+02, gamma 6.658307E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  117, ( 117,  0,  0), Obj 2.102106E+07, DensityWeight 7.946532E-10, wHPWL 6.087818E+07, Overflow 8.206275E-01, MaxDensity 4.150E+02, gamma 6.663083E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  118, ( 118,  0,  0), Obj 2.100926E+07, DensityWeight 8.245975E-10, wHPWL 6.087426E+07, Overflow 8.207271E-01, MaxDensity 4.054E+02, gamma 6.668522E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  119, ( 119,  0,  0), Obj 2.099608E+07, DensityWeight 8.555846E-10, wHPWL 6.086836E+07, Overflow 8.207756E-01, MaxDensity 3.858E+02, gamma 6.671920E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.962 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration  120, ( 120,  0,  0), Obj 2.098707E+07, DensityWeight 8.876473E-10, wHPWL 6.086334E+07, Overflow 8.208175E-01, MaxDensity 4.030E+02, gamma 6.673578E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.955 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  121, ( 121,  0,  0), Obj 2.098171E+07, DensityWeight 9.208195E-10, wHPWL 6.085703E+07, Overflow 8.208443E-01, MaxDensity 3.669E+02, gamma 6.675009E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.967 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  122, ( 122,  0,  0), Obj 2.097689E+07, DensityWeight 9.551359E-10, wHPWL 6.085130E+07, Overflow 8.208553E-01, MaxDensity 4.258E+02, gamma 6.675923E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.960 ms
+[INFO   ] DREAMPlace - optimizer step 2.033 ms
+[INFO   ] DREAMPlace - iteration  123, ( 123,  0,  0), Obj 2.097310E+07, DensityWeight 9.906320E-10, wHPWL 6.084320E+07, Overflow 8.209543E-01, MaxDensity 4.052E+02, gamma 6.676301E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.957 ms
+[INFO   ] DREAMPlace - optimizer step 2.129 ms
+[INFO   ] DREAMPlace - iteration  124, ( 124,  0,  0), Obj 2.097038E+07, DensityWeight 1.027345E-09, wHPWL 6.083502E+07, Overflow 8.210396E-01, MaxDensity 4.230E+02, gamma 6.679681E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 3.067 ms
+[INFO   ] DREAMPlace - optimizer step 2.034 ms
+[INFO   ] DREAMPlace - iteration  125, ( 125,  0,  0), Obj 2.096161E+07, DensityWeight 1.065311E-09, wHPWL 6.082483E+07, Overflow 8.210935E-01, MaxDensity 3.536E+02, gamma 6.682597E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.951 ms
+[INFO   ] DREAMPlace - optimizer step 2.083 ms
+[INFO   ] DREAMPlace - iteration  126, ( 126,  0,  0), Obj 2.095382E+07, DensityWeight 1.104571E-09, wHPWL 6.081574E+07, Overflow 8.211568E-01, MaxDensity 4.113E+02, gamma 6.684443E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  127, ( 127,  0,  0), Obj 2.094827E+07, DensityWeight 1.145162E-09, wHPWL 6.080541E+07, Overflow 8.211241E-01, MaxDensity 3.812E+02, gamma 6.686608E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.963 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  128, ( 128,  0,  0), Obj 2.094210E+07, DensityWeight 1.187126E-09, wHPWL 6.079588E+07, Overflow 8.211525E-01, MaxDensity 3.720E+02, gamma 6.685488E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.961 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  129, ( 129,  0,  0), Obj 2.094261E+07, DensityWeight 1.230506E-09, wHPWL 6.078474E+07, Overflow 8.212981E-01, MaxDensity 4.066E+02, gamma 6.686460E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  130, ( 130,  0,  0), Obj 2.093891E+07, DensityWeight 1.275342E-09, wHPWL 6.077387E+07, Overflow 8.213407E-01, MaxDensity 4.206E+02, gamma 6.691446E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.974 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  131, ( 131,  0,  0), Obj 2.092710E+07, DensityWeight 1.321681E-09, wHPWL 6.076144E+07, Overflow 8.214489E-01, MaxDensity 3.816E+02, gamma 6.692903E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.966 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  132, ( 132,  0,  0), Obj 2.092244E+07, DensityWeight 1.369566E-09, wHPWL 6.075043E+07, Overflow 8.215130E-01, MaxDensity 4.017E+02, gamma 6.696607E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.032 ms
+[INFO   ] DREAMPlace - iteration  133, ( 133,  0,  0), Obj 2.091331E+07, DensityWeight 1.419044E-09, wHPWL 6.073836E+07, Overflow 8.215561E-01, MaxDensity 4.233E+02, gamma 6.698806E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.953 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  134, ( 134,  0,  0), Obj 2.090727E+07, DensityWeight 1.470162E-09, wHPWL 6.072779E+07, Overflow 8.216023E-01, MaxDensity 3.653E+02, gamma 6.700285E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  135, ( 135,  0,  0), Obj 2.090270E+07, DensityWeight 1.522970E-09, wHPWL 6.071590E+07, Overflow 8.216664E-01, MaxDensity 3.942E+02, gamma 6.701870E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.977 ms
+[INFO   ] DREAMPlace - optimizer step 2.030 ms
+[INFO   ] DREAMPlace - iteration  136, ( 136,  0,  0), Obj 2.089794E+07, DensityWeight 1.577516E-09, wHPWL 6.070490E+07, Overflow 8.217320E-01, MaxDensity 4.210E+02, gamma 6.704067E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.954 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  137, ( 137,  0,  0), Obj 2.089197E+07, DensityWeight 1.633853E-09, wHPWL 6.069262E+07, Overflow 8.217908E-01, MaxDensity 3.796E+02, gamma 6.706321E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.953 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  138, ( 138,  0,  0), Obj 2.088591E+07, DensityWeight 1.692033E-09, wHPWL 6.068160E+07, Overflow 8.218614E-01, MaxDensity 3.814E+02, gamma 6.708334E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  139, ( 139,  0,  0), Obj 2.088037E+07, DensityWeight 1.752109E-09, wHPWL 6.066963E+07, Overflow 8.218910E-01, MaxDensity 4.194E+02, gamma 6.710759E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.966 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  140, ( 140,  0,  0), Obj 2.087404E+07, DensityWeight 1.814136E-09, wHPWL 6.065899E+07, Overflow 8.219287E-01, MaxDensity 3.735E+02, gamma 6.711775E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.966 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration  141, ( 141,  0,  0), Obj 2.087056E+07, DensityWeight 1.878172E-09, wHPWL 6.064733E+07, Overflow 8.219536E-01, MaxDensity 3.793E+02, gamma 6.713067E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.947 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  142, ( 142,  0,  0), Obj 2.086656E+07, DensityWeight 1.944273E-09, wHPWL 6.063686E+07, Overflow 8.219794E-01, MaxDensity 4.335E+02, gamma 6.713925E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.954 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  143, ( 143,  0,  0), Obj 2.086345E+07, DensityWeight 2.012500E-09, wHPWL 6.062532E+07, Overflow 8.220214E-01, MaxDensity 4.069E+02, gamma 6.714811E+02, time 0.576ms
+[INFO   ] DREAMPlace - full step 2.953 ms
+[INFO   ] DREAMPlace - optimizer step 2.029 ms
+[INFO   ] DREAMPlace - iteration  144, ( 144,  0,  0), Obj 2.086030E+07, DensityWeight 2.082913E-09, wHPWL 6.061503E+07, Overflow 8.220710E-01, MaxDensity 4.032E+02, gamma 6.716252E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.946 ms
+[INFO   ] DREAMPlace - optimizer step 2.030 ms
+[INFO   ] DREAMPlace - iteration  145, ( 145,  0,  0), Obj 2.085606E+07, DensityWeight 2.155573E-09, wHPWL 6.060370E+07, Overflow 8.221233E-01, MaxDensity 4.235E+02, gamma 6.717958E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.960 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  146, ( 146,  0,  0), Obj 2.085130E+07, DensityWeight 2.230546E-09, wHPWL 6.059381E+07, Overflow 8.221562E-01, MaxDensity 3.919E+02, gamma 6.719756E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  147, ( 147,  0,  0), Obj 2.084638E+07, DensityWeight 2.307895E-09, wHPWL 6.058314E+07, Overflow 8.221866E-01, MaxDensity 4.083E+02, gamma 6.720887E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  148, ( 148,  0,  0), Obj 2.084282E+07, DensityWeight 2.387687E-09, wHPWL 6.057405E+07, Overflow 8.221555E-01, MaxDensity 4.088E+02, gamma 6.721934E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  149, ( 149,  0,  0), Obj 2.083946E+07, DensityWeight 2.469991E-09, wHPWL 6.056411E+07, Overflow 8.221513E-01, MaxDensity 3.859E+02, gamma 6.720865E+02, time 0.574ms
+[INFO   ] DREAMPlace - full step 2.962 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  150, ( 150,  0,  0), Obj 2.084036E+07, DensityWeight 2.554876E-09, wHPWL 6.055557E+07, Overflow 8.220714E-01, MaxDensity 3.901E+02, gamma 6.720721E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.956 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration  151, ( 151,  0,  0), Obj 2.083942E+07, DensityWeight 2.642415E-09, wHPWL 6.054580E+07, Overflow 8.220720E-01, MaxDensity 4.049E+02, gamma 6.717973E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.964 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  152, ( 152,  0,  0), Obj 2.084372E+07, DensityWeight 2.732680E-09, wHPWL 6.053728E+07, Overflow 8.220899E-01, MaxDensity 4.281E+02, gamma 6.717995E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 3.766 ms
+[INFO   ] DREAMPlace - iteration  153, ( 153,  0,  0), Obj 2.084247E+07, DensityWeight 2.825745E-09, wHPWL 6.052731E+07, Overflow 8.221531E-01, MaxDensity 4.100E+02, gamma 6.718610E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 4.691 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  154, ( 154,  0,  0), Obj 2.084004E+07, DensityWeight 2.921688E-09, wHPWL 6.051872E+07, Overflow 8.221857E-01, MaxDensity 4.088E+02, gamma 6.720782E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.035 ms
+[INFO   ] DREAMPlace - iteration  155, ( 155,  0,  0), Obj 2.083450E+07, DensityWeight 3.020586E-09, wHPWL 6.050930E+07, Overflow 8.222116E-01, MaxDensity 3.988E+02, gamma 6.721904E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.959 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  156, ( 156,  0,  0), Obj 2.083108E+07, DensityWeight 3.122519E-09, wHPWL 6.050181E+07, Overflow 8.222025E-01, MaxDensity 4.438E+02, gamma 6.722794E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  157, ( 157,  0,  0), Obj 2.082816E+07, DensityWeight 3.227570E-09, wHPWL 6.049376E+07, Overflow 8.222408E-01, MaxDensity 4.025E+02, gamma 6.722481E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.954 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  158, ( 158,  0,  0), Obj 2.082768E+07, DensityWeight 3.335821E-09, wHPWL 6.048730E+07, Overflow 8.222315E-01, MaxDensity 4.093E+02, gamma 6.723801E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.959 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  159, ( 159,  0,  0), Obj 2.082392E+07, DensityWeight 3.447358E-09, wHPWL 6.047977E+07, Overflow 8.222290E-01, MaxDensity 4.178E+02, gamma 6.723477E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  160, ( 160,  0,  0), Obj 2.082346E+07, DensityWeight 3.562269E-09, wHPWL 6.047373E+07, Overflow 8.222599E-01, MaxDensity 4.835E+02, gamma 6.723393E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  161, ( 161,  0,  0), Obj 2.082254E+07, DensityWeight 3.680641E-09, wHPWL 6.046676E+07, Overflow 8.222855E-01, MaxDensity 4.649E+02, gamma 6.724458E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.968 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  162, ( 162,  0,  0), Obj 2.081936E+07, DensityWeight 3.802567E-09, wHPWL 6.046124E+07, Overflow 8.222853E-01, MaxDensity 4.488E+02, gamma 6.725338E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  163, ( 163,  0,  0), Obj 2.081654E+07, DensityWeight 3.928138E-09, wHPWL 6.045497E+07, Overflow 8.222994E-01, MaxDensity 4.575E+02, gamma 6.725329E+02, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.964 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  164, ( 164,  0,  0), Obj 2.081552E+07, DensityWeight 4.057451E-09, wHPWL 6.045014E+07, Overflow 8.222676E-01, MaxDensity 4.701E+02, gamma 6.725816E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  165, ( 165,  0,  0), Obj 2.081352E+07, DensityWeight 4.190602E-09, wHPWL 6.044449E+07, Overflow 8.222347E-01, MaxDensity 3.848E+02, gamma 6.724722E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.977 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  166, ( 166,  0,  0), Obj 2.081471E+07, DensityWeight 4.327689E-09, wHPWL 6.044024E+07, Overflow 8.221557E-01, MaxDensity 4.259E+02, gamma 6.723589E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.035 ms
+[INFO   ] DREAMPlace - iteration  167, ( 167,  0,  0), Obj 2.081600E+07, DensityWeight 4.468813E-09, wHPWL 6.043500E+07, Overflow 8.221003E-01, MaxDensity 4.204E+02, gamma 6.720870E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.959 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  168, ( 168,  0,  0), Obj 2.082048E+07, DensityWeight 4.614078E-09, wHPWL 6.043080E+07, Overflow 8.220736E-01, MaxDensity 4.195E+02, gamma 6.718968E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.961 ms
+[INFO   ] DREAMPlace - optimizer step 2.034 ms
+[INFO   ] DREAMPlace - iteration  169, ( 169,  0,  0), Obj 2.082333E+07, DensityWeight 4.763590E-09, wHPWL 6.042537E+07, Overflow 8.220093E-01, MaxDensity 4.578E+02, gamma 6.718051E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.956 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  170, ( 170,  0,  0), Obj 2.082422E+07, DensityWeight 4.917454E-09, wHPWL 6.042093E+07, Overflow 8.219150E-01, MaxDensity 4.264E+02, gamma 6.715839E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  171, ( 171,  0,  0), Obj 2.082771E+07, DensityWeight 5.075780E-09, wHPWL 6.041568E+07, Overflow 8.218101E-01, MaxDensity 4.764E+02, gamma 6.712598E+02, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.964 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration  172, ( 172,  0,  0), Obj 2.083330E+07, DensityWeight 5.238679E-09, wHPWL 6.041153E+07, Overflow 8.216721E-01, MaxDensity 3.961E+02, gamma 6.708997E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.955 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  173, ( 173,  0,  0), Obj 2.083963E+07, DensityWeight 5.406266E-09, wHPWL 6.040635E+07, Overflow 8.215390E-01, MaxDensity 4.776E+02, gamma 6.704260E+02, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.948 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  174, ( 174,  0,  0), Obj 2.084826E+07, DensityWeight 5.578657E-09, wHPWL 6.040190E+07, Overflow 8.214357E-01, MaxDensity 4.093E+02, gamma 6.699698E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration  175, ( 175,  0,  0), Obj 2.085654E+07, DensityWeight 5.755968E-09, wHPWL 6.039610E+07, Overflow 8.213592E-01, MaxDensity 4.546E+02, gamma 6.696159E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.953 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  176, ( 176,  0,  0), Obj 2.086278E+07, DensityWeight 5.938322E-09, wHPWL 6.039099E+07, Overflow 8.212930E-01, MaxDensity 3.944E+02, gamma 6.693536E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  177, ( 177,  0,  0), Obj 2.086719E+07, DensityWeight 6.125840E-09, wHPWL 6.038503E+07, Overflow 8.212733E-01, MaxDensity 3.975E+02, gamma 6.691270E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  178, ( 178,  0,  0), Obj 2.087090E+07, DensityWeight 6.318647E-09, wHPWL 6.038025E+07, Overflow 8.212121E-01, MaxDensity 4.340E+02, gamma 6.690594E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  179, ( 179,  0,  0), Obj 2.087141E+07, DensityWeight 6.516871E-09, wHPWL 6.037495E+07, Overflow 8.211048E-01, MaxDensity 4.063E+02, gamma 6.688497E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  180, ( 180,  0,  0), Obj 2.087480E+07, DensityWeight 6.720641E-09, wHPWL 6.037113E+07, Overflow 8.210387E-01, MaxDensity 4.381E+02, gamma 6.684825E+02, time 0.605ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.121 ms
+[INFO   ] DREAMPlace - iteration  181, ( 181,  0,  0), Obj 2.088137E+07, DensityWeight 6.930090E-09, wHPWL 6.036679E+07, Overflow 8.209354E-01, MaxDensity 3.684E+02, gamma 6.682565E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.044 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  182, ( 182,  0,  0), Obj 2.088513E+07, DensityWeight 7.145352E-09, wHPWL 6.036335E+07, Overflow 8.208328E-01, MaxDensity 4.419E+02, gamma 6.679036E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  183, ( 183,  0,  0), Obj 2.089143E+07, DensityWeight 7.366563E-09, wHPWL 6.035922E+07, Overflow 8.207307E-01, MaxDensity 4.259E+02, gamma 6.675533E+02, time 0.613ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.121 ms
+[INFO   ] DREAMPlace - iteration  184, ( 184,  0,  0), Obj 2.089770E+07, DensityWeight 7.593863E-09, wHPWL 6.035593E+07, Overflow 8.206074E-01, MaxDensity 4.372E+02, gamma 6.672047E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.051 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  185, ( 185,  0,  0), Obj 2.090394E+07, DensityWeight 7.827395E-09, wHPWL 6.035193E+07, Overflow 8.204892E-01, MaxDensity 4.307E+02, gamma 6.667836E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  186, ( 186,  0,  0), Obj 2.091166E+07, DensityWeight 8.067301E-09, wHPWL 6.034887E+07, Overflow 8.203604E-01, MaxDensity 4.291E+02, gamma 6.663804E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.977 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  187, ( 187,  0,  0), Obj 2.091903E+07, DensityWeight 8.313727E-09, wHPWL 6.034501E+07, Overflow 8.202342E-01, MaxDensity 4.134E+02, gamma 6.659413E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  188, ( 188,  0,  0), Obj 2.092714E+07, DensityWeight 8.566825E-09, wHPWL 6.034198E+07, Overflow 8.201115E-01, MaxDensity 4.155E+02, gamma 6.655117E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.960 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  189, ( 189,  0,  0), Obj 2.093507E+07, DensityWeight 8.826746E-09, wHPWL 6.033816E+07, Overflow 8.199772E-01, MaxDensity 4.738E+02, gamma 6.650939E+02, time 0.574ms
+[INFO   ] DREAMPlace - full step 2.965 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  190, ( 190,  0,  0), Obj 2.094277E+07, DensityWeight 9.093643E-09, wHPWL 6.033522E+07, Overflow 8.198448E-01, MaxDensity 4.041E+02, gamma 6.646371E+02, time 0.610ms
+[INFO   ] DREAMPlace - full step 3.013 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  191, ( 191,  0,  0), Obj 2.095127E+07, DensityWeight 9.367674E-09, wHPWL 6.033162E+07, Overflow 8.197331E-01, MaxDensity 4.271E+02, gamma 6.641870E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 3.011 ms
+[INFO   ] DREAMPlace - optimizer step 2.079 ms
+[INFO   ] DREAMPlace - iteration  192, ( 192,  0,  0), Obj 2.095966E+07, DensityWeight 9.648997E-09, wHPWL 6.032889E+07, Overflow 8.196439E-01, MaxDensity 4.277E+02, gamma 6.638075E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 3.069 ms
+[INFO   ] DREAMPlace - optimizer step 2.108 ms
+[INFO   ] DREAMPlace - iteration  193, ( 193,  0,  0), Obj 2.096662E+07, DensityWeight 9.937776E-09, wHPWL 6.032546E+07, Overflow 8.195366E-01, MaxDensity 3.895E+02, gamma 6.635044E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 3.094 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  194, ( 194,  0,  0), Obj 2.097203E+07, DensityWeight 1.023417E-08, wHPWL 6.032302E+07, Overflow 8.194536E-01, MaxDensity 4.326E+02, gamma 6.631400E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.027 ms
+[INFO   ] DREAMPlace - iteration  195, ( 195,  0,  0), Obj 2.097870E+07, DensityWeight 1.053836E-08, wHPWL 6.032023E+07, Overflow 8.193561E-01, MaxDensity 4.331E+02, gamma 6.628586E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 2.960 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  196, ( 196,  0,  0), Obj 2.098370E+07, DensityWeight 1.085050E-08, wHPWL 6.031853E+07, Overflow 8.192737E-01, MaxDensity 3.432E+02, gamma 6.625281E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.072 ms
+[INFO   ] DREAMPlace - iteration  197, ( 197,  0,  0), Obj 2.098972E+07, DensityWeight 1.117076E-08, wHPWL 6.031648E+07, Overflow 8.192164E-01, MaxDensity 4.298E+02, gamma 6.622487E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.067 ms
+[INFO   ] DREAMPlace - iteration  198, ( 198,  0,  0), Obj 2.099470E+07, DensityWeight 1.149933E-08, wHPWL 6.031544E+07, Overflow 8.190914E-01, MaxDensity 4.434E+02, gamma 6.620546E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  199, ( 199,  0,  0), Obj 2.099795E+07, DensityWeight 1.183639E-08, wHPWL 6.031400E+07, Overflow 8.189287E-01, MaxDensity 3.660E+02, gamma 6.616315E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  200, ( 200,  0,  0), Obj 2.100587E+07, DensityWeight 1.218210E-08, wHPWL 6.031379E+07, Overflow 8.187863E-01, MaxDensity 4.279E+02, gamma 6.610806E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 2.974 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  201, ( 201,  0,  0), Obj 2.101642E+07, DensityWeight 1.253665E-08, wHPWL 6.031302E+07, Overflow 8.186587E-01, MaxDensity 4.151E+02, gamma 6.605991E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.958 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  202, ( 202,  0,  0), Obj 2.102559E+07, DensityWeight 1.290024E-08, wHPWL 6.031282E+07, Overflow 8.185482E-01, MaxDensity 3.741E+02, gamma 6.601681E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.966 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  203, ( 203,  0,  0), Obj 2.103372E+07, DensityWeight 1.327435E-08, wHPWL 6.031176E+07, Overflow 8.184147E-01, MaxDensity 3.556E+02, gamma 6.597949E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.074 ms
+[INFO   ] DREAMPlace - iteration  204, ( 204,  0,  0), Obj 2.104068E+07, DensityWeight 1.365930E-08, wHPWL 6.031139E+07, Overflow 8.182844E-01, MaxDensity 4.415E+02, gamma 6.593444E+02, time 0.607ms
+[INFO   ] DREAMPlace - full step 3.009 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  205, ( 205,  0,  0), Obj 2.104924E+07, DensityWeight 1.405542E-08, wHPWL 6.031064E+07, Overflow 8.182236E-01, MaxDensity 3.697E+02, gamma 6.589048E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.952 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  206, ( 206,  0,  0), Obj 2.105762E+07, DensityWeight 1.446303E-08, wHPWL 6.031075E+07, Overflow 8.180895E-01, MaxDensity 4.207E+02, gamma 6.586999E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.965 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  207, ( 207,  0,  0), Obj 2.106121E+07, DensityWeight 1.518594E-08, wHPWL 6.031034E+07, Overflow 8.179578E-01, MaxDensity 3.803E+02, gamma 6.582480E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.068 ms
+[INFO   ] DREAMPlace - iteration  208, ( 208,  0,  0), Obj 2.106984E+07, DensityWeight 1.562633E-08, wHPWL 6.031094E+07, Overflow 8.177605E-01, MaxDensity 3.814E+02, gamma 6.578044E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  209, ( 209,  0,  0), Obj 2.107833E+07, DensityWeight 1.640628E-08, wHPWL 6.031103E+07, Overflow 8.176163E-01, MaxDensity 4.225E+02, gamma 6.571409E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.067 ms
+[INFO   ] DREAMPlace - iteration  210, ( 210,  0,  0), Obj 2.109137E+07, DensityWeight 1.722636E-08, wHPWL 6.031192E+07, Overflow 8.174812E-01, MaxDensity 4.331E+02, gamma 6.566563E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  211, ( 211,  0,  0), Obj 2.110077E+07, DensityWeight 1.808543E-08, wHPWL 6.031194E+07, Overflow 8.172861E-01, MaxDensity 4.012E+02, gamma 6.562023E+02, time 0.601ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  212, ( 212,  0,  0), Obj 2.110954E+07, DensityWeight 1.898965E-08, wHPWL 6.031244E+07, Overflow 8.171169E-01, MaxDensity 3.971E+02, gamma 6.555475E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  213, ( 213,  0,  0), Obj 2.112244E+07, DensityWeight 1.993775E-08, wHPWL 6.031240E+07, Overflow 8.169793E-01, MaxDensity 4.087E+02, gamma 6.549802E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  214, ( 214,  0,  0), Obj 2.113360E+07, DensityWeight 2.051595E-08, wHPWL 6.031290E+07, Overflow 8.168470E-01, MaxDensity 3.892E+02, gamma 6.545193E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 3.007 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  215, ( 215,  0,  0), Obj 2.114260E+07, DensityWeight 2.154025E-08, wHPWL 6.031298E+07, Overflow 8.167342E-01, MaxDensity 3.832E+02, gamma 6.540765E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  216, ( 216,  0,  0), Obj 2.115124E+07, DensityWeight 2.261702E-08, wHPWL 6.031368E+07, Overflow 8.166251E-01, MaxDensity 4.050E+02, gamma 6.536989E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  217, ( 217,  0,  0), Obj 2.115855E+07, DensityWeight 2.374556E-08, wHPWL 6.031400E+07, Overflow 8.165061E-01, MaxDensity 4.058E+02, gamma 6.533340E+02, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  218, ( 218,  0,  0), Obj 2.116562E+07, DensityWeight 2.493170E-08, wHPWL 6.031525E+07, Overflow 8.163953E-01, MaxDensity 3.973E+02, gamma 6.529363E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  219, ( 219,  0,  0), Obj 2.117339E+07, DensityWeight 2.617374E-08, wHPWL 6.031646E+07, Overflow 8.162916E-01, MaxDensity 3.872E+02, gamma 6.525664E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  220, ( 220,  0,  0), Obj 2.118062E+07, DensityWeight 2.747777E-08, wHPWL 6.031850E+07, Overflow 8.161732E-01, MaxDensity 4.073E+02, gamma 6.522205E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 3.003 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  221, ( 221,  0,  0), Obj 2.118736E+07, DensityWeight 2.884345E-08, wHPWL 6.032029E+07, Overflow 8.161043E-01, MaxDensity 4.056E+02, gamma 6.518253E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  222, ( 222,  0,  0), Obj 2.119513E+07, DensityWeight 3.027809E-08, wHPWL 6.032283E+07, Overflow 8.160262E-01, MaxDensity 3.828E+02, gamma 6.515954E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  223, ( 223,  0,  0), Obj 2.119951E+07, DensityWeight 3.178074E-08, wHPWL 6.032522E+07, Overflow 8.159935E-01, MaxDensity 3.744E+02, gamma 6.513352E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.001 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  224, ( 224,  0,  0), Obj 2.120454E+07, DensityWeight 3.335863E-08, wHPWL 6.032867E+07, Overflow 8.159414E-01, MaxDensity 3.862E+02, gamma 6.512261E+02, time 0.608ms
+[INFO   ] DREAMPlace - full step 3.007 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  225, ( 225,  0,  0), Obj 2.120647E+07, DensityWeight 3.500973E-08, wHPWL 6.033216E+07, Overflow 8.158676E-01, MaxDensity 3.790E+02, gamma 6.510526E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  226, ( 226,  0,  0), Obj 2.120975E+07, DensityWeight 3.674234E-08, wHPWL 6.033678E+07, Overflow 8.157774E-01, MaxDensity 3.750E+02, gamma 6.508068E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration  227, ( 227,  0,  0), Obj 2.121453E+07, DensityWeight 3.855460E-08, wHPWL 6.034152E+07, Overflow 8.157668E-01, MaxDensity 3.814E+02, gamma 6.505065E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  228, ( 228,  0,  0), Obj 2.122047E+07, DensityWeight 4.045561E-08, wHPWL 6.034710E+07, Overflow 8.157660E-01, MaxDensity 3.838E+02, gamma 6.504713E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  229, ( 229,  0,  0), Obj 2.122095E+07, DensityWeight 4.244533E-08, wHPWL 6.035256E+07, Overflow 8.158039E-01, MaxDensity 4.081E+02, gamma 6.504685E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.956 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  230, ( 230,  0,  0), Obj 2.122076E+07, DensityWeight 4.453373E-08, wHPWL 6.035908E+07, Overflow 8.157377E-01, MaxDensity 3.550E+02, gamma 6.505947E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  231, ( 231,  0,  0), Obj 2.121791E+07, DensityWeight 4.671788E-08, wHPWL 6.036598E+07, Overflow 8.156516E-01, MaxDensity 3.820E+02, gamma 6.503744E+02, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  232, ( 232,  0,  0), Obj 2.122226E+07, DensityWeight 4.900667E-08, wHPWL 6.037433E+07, Overflow 8.155501E-01, MaxDensity 3.544E+02, gamma 6.500878E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  233, ( 233,  0,  0), Obj 2.122803E+07, DensityWeight 5.139713E-08, wHPWL 6.038272E+07, Overflow 8.154056E-01, MaxDensity 3.673E+02, gamma 6.497504E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.033 ms
+[INFO   ] DREAMPlace - iteration  234, ( 234,  0,  0), Obj 2.123487E+07, DensityWeight 5.390389E-08, wHPWL 6.039158E+07, Overflow 8.152658E-01, MaxDensity 3.996E+02, gamma 6.492699E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.968 ms
+[INFO   ] DREAMPlace - optimizer step 2.072 ms
+[INFO   ] DREAMPlace - iteration  235, ( 235,  0,  0), Obj 2.124468E+07, DensityWeight 5.652918E-08, wHPWL 6.039996E+07, Overflow 8.151416E-01, MaxDensity 3.664E+02, gamma 6.488057E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  236, ( 236,  0,  0), Obj 2.125418E+07, DensityWeight 5.928638E-08, wHPWL 6.040848E+07, Overflow 8.150896E-01, MaxDensity 3.433E+02, gamma 6.483935E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  237, ( 237,  0,  0), Obj 2.126263E+07, DensityWeight 6.217677E-08, wHPWL 6.041675E+07, Overflow 8.149322E-01, MaxDensity 3.484E+02, gamma 6.482211E+02, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.128 ms
+[INFO   ] DREAMPlace - iteration  238, ( 238,  0,  0), Obj 2.126613E+07, DensityWeight 6.521040E-08, wHPWL 6.042554E+07, Overflow 8.149039E-01, MaxDensity 3.327E+02, gamma 6.476991E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 3.066 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  239, ( 239,  0,  0), Obj 2.127691E+07, DensityWeight 6.838705E-08, wHPWL 6.043460E+07, Overflow 8.147595E-01, MaxDensity 3.544E+02, gamma 6.476052E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  240, ( 240,  0,  0), Obj 2.127881E+07, DensityWeight 7.171580E-08, wHPWL 6.044400E+07, Overflow 8.146396E-01, MaxDensity 3.705E+02, gamma 6.471271E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.070 ms
+[INFO   ] DREAMPlace - iteration  241, ( 241,  0,  0), Obj 2.128873E+07, DensityWeight 7.520294E-08, wHPWL 6.045398E+07, Overflow 8.144838E-01, MaxDensity 3.523E+02, gamma 6.467303E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 3.016 ms
+[INFO   ] DREAMPlace - optimizer step 2.069 ms
+[INFO   ] DREAMPlace - iteration  242, ( 242,  0,  0), Obj 2.129699E+07, DensityWeight 7.885339E-08, wHPWL 6.046438E+07, Overflow 8.143219E-01, MaxDensity 3.804E+02, gamma 6.462148E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.065 ms
+[INFO   ] DREAMPlace - iteration  243, ( 243,  0,  0), Obj 2.130776E+07, DensityWeight 8.267602E-08, wHPWL 6.047497E+07, Overflow 8.142207E-01, MaxDensity 3.705E+02, gamma 6.456797E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  244, ( 244,  0,  0), Obj 2.131899E+07, DensityWeight 8.668178E-08, wHPWL 6.048595E+07, Overflow 8.140661E-01, MaxDensity 3.648E+02, gamma 6.453452E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  245, ( 245,  0,  0), Obj 2.132604E+07, DensityWeight 9.087667E-08, wHPWL 6.049684E+07, Overflow 8.139861E-01, MaxDensity 3.029E+02, gamma 6.448351E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 3.000 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  246, ( 246,  0,  0), Obj 2.133679E+07, DensityWeight 9.527577E-08, wHPWL 6.050850E+07, Overflow 8.138536E-01, MaxDensity 3.310E+02, gamma 6.445714E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.063 ms
+[INFO   ] DREAMPlace - iteration  247, ( 247,  0,  0), Obj 2.134242E+07, DensityWeight 9.987708E-08, wHPWL 6.052032E+07, Overflow 8.137415E-01, MaxDensity 3.334E+02, gamma 6.441343E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.004 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  248, ( 248,  0,  0), Obj 2.135173E+07, DensityWeight 1.046983E-07, wHPWL 6.053330E+07, Overflow 8.135782E-01, MaxDensity 3.621E+02, gamma 6.437651E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  249, ( 249,  0,  0), Obj 2.135966E+07, DensityWeight 1.097344E-07, wHPWL 6.054662E+07, Overflow 8.135208E-01, MaxDensity 3.800E+02, gamma 6.432275E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  250, ( 250,  0,  0), Obj 2.137115E+07, DensityWeight 1.150075E-07, wHPWL 6.056085E+07, Overflow 8.134389E-01, MaxDensity 3.508E+02, gamma 6.430384E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  251, ( 251,  0,  0), Obj 2.137537E+07, DensityWeight 1.205185E-07, wHPWL 6.057525E+07, Overflow 8.133078E-01, MaxDensity 3.440E+02, gamma 6.427690E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.999 ms
+[INFO   ] DREAMPlace - optimizer step 2.074 ms
+[INFO   ] DREAMPlace - iteration  252, ( 252,  0,  0), Obj 2.138130E+07, DensityWeight 1.262907E-07, wHPWL 6.059099E+07, Overflow 8.131133E-01, MaxDensity 2.667E+02, gamma 6.423380E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 3.008 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  253, ( 253,  0,  0), Obj 2.139068E+07, DensityWeight 1.323145E-07, wHPWL 6.060750E+07, Overflow 8.128846E-01, MaxDensity 3.244E+02, gamma 6.416992E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  254, ( 254,  0,  0), Obj 2.140449E+07, DensityWeight 1.386108E-07, wHPWL 6.062506E+07, Overflow 8.126826E-01, MaxDensity 3.296E+02, gamma 6.409484E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  255, ( 255,  0,  0), Obj 2.142073E+07, DensityWeight 1.451856E-07, wHPWL 6.064264E+07, Overflow 8.124312E-01, MaxDensity 3.625E+02, gamma 6.402866E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 3.009 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  256, ( 256,  0,  0), Obj 2.143513E+07, DensityWeight 1.520716E-07, wHPWL 6.066049E+07, Overflow 8.121942E-01, MaxDensity 3.532E+02, gamma 6.394631E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  257, ( 257,  0,  0), Obj 2.145301E+07, DensityWeight 1.592784E-07, wHPWL 6.067850E+07, Overflow 8.119828E-01, MaxDensity 3.027E+02, gamma 6.386882E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  258, ( 258,  0,  0), Obj 2.146996E+07, DensityWeight 1.668231E-07, wHPWL 6.069720E+07, Overflow 8.117889E-01, MaxDensity 2.972E+02, gamma 6.379977E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  259, ( 259,  0,  0), Obj 2.148522E+07, DensityWeight 1.747083E-07, wHPWL 6.071640E+07, Overflow 8.115115E-01, MaxDensity 2.781E+02, gamma 6.373650E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 3.014 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  260, ( 260,  0,  0), Obj 2.149932E+07, DensityWeight 1.829532E-07, wHPWL 6.073664E+07, Overflow 8.112566E-01, MaxDensity 3.007E+02, gamma 6.364612E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.001 ms
+[INFO   ] DREAMPlace - optimizer step 2.076 ms
+[INFO   ] DREAMPlace - iteration  261, ( 261,  0,  0), Obj 2.151925E+07, DensityWeight 1.915596E-07, wHPWL 6.075760E+07, Overflow 8.109727E-01, MaxDensity 3.222E+02, gamma 6.356313E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 3.037 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  262, ( 262,  0,  0), Obj 2.153773E+07, DensityWeight 2.005507E-07, wHPWL 6.077955E+07, Overflow 8.107336E-01, MaxDensity 3.296E+02, gamma 6.347089E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.067 ms
+[INFO   ] DREAMPlace - iteration  263, ( 263,  0,  0), Obj 2.155830E+07, DensityWeight 2.099349E-07, wHPWL 6.080234E+07, Overflow 8.105047E-01, MaxDensity 2.962E+02, gamma 6.339325E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  264, ( 264,  0,  0), Obj 2.157585E+07, DensityWeight 2.197325E-07, wHPWL 6.082610E+07, Overflow 8.103421E-01, MaxDensity 2.893E+02, gamma 6.331908E+02, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  265, ( 265,  0,  0), Obj 2.159276E+07, DensityWeight 2.299561E-07, wHPWL 6.085075E+07, Overflow 8.101673E-01, MaxDensity 2.848E+02, gamma 6.326641E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  266, ( 266,  0,  0), Obj 2.160518E+07, DensityWeight 2.406258E-07, wHPWL 6.087705E+07, Overflow 8.099889E-01, MaxDensity 2.782E+02, gamma 6.320983E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  267, ( 267,  0,  0), Obj 2.161855E+07, DensityWeight 2.517323E-07, wHPWL 6.090507E+07, Overflow 8.098449E-01, MaxDensity 2.750E+02, gamma 6.315217E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  268, ( 268,  0,  0), Obj 2.163228E+07, DensityWeight 2.632884E-07, wHPWL 6.093522E+07, Overflow 8.096722E-01, MaxDensity 2.868E+02, gamma 6.310565E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 3.010 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  269, ( 269,  0,  0), Obj 2.164373E+07, DensityWeight 2.752936E-07, wHPWL 6.096695E+07, Overflow 8.095130E-01, MaxDensity 2.679E+02, gamma 6.304990E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.019 ms
+[INFO   ] DREAMPlace - iteration  270, ( 270,  0,  0), Obj 2.165731E+07, DensityWeight 2.877823E-07, wHPWL 6.100109E+07, Overflow 8.092499E-01, MaxDensity 2.539E+02, gamma 6.299857E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.949 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration  271, ( 271,  0,  0), Obj 2.167008E+07, DensityWeight 3.007369E-07, wHPWL 6.103687E+07, Overflow 8.089872E-01, MaxDensity 2.731E+02, gamma 6.291384E+02, time 0.606ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.034 ms
+[INFO   ] DREAMPlace - iteration  272, ( 272,  0,  0), Obj 2.169021E+07, DensityWeight 3.142025E-07, wHPWL 6.107503E+07, Overflow 8.086671E-01, MaxDensity 2.466E+02, gamma 6.282930E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  273, ( 273,  0,  0), Obj 2.171050E+07, DensityWeight 3.281624E-07, wHPWL 6.111443E+07, Overflow 8.082613E-01, MaxDensity 2.624E+02, gamma 6.272647E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  274, ( 274,  0,  0), Obj 2.173496E+07, DensityWeight 3.426830E-07, wHPWL 6.115578E+07, Overflow 8.078369E-01, MaxDensity 2.309E+02, gamma 6.259639E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  275, ( 275,  0,  0), Obj 2.176556E+07, DensityWeight 3.577493E-07, wHPWL 6.119800E+07, Overflow 8.073413E-01, MaxDensity 2.323E+02, gamma 6.246060E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  276, ( 276,  0,  0), Obj 2.179767E+07, DensityWeight 3.734320E-07, wHPWL 6.124145E+07, Overflow 8.068480E-01, MaxDensity 2.479E+02, gamma 6.230239E+02, time 0.604ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  277, ( 277,  0,  0), Obj 2.183491E+07, DensityWeight 3.897362E-07, wHPWL 6.128527E+07, Overflow 8.063531E-01, MaxDensity 2.190E+02, gamma 6.214536E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  278, ( 278,  0,  0), Obj 2.187221E+07, DensityWeight 4.067306E-07, wHPWL 6.133007E+07, Overflow 8.059049E-01, MaxDensity 2.501E+02, gamma 6.198816E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 3.001 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  279, ( 279,  0,  0), Obj 2.190989E+07, DensityWeight 4.244085E-07, wHPWL 6.137556E+07, Overflow 8.053964E-01, MaxDensity 1.838E+02, gamma 6.184616E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  280, ( 280,  0,  0), Obj 2.194456E+07, DensityWeight 4.428116E-07, wHPWL 6.142275E+07, Overflow 8.048629E-01, MaxDensity 2.184E+02, gamma 6.168543E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  281, ( 281,  0,  0), Obj 2.198371E+07, DensityWeight 4.619037E-07, wHPWL 6.147123E+07, Overflow 8.043464E-01, MaxDensity 2.206E+02, gamma 6.151730E+02, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.968 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  282, ( 282,  0,  0), Obj 2.202490E+07, DensityWeight 4.817322E-07, wHPWL 6.152178E+07, Overflow 8.037969E-01, MaxDensity 1.615E+02, gamma 6.135493E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  283, ( 283,  0,  0), Obj 2.206523E+07, DensityWeight 5.022674E-07, wHPWL 6.157350E+07, Overflow 8.032652E-01, MaxDensity 2.151E+02, gamma 6.118265E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  284, ( 284,  0,  0), Obj 2.210819E+07, DensityWeight 5.235915E-07, wHPWL 6.162750E+07, Overflow 8.028229E-01, MaxDensity 1.870E+02, gamma 6.101641E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  285, ( 285,  0,  0), Obj 2.215024E+07, DensityWeight 5.456482E-07, wHPWL 6.168274E+07, Overflow 8.024196E-01, MaxDensity 1.632E+02, gamma 6.087848E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  286, ( 286,  0,  0), Obj 2.218638E+07, DensityWeight 5.685359E-07, wHPWL 6.174038E+07, Overflow 8.018502E-01, MaxDensity 1.950E+02, gamma 6.075298E+02, time 0.605ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration  287, ( 287,  0,  0), Obj 2.222010E+07, DensityWeight 5.921850E-07, wHPWL 6.179999E+07, Overflow 8.014362E-01, MaxDensity 1.664E+02, gamma 6.057624E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  288, ( 288,  0,  0), Obj 2.226584E+07, DensityWeight 6.166489E-07, wHPWL 6.186306E+07, Overflow 8.012070E-01, MaxDensity 1.463E+02, gamma 6.044803E+02, time 0.604ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  289, ( 289,  0,  0), Obj 2.230122E+07, DensityWeight 6.418135E-07, wHPWL 6.192798E+07, Overflow 8.008448E-01, MaxDensity 1.692E+02, gamma 6.037719E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.034 ms
+[INFO   ] DREAMPlace - iteration  290, ( 290,  0,  0), Obj 2.232394E+07, DensityWeight 6.678337E-07, wHPWL 6.199610E+07, Overflow 8.004249E-01, MaxDensity 1.556E+02, gamma 6.026541E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  291, ( 291,  0,  0), Obj 2.235629E+07, DensityWeight 6.945981E-07, wHPWL 6.206729E+07, Overflow 8.000222E-01, MaxDensity 1.262E+02, gamma 6.013607E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  292, ( 292,  0,  0), Obj 2.239333E+07, DensityWeight 7.221253E-07, wHPWL 6.214308E+07, Overflow 7.993905E-01, MaxDensity 1.373E+02, gamma 6.001228E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  293, ( 293,  0,  0), Obj 2.242989E+07, DensityWeight 7.502631E-07, wHPWL 6.222218E+07, Overflow 7.985960E-01, MaxDensity 1.360E+02, gamma 5.981859E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  294, ( 294,  0,  0), Obj 2.248305E+07, DensityWeight 7.791370E-07, wHPWL 6.230441E+07, Overflow 7.976199E-01, MaxDensity 1.209E+02, gamma 5.957591E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.001 ms
+[INFO   ] DREAMPlace - optimizer step 2.152 ms
+[INFO   ] DREAMPlace - iteration  295, ( 295,  0,  0), Obj 2.254820E+07, DensityWeight 8.087703E-07, wHPWL 6.238702E+07, Overflow 7.965748E-01, MaxDensity 1.145E+02, gamma 5.927911E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 3.086 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  296, ( 296,  0,  0), Obj 2.262682E+07, DensityWeight 8.394847E-07, wHPWL 6.247048E+07, Overflow 7.954093E-01, MaxDensity 1.088E+02, gamma 5.896294E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 2.999 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  297, ( 297,  0,  0), Obj 2.271105E+07, DensityWeight 8.712636E-07, wHPWL 6.255299E+07, Overflow 7.941833E-01, MaxDensity 1.033E+02, gamma 5.861234E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 3.014 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  298, ( 298,  0,  0), Obj 2.280442E+07, DensityWeight 9.043650E-07, wHPWL 6.263492E+07, Overflow 7.932149E-01, MaxDensity 9.252E+01, gamma 5.824581E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  299, ( 299,  0,  0), Obj 2.290273E+07, DensityWeight 9.387988E-07, wHPWL 6.271506E+07, Overflow 7.925395E-01, MaxDensity 9.875E+01, gamma 5.795790E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  300, ( 300,  0,  0), Obj 2.298342E+07, DensityWeight 9.747883E-07, wHPWL 6.279438E+07, Overflow 7.918099E-01, MaxDensity 9.498E+01, gamma 5.775796E+02, time 0.609ms
+[INFO   ] DREAMPlace - full step 3.009 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  301, ( 301,  0,  0), Obj 2.304379E+07, DensityWeight 1.012273E-06, wHPWL 6.287436E+07, Overflow 7.916058E-01, MaxDensity 9.373E+01, gamma 5.754272E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 1.985 ms
+[INFO   ] DREAMPlace - iteration  302, ( 302,  0,  0), Obj 2.310864E+07, DensityWeight 1.051102E-06, wHPWL 6.295829E+07, Overflow 7.910492E-01, MaxDensity 9.042E+01, gamma 5.748267E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.922 ms
+[INFO   ] DREAMPlace - optimizer step 1.998 ms
+[INFO   ] DREAMPlace - iteration  303, ( 303,  0,  0), Obj 2.313726E+07, DensityWeight 1.090820E-06, wHPWL 6.304698E+07, Overflow 7.907928E-01, MaxDensity 8.517E+01, gamma 5.731920E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.938 ms
+[INFO   ] DREAMPlace - optimizer step 2.000 ms
+[INFO   ] DREAMPlace - iteration  304, ( 304,  0,  0), Obj 2.319141E+07, DensityWeight 1.131286E-06, wHPWL 6.314216E+07, Overflow 7.899739E-01, MaxDensity 9.039E+01, gamma 5.724402E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.940 ms
+[INFO   ] DREAMPlace - optimizer step 1.986 ms
+[INFO   ] DREAMPlace - iteration  305, ( 305,  0,  0), Obj 2.322519E+07, DensityWeight 1.172195E-06, wHPWL 6.324175E+07, Overflow 7.891127E-01, MaxDensity 8.024E+01, gamma 5.700468E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.923 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  306, ( 306,  0,  0), Obj 2.329957E+07, DensityWeight 1.213835E-06, wHPWL 6.334636E+07, Overflow 7.880729E-01, MaxDensity 8.069E+01, gamma 5.675404E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.071 ms
+[INFO   ] DREAMPlace - iteration  307, ( 307,  0,  0), Obj 2.337832E+07, DensityWeight 1.256075E-06, wHPWL 6.345330E+07, Overflow 7.866673E-01, MaxDensity 7.939E+01, gamma 5.645287E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 3.013 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  308, ( 308,  0,  0), Obj 2.347083E+07, DensityWeight 1.299365E-06, wHPWL 6.356149E+07, Overflow 7.854592E-01, MaxDensity 7.656E+01, gamma 5.604832E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.016 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  309, ( 309,  0,  0), Obj 2.359023E+07, DensityWeight 1.343910E-06, wHPWL 6.366790E+07, Overflow 7.844039E-01, MaxDensity 7.797E+01, gamma 5.570290E+02, time 0.573ms
+[INFO   ] DREAMPlace - full step 2.958 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  310, ( 310,  0,  0), Obj 2.369655E+07, DensityWeight 1.390327E-06, wHPWL 6.377188E+07, Overflow 7.832131E-01, MaxDensity 7.056E+01, gamma 5.540293E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 3.000 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  311, ( 311,  0,  0), Obj 2.379234E+07, DensityWeight 1.438836E-06, wHPWL 6.387349E+07, Overflow 7.820519E-01, MaxDensity 7.416E+01, gamma 5.506636E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.035 ms
+[INFO   ] DREAMPlace - iteration  312, ( 312,  0,  0), Obj 2.389839E+07, DensityWeight 1.489531E-06, wHPWL 6.397488E+07, Overflow 7.808234E-01, MaxDensity 6.755E+01, gamma 5.474017E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  313, ( 313,  0,  0), Obj 2.400379E+07, DensityWeight 1.542056E-06, wHPWL 6.407741E+07, Overflow 7.794970E-01, MaxDensity 6.993E+01, gamma 5.439714E+02, time 2.614ms
+[INFO   ] DREAMPlace - full step 5.019 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  314, ( 314,  0,  0), Obj 2.411543E+07, DensityWeight 1.596181E-06, wHPWL 6.418196E+07, Overflow 7.781916E-01, MaxDensity 6.388E+01, gamma 5.402917E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.010 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  315, ( 315,  0,  0), Obj 2.423505E+07, DensityWeight 1.651742E-06, wHPWL 6.428593E+07, Overflow 7.770444E-01, MaxDensity 6.612E+01, gamma 5.366952E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  316, ( 316,  0,  0), Obj 2.435381E+07, DensityWeight 1.709373E-06, wHPWL 6.438879E+07, Overflow 7.754177E-01, MaxDensity 6.231E+01, gamma 5.335539E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 3.012 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  317, ( 317,  0,  0), Obj 2.446167E+07, DensityWeight 1.769290E-06, wHPWL 6.449030E+07, Overflow 7.740309E-01, MaxDensity 6.231E+01, gamma 5.291312E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  318, ( 318,  0,  0), Obj 2.460526E+07, DensityWeight 1.831650E-06, wHPWL 6.459299E+07, Overflow 7.721345E-01, MaxDensity 6.433E+01, gamma 5.253896E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  319, ( 319,  0,  0), Obj 2.473356E+07, DensityWeight 1.895898E-06, wHPWL 6.469581E+07, Overflow 7.704750E-01, MaxDensity 5.624E+01, gamma 5.203162E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  320, ( 320,  0,  0), Obj 2.489993E+07, DensityWeight 1.962365E-06, wHPWL 6.479813E+07, Overflow 7.685863E-01, MaxDensity 6.019E+01, gamma 5.159167E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  321, ( 321,  0,  0), Obj 2.505028E+07, DensityWeight 2.031301E-06, wHPWL 6.489656E+07, Overflow 7.663822E-01, MaxDensity 6.364E+01, gamma 5.109547E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.977 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  322, ( 322,  0,  0), Obj 2.521773E+07, DensityWeight 2.103801E-06, wHPWL 6.499171E+07, Overflow 7.642808E-01, MaxDensity 5.596E+01, gamma 5.052244E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.034 ms
+[INFO   ] DREAMPlace - iteration  323, ( 323,  0,  0), Obj 2.540964E+07, DensityWeight 2.179883E-06, wHPWL 6.508393E+07, Overflow 7.622699E-01, MaxDensity 5.586E+01, gamma 4.998213E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  324, ( 324,  0,  0), Obj 2.559607E+07, DensityWeight 2.259642E-06, wHPWL 6.517376E+07, Overflow 7.603047E-01, MaxDensity 5.763E+01, gamma 4.947047E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  325, ( 325,  0,  0), Obj 2.577630E+07, DensityWeight 2.343099E-06, wHPWL 6.525914E+07, Overflow 7.582881E-01, MaxDensity 5.730E+01, gamma 4.897550E+02, time 1.863ms
+[INFO   ] DREAMPlace - full step 4.253 ms
+[INFO   ] DREAMPlace - optimizer step 2.063 ms
+[INFO   ] DREAMPlace - iteration  326, ( 326,  0,  0), Obj 2.595313E+07, DensityWeight 2.431146E-06, wHPWL 6.534024E+07, Overflow 7.561985E-01, MaxDensity 5.226E+01, gamma 4.847275E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.008 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  327, ( 327,  0,  0), Obj 2.613474E+07, DensityWeight 2.524003E-06, wHPWL 6.541999E+07, Overflow 7.545477E-01, MaxDensity 5.849E+01, gamma 4.795724E+02, time 0.576ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  328, ( 328,  0,  0), Obj 2.632344E+07, DensityWeight 2.620905E-06, wHPWL 6.549983E+07, Overflow 7.527092E-01, MaxDensity 5.475E+01, gamma 4.755384E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  329, ( 329,  0,  0), Obj 2.648055E+07, DensityWeight 2.721491E-06, wHPWL 6.557816E+07, Overflow 7.507131E-01, MaxDensity 4.973E+01, gamma 4.710858E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  330, ( 330,  0,  0), Obj 2.665098E+07, DensityWeight 2.826533E-06, wHPWL 6.565523E+07, Overflow 7.490970E-01, MaxDensity 5.966E+01, gamma 4.662986E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  331, ( 331,  0,  0), Obj 2.683450E+07, DensityWeight 2.936144E-06, wHPWL 6.573331E+07, Overflow 7.471458E-01, MaxDensity 5.139E+01, gamma 4.624587E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  332, ( 332,  0,  0), Obj 2.699178E+07, DensityWeight 3.049577E-06, wHPWL 6.581296E+07, Overflow 7.453770E-01, MaxDensity 5.306E+01, gamma 4.578645E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.089 ms
+[INFO   ] DREAMPlace - iteration  333, ( 333,  0,  0), Obj 2.717393E+07, DensityWeight 3.166700E-06, wHPWL 6.589288E+07, Overflow 7.436475E-01, MaxDensity 5.138E+01, gamma 4.537392E+02, time 0.576ms
+[INFO   ] DREAMPlace - full step 3.015 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  334, ( 334,  0,  0), Obj 2.734370E+07, DensityWeight 3.288196E-06, wHPWL 6.597267E+07, Overflow 7.417480E-01, MaxDensity 5.266E+01, gamma 4.497414E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.023 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  335, ( 335,  0,  0), Obj 2.751119E+07, DensityWeight 3.414415E-06, wHPWL 6.605280E+07, Overflow 7.401530E-01, MaxDensity 4.412E+01, gamma 4.453913E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  336, ( 336,  0,  0), Obj 2.769188E+07, DensityWeight 3.545312E-06, wHPWL 6.613385E+07, Overflow 7.391412E-01, MaxDensity 5.833E+01, gamma 4.417711E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.076 ms
+[INFO   ] DREAMPlace - iteration  337, ( 337,  0,  0), Obj 2.785098E+07, DensityWeight 3.680758E-06, wHPWL 6.621497E+07, Overflow 7.377300E-01, MaxDensity 4.409E+01, gamma 4.394899E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 3.003 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  338, ( 338,  0,  0), Obj 2.796630E+07, DensityWeight 3.821336E-06, wHPWL 6.629775E+07, Overflow 7.362939E-01, MaxDensity 4.835E+01, gamma 4.363278E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  339, ( 339,  0,  0), Obj 2.811089E+07, DensityWeight 3.966369E-06, wHPWL 6.638502E+07, Overflow 7.345334E-01, MaxDensity 4.804E+01, gamma 4.331332E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  340, ( 340,  0,  0), Obj 2.826062E+07, DensityWeight 4.114330E-06, wHPWL 6.647966E+07, Overflow 7.327630E-01, MaxDensity 5.159E+01, gamma 4.292491E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 3.018 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  341, ( 341,  0,  0), Obj 2.843669E+07, DensityWeight 4.263424E-06, wHPWL 6.657690E+07, Overflow 7.306274E-01, MaxDensity 4.171E+01, gamma 4.253781E+02, time 0.574ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.073 ms
+[INFO   ] DREAMPlace - iteration  342, ( 342,  0,  0), Obj 2.861368E+07, DensityWeight 4.416326E-06, wHPWL 6.667024E+07, Overflow 7.282338E-01, MaxDensity 4.894E+01, gamma 4.207550E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 3.019 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  343, ( 343,  0,  0), Obj 2.881674E+07, DensityWeight 4.577193E-06, wHPWL 6.675644E+07, Overflow 7.260811E-01, MaxDensity 4.455E+01, gamma 4.156332E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  344, ( 344,  0,  0), Obj 2.903939E+07, DensityWeight 4.748647E-06, wHPWL 6.683767E+07, Overflow 7.234962E-01, MaxDensity 4.406E+01, gamma 4.110801E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 3.000 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  345, ( 345,  0,  0), Obj 2.924554E+07, DensityWeight 4.929936E-06, wHPWL 6.691417E+07, Overflow 7.209607E-01, MaxDensity 4.057E+01, gamma 4.056787E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  346, ( 346,  0,  0), Obj 2.948468E+07, DensityWeight 5.121527E-06, wHPWL 6.698926E+07, Overflow 7.189487E-01, MaxDensity 4.406E+01, gamma 4.004496E+02, time 0.618ms
+[INFO   ] DREAMPlace - full step 3.016 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  347, ( 347,  0,  0), Obj 2.972345E+07, DensityWeight 5.321601E-06, wHPWL 6.706158E+07, Overflow 7.169847E-01, MaxDensity 4.073E+01, gamma 3.963481E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  348, ( 348,  0,  0), Obj 2.992390E+07, DensityWeight 5.531638E-06, wHPWL 6.712982E+07, Overflow 7.150837E-01, MaxDensity 3.951E+01, gamma 3.923849E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  349, ( 349,  0,  0), Obj 3.011899E+07, DensityWeight 5.753224E-06, wHPWL 6.719314E+07, Overflow 7.132743E-01, MaxDensity 3.498E+01, gamma 3.885866E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.083 ms
+[INFO   ] DREAMPlace - iteration  350, ( 350,  0,  0), Obj 3.031014E+07, DensityWeight 5.987798E-06, wHPWL 6.725839E+07, Overflow 7.120299E-01, MaxDensity 3.661E+01, gamma 3.850055E+02, time 0.612ms
+[INFO   ] DREAMPlace - full step 3.052 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  351, ( 351,  0,  0), Obj 3.049713E+07, DensityWeight 6.230261E-06, wHPWL 6.732894E+07, Overflow 7.105753E-01, MaxDensity 3.672E+01, gamma 3.825617E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 3.000 ms
+[INFO   ] DREAMPlace - optimizer step 2.124 ms
+[INFO   ] DREAMPlace - iteration  352, ( 352,  0,  0), Obj 3.064304E+07, DensityWeight 6.477751E-06, wHPWL 6.740454E+07, Overflow 7.091929E-01, MaxDensity 3.464E+01, gamma 3.797249E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 3.067 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  353, ( 353,  0,  0), Obj 3.080448E+07, DensityWeight 6.730341E-06, wHPWL 6.748637E+07, Overflow 7.078989E-01, MaxDensity 3.288E+01, gamma 3.770484E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  354, ( 354,  0,  0), Obj 3.096313E+07, DensityWeight 6.986701E-06, wHPWL 6.757622E+07, Overflow 7.065934E-01, MaxDensity 3.425E+01, gamma 3.745602E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  355, ( 355,  0,  0), Obj 3.111806E+07, DensityWeight 7.244718E-06, wHPWL 6.767234E+07, Overflow 7.049645E-01, MaxDensity 3.486E+01, gamma 3.720664E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.070 ms
+[INFO   ] DREAMPlace - iteration  356, ( 356,  0,  0), Obj 3.127399E+07, DensityWeight 7.505715E-06, wHPWL 6.776942E+07, Overflow 7.036849E-01, MaxDensity 3.188E+01, gamma 3.689783E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.078 ms
+[INFO   ] DREAMPlace - iteration  357, ( 357,  0,  0), Obj 3.145399E+07, DensityWeight 7.775065E-06, wHPWL 6.786534E+07, Overflow 7.019600E-01, MaxDensity 3.428E+01, gamma 3.665702E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  358, ( 358,  0,  0), Obj 3.160824E+07, DensityWeight 8.055374E-06, wHPWL 6.795901E+07, Overflow 7.001379E-01, MaxDensity 3.304E+01, gamma 3.633490E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  359, ( 359,  0,  0), Obj 3.179554E+07, DensityWeight 8.348424E-06, wHPWL 6.805350E+07, Overflow 6.983042E-01, MaxDensity 3.131E+01, gamma 3.599771E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration  360, ( 360,  0,  0), Obj 3.199313E+07, DensityWeight 8.651141E-06, wHPWL 6.814996E+07, Overflow 6.964435E-01, MaxDensity 3.137E+01, gamma 3.566154E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  361, ( 361,  0,  0), Obj 3.219548E+07, DensityWeight 8.962365E-06, wHPWL 6.824737E+07, Overflow 6.943319E-01, MaxDensity 3.225E+01, gamma 3.532361E+02, time 0.576ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.033 ms
+[INFO   ] DREAMPlace - iteration  362, ( 362,  0,  0), Obj 3.240060E+07, DensityWeight 9.283564E-06, wHPWL 6.834033E+07, Overflow 6.923692E-01, MaxDensity 3.469E+01, gamma 3.494400E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  363, ( 363,  0,  0), Obj 3.262543E+07, DensityWeight 9.622239E-06, wHPWL 6.842774E+07, Overflow 6.905422E-01, MaxDensity 3.027E+01, gamma 3.459482E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  364, ( 364,  0,  0), Obj 3.284070E+07, DensityWeight 9.980980E-06, wHPWL 6.851070E+07, Overflow 6.879920E-01, MaxDensity 3.010E+01, gamma 3.427291E+02, time 0.611ms
+[INFO   ] DREAMPlace - full step 3.021 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  365, ( 365,  0,  0), Obj 3.304731E+07, DensityWeight 1.035953E-05, wHPWL 6.859084E+07, Overflow 6.854752E-01, MaxDensity 3.129E+01, gamma 3.382860E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  366, ( 366,  0,  0), Obj 3.330850E+07, DensityWeight 1.075667E-05, wHPWL 6.866995E+07, Overflow 6.827854E-01, MaxDensity 2.887E+01, gamma 3.339575E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.019 ms
+[INFO   ] DREAMPlace - optimizer step 2.033 ms
+[INFO   ] DREAMPlace - iteration  367, ( 367,  0,  0), Obj 3.357128E+07, DensityWeight 1.117063E-05, wHPWL 6.874507E+07, Overflow 6.802896E-01, MaxDensity 3.234E+01, gamma 3.293926E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.963 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  368, ( 368,  0,  0), Obj 3.384674E+07, DensityWeight 1.160697E-05, wHPWL 6.881274E+07, Overflow 6.780000E-01, MaxDensity 3.114E+01, gamma 3.252128E+02, time 0.605ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  369, ( 369,  0,  0), Obj 3.410728E+07, DensityWeight 1.207289E-05, wHPWL 6.887001E+07, Overflow 6.763014E-01, MaxDensity 3.291E+01, gamma 3.214250E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  370, ( 370,  0,  0), Obj 3.435191E+07, DensityWeight 1.257575E-05, wHPWL 6.892174E+07, Overflow 6.738842E-01, MaxDensity 3.030E+01, gamma 3.186434E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  371, ( 371,  0,  0), Obj 3.455416E+07, DensityWeight 1.310964E-05, wHPWL 6.897222E+07, Overflow 6.715711E-01, MaxDensity 3.092E+01, gamma 3.147264E+02, time 0.607ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  372, ( 372,  0,  0), Obj 3.480981E+07, DensityWeight 1.366861E-05, wHPWL 6.902713E+07, Overflow 6.690271E-01, MaxDensity 2.797E+01, gamma 3.110234E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  373, ( 373,  0,  0), Obj 3.506214E+07, DensityWeight 1.424260E-05, wHPWL 6.908334E+07, Overflow 6.662531E-01, MaxDensity 2.827E+01, gamma 3.070010E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 3.003 ms
+[INFO   ] DREAMPlace - optimizer step 2.077 ms
+[INFO   ] DREAMPlace - iteration  374, ( 374,  0,  0), Obj 3.533136E+07, DensityWeight 1.483800E-05, wHPWL 6.913855E+07, Overflow 6.635228E-01, MaxDensity 2.874E+01, gamma 3.026743E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 3.027 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  375, ( 375,  0,  0), Obj 3.561737E+07, DensityWeight 1.546045E-05, wHPWL 6.918880E+07, Overflow 6.607269E-01, MaxDensity 3.305E+01, gamma 2.984751E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  376, ( 376,  0,  0), Obj 3.590024E+07, DensityWeight 1.612016E-05, wHPWL 6.923494E+07, Overflow 6.579561E-01, MaxDensity 3.164E+01, gamma 2.942354E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  377, ( 377,  0,  0), Obj 3.618855E+07, DensityWeight 1.681764E-05, wHPWL 6.927789E+07, Overflow 6.555909E-01, MaxDensity 2.697E+01, gamma 2.900933E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  378, ( 378,  0,  0), Obj 3.647456E+07, DensityWeight 1.755313E-05, wHPWL 6.931818E+07, Overflow 6.528752E-01, MaxDensity 2.910E+01, gamma 2.866036E+02, time 0.603ms
+[INFO   ] DREAMPlace - full step 3.019 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  379, ( 379,  0,  0), Obj 3.673205E+07, DensityWeight 1.832754E-05, wHPWL 6.935755E+07, Overflow 6.499251E-01, MaxDensity 2.825E+01, gamma 2.826486E+02, time 0.601ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  380, ( 380,  0,  0), Obj 3.701399E+07, DensityWeight 1.913860E-05, wHPWL 6.940022E+07, Overflow 6.472057E-01, MaxDensity 2.526E+01, gamma 2.784139E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.977 ms
+[INFO   ] DREAMPlace - optimizer step 2.065 ms
+[INFO   ] DREAMPlace - iteration  381, ( 381,  0,  0), Obj 3.731548E+07, DensityWeight 1.997637E-05, wHPWL 6.944461E+07, Overflow 6.448384E-01, MaxDensity 2.846E+01, gamma 2.745667E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration  382, ( 382,  0,  0), Obj 3.760067E+07, DensityWeight 2.084579E-05, wHPWL 6.948894E+07, Overflow 6.424615E-01, MaxDensity 3.151E+01, gamma 2.712609E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.972 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  383, ( 383,  0,  0), Obj 3.785951E+07, DensityWeight 2.175324E-05, wHPWL 6.953120E+07, Overflow 6.397566E-01, MaxDensity 3.001E+01, gamma 2.679817E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  384, ( 384,  0,  0), Obj 3.811728E+07, DensityWeight 2.270672E-05, wHPWL 6.957686E+07, Overflow 6.366866E-01, MaxDensity 2.738E+01, gamma 2.642982E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  385, ( 385,  0,  0), Obj 3.840024E+07, DensityWeight 2.369077E-05, wHPWL 6.962610E+07, Overflow 6.340637E-01, MaxDensity 2.624E+01, gamma 2.601788E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  386, ( 386,  0,  0), Obj 3.870916E+07, DensityWeight 2.470518E-05, wHPWL 6.967635E+07, Overflow 6.319554E-01, MaxDensity 2.427E+01, gamma 2.567104E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.999 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  387, ( 387,  0,  0), Obj 3.898553E+07, DensityWeight 2.575934E-05, wHPWL 6.971881E+07, Overflow 6.291358E-01, MaxDensity 2.618E+01, gamma 2.539558E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  388, ( 388,  0,  0), Obj 3.922113E+07, DensityWeight 2.688770E-05, wHPWL 6.975902E+07, Overflow 6.261146E-01, MaxDensity 2.536E+01, gamma 2.503182E+02, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  389, ( 389,  0,  0), Obj 3.950593E+07, DensityWeight 2.807429E-05, wHPWL 6.980246E+07, Overflow 6.229014E-01, MaxDensity 2.794E+01, gamma 2.464783E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.080 ms
+[INFO   ] DREAMPlace - iteration  390, ( 390,  0,  0), Obj 3.980809E+07, DensityWeight 2.930000E-05, wHPWL 6.985112E+07, Overflow 6.195974E-01, MaxDensity 2.930E+01, gamma 2.424590E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 3.016 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration  391, ( 391,  0,  0), Obj 4.012264E+07, DensityWeight 3.055703E-05, wHPWL 6.989346E+07, Overflow 6.167933E-01, MaxDensity 2.668E+01, gamma 2.383944E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  392, ( 392,  0,  0), Obj 4.043780E+07, DensityWeight 3.189605E-05, wHPWL 6.992912E+07, Overflow 6.146237E-01, MaxDensity 2.327E+01, gamma 2.349983E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  393, ( 393,  0,  0), Obj 4.071604E+07, DensityWeight 3.332480E-05, wHPWL 6.995419E+07, Overflow 6.123077E-01, MaxDensity 2.216E+01, gamma 2.324038E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.069 ms
+[INFO   ] DREAMPlace - iteration  394, ( 394,  0,  0), Obj 4.094667E+07, DensityWeight 3.486895E-05, wHPWL 6.998251E+07, Overflow 6.099452E-01, MaxDensity 2.648E+01, gamma 2.296660E+02, time 0.609ms
+[INFO   ] DREAMPlace - full step 3.027 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  395, ( 395,  0,  0), Obj 4.118488E+07, DensityWeight 3.646814E-05, wHPWL 7.001032E+07, Overflow 6.075686E-01, MaxDensity 2.861E+01, gamma 2.269064E+02, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  396, ( 396,  0,  0), Obj 4.142645E+07, DensityWeight 3.814340E-05, wHPWL 7.005215E+07, Overflow 6.054288E-01, MaxDensity 2.723E+01, gamma 2.241637E+02, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  397, ( 397,  0,  0), Obj 4.166898E+07, DensityWeight 3.981769E-05, wHPWL 7.009246E+07, Overflow 6.031658E-01, MaxDensity 2.448E+01, gamma 2.217227E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  398, ( 398,  0,  0), Obj 4.189271E+07, DensityWeight 4.157429E-05, wHPWL 7.014256E+07, Overflow 6.006551E-01, MaxDensity 2.361E+01, gamma 2.191701E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.999 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  399, ( 399,  0,  0), Obj 4.212273E+07, DensityWeight 4.334922E-05, wHPWL 7.018998E+07, Overflow 5.976515E-01, MaxDensity 2.151E+01, gamma 2.163725E+02, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  400, ( 400,  0,  0), Obj 4.236886E+07, DensityWeight 4.521676E-05, wHPWL 7.025041E+07, Overflow 5.943207E-01, MaxDensity 2.426E+01, gamma 2.130725E+02, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  401, ( 401,  0,  0), Obj 4.264816E+07, DensityWeight 4.707937E-05, wHPWL 7.030549E+07, Overflow 5.908323E-01, MaxDensity 2.439E+01, gamma 2.094718E+02, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  402, ( 402,  0,  0), Obj 4.294738E+07, DensityWeight 4.905523E-05, wHPWL 7.036398E+07, Overflow 5.871273E-01, MaxDensity 2.499E+01, gamma 2.057660E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.078 ms
+[INFO   ] DREAMPlace - iteration  403, ( 403,  0,  0), Obj 4.325378E+07, DensityWeight 5.108973E-05, wHPWL 7.040528E+07, Overflow 5.837103E-01, MaxDensity 2.677E+01, gamma 2.019018E+02, time 0.609ms
+[INFO   ] DREAMPlace - full step 3.036 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  404, ( 404,  0,  0), Obj 4.357012E+07, DensityWeight 5.333623E-05, wHPWL 7.044363E+07, Overflow 5.804641E-01, MaxDensity 2.595E+01, gamma 1.984025E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  405, ( 405,  0,  0), Obj 4.386495E+07, DensityWeight 5.570443E-05, wHPWL 7.046395E+07, Overflow 5.777668E-01, MaxDensity 2.291E+01, gamma 1.951341E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  406, ( 406,  0,  0), Obj 4.414469E+07, DensityWeight 5.832421E-05, wHPWL 7.048354E+07, Overflow 5.750877E-01, MaxDensity 1.846E+01, gamma 1.924595E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.075 ms
+[INFO   ] DREAMPlace - iteration  407, ( 407,  0,  0), Obj 4.438564E+07, DensityWeight 6.107346E-05, wHPWL 7.049124E+07, Overflow 5.732840E-01, MaxDensity 2.140E+01, gamma 1.898391E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.998 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  408, ( 408,  0,  0), Obj 4.462141E+07, DensityWeight 6.405829E-05, wHPWL 7.050717E+07, Overflow 5.710008E-01, MaxDensity 2.448E+01, gamma 1.880951E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.972 ms
+[INFO   ] DREAMPlace - optimizer step 2.747 ms
+[INFO   ] DREAMPlace - iteration  409, ( 409,  0,  0), Obj 4.480085E+07, DensityWeight 6.711202E-05, wHPWL 7.051978E+07, Overflow 5.685381E-01, MaxDensity 2.554E+01, gamma 1.859104E+02, time 0.583ms
+[INFO   ] DREAMPlace - full step 3.681 ms
+[INFO   ] DREAMPlace - optimizer step 2.104 ms
+[INFO   ] DREAMPlace - iteration  410, ( 410,  0,  0), Obj 4.500751E+07, DensityWeight 7.034381E-05, wHPWL 7.054918E+07, Overflow 5.661336E-01, MaxDensity 2.420E+01, gamma 1.835824E+02, time 2.841ms
+[INFO   ] DREAMPlace - full step 5.311 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  411, ( 411,  0,  0), Obj 4.522643E+07, DensityWeight 7.355890E-05, wHPWL 7.058016E+07, Overflow 5.627611E-01, MaxDensity 2.082E+01, gamma 1.813376E+02, time 0.600ms
+[INFO   ] DREAMPlace - full step 3.004 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  412, ( 412,  0,  0), Obj 4.544234E+07, DensityWeight 7.690404E-05, wHPWL 7.062129E+07, Overflow 5.592274E-01, MaxDensity 2.070E+01, gamma 1.782351E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.306 ms
+[INFO   ] DREAMPlace - iteration  413, ( 413,  0,  0), Obj 4.571415E+07, DensityWeight 8.028760E-05, wHPWL 7.065709E+07, Overflow 5.557175E-01, MaxDensity 1.900E+01, gamma 1.750413E+02, time 0.576ms
+[INFO   ] DREAMPlace - full step 3.227 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  414, ( 414,  0,  0), Obj 4.599602E+07, DensityWeight 8.388232E-05, wHPWL 7.069070E+07, Overflow 5.520157E-01, MaxDensity 1.936E+01, gamma 1.719256E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.032 ms
+[INFO   ] DREAMPlace - iteration  415, ( 415,  0,  0), Obj 4.627082E+07, DensityWeight 8.766467E-05, wHPWL 7.070684E+07, Overflow 5.484140E-01, MaxDensity 1.916E+01, gamma 1.686998E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.961 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  416, ( 416,  0,  0), Obj 4.655146E+07, DensityWeight 9.184108E-05, wHPWL 7.071520E+07, Overflow 5.447042E-01, MaxDensity 2.175E+01, gamma 1.656192E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.026 ms
+[INFO   ] DREAMPlace - iteration  417, ( 417,  0,  0), Obj 4.682235E+07, DensityWeight 9.632082E-05, wHPWL 7.070904E+07, Overflow 5.410711E-01, MaxDensity 2.252E+01, gamma 1.625050E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.953 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  418, ( 418,  0,  0), Obj 4.709686E+07, DensityWeight 9.911413E-05, wHPWL 7.070203E+07, Overflow 5.372799E-01, MaxDensity 2.157E+01, gamma 1.595119E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.963 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration  419, ( 419,  0,  0), Obj 4.736291E+07, DensityWeight 1.019884E-04, wHPWL 7.068346E+07, Overflow 5.330472E-01, MaxDensity 1.957E+01, gamma 1.564474E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  420, ( 420,  0,  0), Obj 4.763303E+07, DensityWeight 1.049461E-04, wHPWL 7.065946E+07, Overflow 5.295482E-01, MaxDensity 2.038E+01, gamma 1.530955E+02, time 0.602ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  421, ( 421,  0,  0), Obj 4.791991E+07, DensityWeight 1.079896E-04, wHPWL 7.061473E+07, Overflow 5.268169E-01, MaxDensity 1.969E+01, gamma 1.503788E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  422, ( 422,  0,  0), Obj 4.815790E+07, DensityWeight 1.111213E-04, wHPWL 7.055973E+07, Overflow 5.251716E-01, MaxDensity 1.823E+01, gamma 1.482918E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.974 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  423, ( 423,  0,  0), Obj 4.834207E+07, DensityWeight 1.143438E-04, wHPWL 7.049078E+07, Overflow 5.235432E-01, MaxDensity 1.603E+01, gamma 1.470486E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  424, ( 424,  0,  0), Obj 4.845925E+07, DensityWeight 1.176598E-04, wHPWL 7.042778E+07, Overflow 5.220765E-01, MaxDensity 1.592E+01, gamma 1.458284E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.963 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  425, ( 425,  0,  0), Obj 4.857157E+07, DensityWeight 1.210719E-04, wHPWL 7.037222E+07, Overflow 5.208250E-01, MaxDensity 1.649E+01, gamma 1.447382E+02, time 0.588ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  426, ( 426,  0,  0), Obj 4.867598E+07, DensityWeight 1.245830E-04, wHPWL 7.033742E+07, Overflow 5.193706E-01, MaxDensity 1.677E+01, gamma 1.438142E+02, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.977 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  427, ( 427,  0,  0), Obj 4.876681E+07, DensityWeight 1.281959E-04, wHPWL 7.030962E+07, Overflow 5.171480E-01, MaxDensity 1.650E+01, gamma 1.427479E+02, time 0.572ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  428, ( 428,  0,  0), Obj 4.886753E+07, DensityWeight 1.319136E-04, wHPWL 7.029905E+07, Overflow 5.148432E-01, MaxDensity 1.585E+01, gamma 1.411337E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  429, ( 429,  0,  0), Obj 4.901037E+07, DensityWeight 1.357391E-04, wHPWL 7.029213E+07, Overflow 5.121723E-01, MaxDensity 1.608E+01, gamma 1.394790E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  430, ( 430,  0,  0), Obj 4.915982E+07, DensityWeight 1.396755E-04, wHPWL 7.029412E+07, Overflow 5.098049E-01, MaxDensity 1.608E+01, gamma 1.375858E+02, time 0.574ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  431, ( 431,  0,  0), Obj 4.932668E+07, DensityWeight 1.466185E-04, wHPWL 7.028678E+07, Overflow 5.072682E-01, MaxDensity 1.561E+01, gamma 1.359292E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.105 ms
+[INFO   ] DREAMPlace - iteration  432, ( 432,  0,  0), Obj 4.947610E+07, DensityWeight 1.508705E-04, wHPWL 7.027998E+07, Overflow 5.050616E-01, MaxDensity 1.557E+01, gamma 1.341763E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 3.045 ms
+[INFO   ] DREAMPlace - optimizer step 2.030 ms
+[INFO   ] DREAMPlace - iteration  433, ( 433,  0,  0), Obj 4.963764E+07, DensityWeight 1.552457E-04, wHPWL 7.027538E+07, Overflow 5.015322E-01, MaxDensity 1.624E+01, gamma 1.326698E+02, time 0.576ms
+[INFO   ] DREAMPlace - full step 2.950 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  434, ( 434,  0,  0), Obj 4.978528E+07, DensityWeight 1.597479E-04, wHPWL 7.028082E+07, Overflow 4.978707E-01, MaxDensity 1.673E+01, gamma 1.302954E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  435, ( 435,  0,  0), Obj 5.000413E+07, DensityWeight 1.676081E-04, wHPWL 7.028181E+07, Overflow 4.943083E-01, MaxDensity 1.686E+01, gamma 1.278770E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.030 ms
+[INFO   ] DREAMPlace - iteration  436, ( 436,  0,  0), Obj 5.023150E+07, DensityWeight 1.759642E-04, wHPWL 7.028065E+07, Overflow 4.913742E-01, MaxDensity 1.672E+01, gamma 1.255671E+02, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.960 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  437, ( 437,  0,  0), Obj 5.045477E+07, DensityWeight 1.810671E-04, wHPWL 7.027048E+07, Overflow 4.883977E-01, MaxDensity 1.610E+01, gamma 1.236960E+02, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  438, ( 438,  0,  0), Obj 5.064698E+07, DensityWeight 1.863181E-04, wHPWL 7.026910E+07, Overflow 4.851865E-01, MaxDensity 1.465E+01, gamma 1.218263E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.072 ms
+[INFO   ] DREAMPlace - iteration  439, ( 439,  0,  0), Obj 5.084286E+07, DensityWeight 1.917213E-04, wHPWL 7.026251E+07, Overflow 4.822940E-01, MaxDensity 1.317E+01, gamma 1.198409E+02, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.999 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  440, ( 440,  0,  0), Obj 5.105170E+07, DensityWeight 1.972812E-04, wHPWL 7.026208E+07, Overflow 4.793739E-01, MaxDensity 1.380E+01, gamma 1.180803E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.974 ms
+[INFO   ] DREAMPlace - optimizer step 2.029 ms
+[INFO   ] DREAMPlace - iteration  441, ( 441,  0,  0), Obj 5.124363E+07, DensityWeight 2.030024E-04, wHPWL 7.025038E+07, Overflow 4.768748E-01, MaxDensity 1.376E+01, gamma 1.163291E+02, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.965 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  442, ( 442,  0,  0), Obj 5.143435E+07, DensityWeight 2.088895E-04, wHPWL 7.024218E+07, Overflow 4.745919E-01, MaxDensity 1.314E+01, gamma 1.148510E+02, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  443, ( 443,  0,  0), Obj 5.160232E+07, DensityWeight 2.149473E-04, wHPWL 7.022492E+07, Overflow 4.722607E-01, MaxDensity 1.198E+01, gamma 1.135172E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  444, ( 444,  0,  0), Obj 5.175764E+07, DensityWeight 2.211808E-04, wHPWL 7.021466E+07, Overflow 4.693649E-01, MaxDensity 1.181E+01, gamma 1.121711E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  445, ( 445,  0,  0), Obj 5.191410E+07, DensityWeight 2.275950E-04, wHPWL 7.020246E+07, Overflow 4.669634E-01, MaxDensity 1.153E+01, gamma 1.105213E+02, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  446, ( 446,  0,  0), Obj 5.209856E+07, DensityWeight 2.341953E-04, wHPWL 7.019877E+07, Overflow 4.647910E-01, MaxDensity 1.143E+01, gamma 1.091715E+02, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  447, ( 447,  0,  0), Obj 5.225702E+07, DensityWeight 2.409869E-04, wHPWL 7.018506E+07, Overflow 4.623919E-01, MaxDensity 1.111E+01, gamma 1.079647E+02, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.967 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  448, ( 448,  0,  0), Obj 5.239958E+07, DensityWeight 2.479756E-04, wHPWL 7.017247E+07, Overflow 4.605592E-01, MaxDensity 1.124E+01, gamma 1.066475E+02, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  449, ( 449,  0,  0), Obj 5.254904E+07, DensityWeight 2.551669E-04, wHPWL 7.015510E+07, Overflow 4.588446E-01, MaxDensity 1.149E+01, gamma 1.056520E+02, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.999 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  450, ( 450,  0,  0), Obj 5.267182E+07, DensityWeight 2.625667E-04, wHPWL 7.014603E+07, Overflow 4.571625E-01, MaxDensity 1.068E+01, gamma 1.047292E+02, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  451, ( 451,  0,  0), Obj 5.278767E+07, DensityWeight 2.701812E-04, wHPWL 7.013976E+07, Overflow 4.553853E-01, MaxDensity 1.019E+01, gamma 1.038316E+02, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  452, ( 452,  0,  0), Obj 5.290255E+07, DensityWeight 2.780164E-04, wHPWL 7.014502E+07, Overflow 4.529747E-01, MaxDensity 1.075E+01, gamma 1.028917E+02, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  453, ( 453,  0,  0), Obj 5.302209E+07, DensityWeight 2.917034E-04, wHPWL 7.015235E+07, Overflow 4.506120E-01, MaxDensity 1.082E+01, gamma 1.016304E+02, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  454, ( 454,  0,  0), Obj 5.317186E+07, DensityWeight 3.059755E-04, wHPWL 7.016714E+07, Overflow 4.477269E-01, MaxDensity 1.010E+01, gamma 1.004091E+02, time 0.594ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  455, ( 455,  0,  0), Obj 5.332394E+07, DensityWeight 3.206125E-04, wHPWL 7.018499E+07, Overflow 4.441012E-01, MaxDensity 1.058E+01, gamma 9.893764E+01, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  456, ( 456,  0,  0), Obj 5.350565E+07, DensityWeight 3.358066E-04, wHPWL 7.021669E+07, Overflow 4.397102E-01, MaxDensity 1.059E+01, gamma 9.711909E+01, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.034 ms
+[INFO   ] DREAMPlace - iteration  457, ( 457,  0,  0), Obj 5.372739E+07, DensityWeight 3.510424E-04, wHPWL 7.024837E+07, Overflow 4.353064E-01, MaxDensity 1.023E+01, gamma 9.496132E+01, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.973 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  458, ( 458,  0,  0), Obj 5.398904E+07, DensityWeight 3.669703E-04, wHPWL 7.028360E+07, Overflow 4.306226E-01, MaxDensity 9.453E+00, gamma 9.284542E+01, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  459, ( 459,  0,  0), Obj 5.425158E+07, DensityWeight 3.834310E-04, wHPWL 7.030357E+07, Overflow 4.261485E-01, MaxDensity 8.851E+00, gamma 9.064673E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  460, ( 460,  0,  0), Obj 5.452433E+07, DensityWeight 4.014834E-04, wHPWL 7.031744E+07, Overflow 4.219668E-01, MaxDensity 8.263E+00, gamma 8.859509E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  461, ( 461,  0,  0), Obj 5.478578E+07, DensityWeight 4.207431E-04, wHPWL 7.031801E+07, Overflow 4.173380E-01, MaxDensity 8.806E+00, gamma 8.671956E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.025 ms
+[INFO   ] DREAMPlace - iteration  462, ( 462,  0,  0), Obj 5.503270E+07, DensityWeight 4.417453E-04, wHPWL 7.031813E+07, Overflow 4.130633E-01, MaxDensity 8.278E+00, gamma 8.468974E+01, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.957 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  463, ( 463,  0,  0), Obj 5.529722E+07, DensityWeight 4.638247E-04, wHPWL 7.031363E+07, Overflow 4.090738E-01, MaxDensity 7.936E+00, gamma 8.285741E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  464, ( 464,  0,  0), Obj 5.554514E+07, DensityWeight 4.772757E-04, wHPWL 7.031131E+07, Overflow 4.054750E-01, MaxDensity 7.654E+00, gamma 8.118314E+01, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  465, ( 465,  0,  0), Obj 5.577781E+07, DensityWeight 4.911167E-04, wHPWL 7.030678E+07, Overflow 4.024356E-01, MaxDensity 7.754E+00, gamma 7.970187E+01, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.101 ms
+[INFO   ] DREAMPlace - iteration  466, ( 466,  0,  0), Obj 5.598644E+07, DensityWeight 5.053591E-04, wHPWL 7.030030E+07, Overflow 4.002958E-01, MaxDensity 8.073E+00, gamma 7.847195E+01, time 0.578ms
+[INFO   ] DREAMPlace - full step 3.020 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  467, ( 467,  0,  0), Obj 5.616228E+07, DensityWeight 5.200145E-04, wHPWL 7.028337E+07, Overflow 3.978777E-01, MaxDensity 7.884E+00, gamma 7.761741E+01, time 0.607ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.035 ms
+[INFO   ] DREAMPlace - iteration  468, ( 468,  0,  0), Obj 5.629261E+07, DensityWeight 5.350949E-04, wHPWL 7.026959E+07, Overflow 3.956235E-01, MaxDensity 7.518E+00, gamma 7.666296E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.960 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  469, ( 469,  0,  0), Obj 5.642878E+07, DensityWeight 5.506127E-04, wHPWL 7.025483E+07, Overflow 3.933979E-01, MaxDensity 7.162E+00, gamma 7.578381E+01, time 0.572ms
+[INFO   ] DREAMPlace - full step 2.966 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  470, ( 470,  0,  0), Obj 5.655492E+07, DensityWeight 5.665805E-04, wHPWL 7.024775E+07, Overflow 3.908633E-01, MaxDensity 7.483E+00, gamma 7.492565E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.033 ms
+[INFO   ] DREAMPlace - iteration  471, ( 471,  0,  0), Obj 5.667463E+07, DensityWeight 5.830114E-04, wHPWL 7.023475E+07, Overflow 3.884217E-01, MaxDensity 7.439E+00, gamma 7.396019E+01, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.965 ms
+[INFO   ] DREAMPlace - optimizer step 2.036 ms
+[INFO   ] DREAMPlace - iteration  472, ( 472,  0,  0), Obj 5.680111E+07, DensityWeight 5.999187E-04, wHPWL 7.022438E+07, Overflow 3.855113E-01, MaxDensity 7.111E+00, gamma 7.304195E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.959 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  473, ( 473,  0,  0), Obj 5.692063E+07, DensityWeight 6.173164E-04, wHPWL 7.020720E+07, Overflow 3.825844E-01, MaxDensity 6.744E+00, gamma 7.196226E+01, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  474, ( 474,  0,  0), Obj 5.705556E+07, DensityWeight 6.352186E-04, wHPWL 7.019287E+07, Overflow 3.802860E-01, MaxDensity 7.153E+00, gamma 7.089253E+01, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  475, ( 475,  0,  0), Obj 5.718907E+07, DensityWeight 6.536400E-04, wHPWL 7.017199E+07, Overflow 3.775629E-01, MaxDensity 7.527E+00, gamma 7.006370E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  476, ( 476,  0,  0), Obj 5.729626E+07, DensityWeight 6.725956E-04, wHPWL 7.015304E+07, Overflow 3.753800E-01, MaxDensity 7.641E+00, gamma 6.909422E+01, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  477, ( 477,  0,  0), Obj 5.741869E+07, DensityWeight 6.921010E-04, wHPWL 7.013424E+07, Overflow 3.728620E-01, MaxDensity 7.635E+00, gamma 6.832677E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  478, ( 478,  0,  0), Obj 5.752211E+07, DensityWeight 7.121719E-04, wHPWL 7.012200E+07, Overflow 3.705120E-01, MaxDensity 7.353E+00, gamma 6.745206E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  479, ( 479,  0,  0), Obj 5.763904E+07, DensityWeight 7.328249E-04, wHPWL 7.011157E+07, Overflow 3.682394E-01, MaxDensity 6.993E+00, gamma 6.664585E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.967 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  480, ( 480,  0,  0), Obj 5.775051E+07, DensityWeight 7.540769E-04, wHPWL 7.010589E+07, Overflow 3.656439E-01, MaxDensity 6.502E+00, gamma 6.587531E+01, time 0.569ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.035 ms
+[INFO   ] DREAMPlace - iteration  481, ( 481,  0,  0), Obj 5.785954E+07, DensityWeight 7.759451E-04, wHPWL 7.009944E+07, Overflow 3.631100E-01, MaxDensity 7.333E+00, gamma 6.500624E+01, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.961 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  482, ( 482,  0,  0), Obj 5.798238E+07, DensityWeight 7.984476E-04, wHPWL 7.009838E+07, Overflow 3.599457E-01, MaxDensity 6.732E+00, gamma 6.416884E+01, time 0.605ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  483, ( 483,  0,  0), Obj 5.810358E+07, DensityWeight 8.216026E-04, wHPWL 7.009343E+07, Overflow 3.569570E-01, MaxDensity 6.738E+00, gamma 6.313821E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  484, ( 484,  0,  0), Obj 5.824854E+07, DensityWeight 8.454291E-04, wHPWL 7.009154E+07, Overflow 3.543853E-01, MaxDensity 6.668E+00, gamma 6.218002E+01, time 0.599ms
+[INFO   ] DREAMPlace - full step 3.008 ms
+[INFO   ] DREAMPlace - optimizer step 2.033 ms
+[INFO   ] DREAMPlace - iteration  485, ( 485,  0,  0), Obj 5.838510E+07, DensityWeight 8.699466E-04, wHPWL 7.007922E+07, Overflow 3.522747E-01, MaxDensity 6.464E+00, gamma 6.136713E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.966 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  486, ( 486,  0,  0), Obj 5.850536E+07, DensityWeight 8.951750E-04, wHPWL 7.006800E+07, Overflow 3.497303E-01, MaxDensity 6.970E+00, gamma 6.070797E+01, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  487, ( 487,  0,  0), Obj 5.860545E+07, DensityWeight 9.211351E-04, wHPWL 7.005124E+07, Overflow 3.474848E-01, MaxDensity 7.067E+00, gamma 5.992272E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  488, ( 488,  0,  0), Obj 5.872154E+07, DensityWeight 9.478481E-04, wHPWL 7.004371E+07, Overflow 3.448492E-01, MaxDensity 6.185E+00, gamma 5.923815E+01, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.073 ms
+[INFO   ] DREAMPlace - iteration  489, ( 489,  0,  0), Obj 5.882610E+07, DensityWeight 9.753357E-04, wHPWL 7.003386E+07, Overflow 3.427247E-01, MaxDensity 7.038E+00, gamma 5.844460E+01, time 0.593ms
+[INFO   ] DREAMPlace - full step 3.020 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  490, ( 490,  0,  0), Obj 5.894380E+07, DensityWeight 1.003620E-03, wHPWL 7.003034E+07, Overflow 3.401295E-01, MaxDensity 6.976E+00, gamma 5.781271E+01, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  491, ( 491,  0,  0), Obj 5.904133E+07, DensityWeight 1.032725E-03, wHPWL 7.002178E+07, Overflow 3.375685E-01, MaxDensity 6.019E+00, gamma 5.705008E+01, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  492, ( 492,  0,  0), Obj 5.915473E+07, DensityWeight 1.062675E-03, wHPWL 7.001982E+07, Overflow 3.350461E-01, MaxDensity 5.866E+00, gamma 5.630736E+01, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  493, ( 493,  0,  0), Obj 5.926641E+07, DensityWeight 1.093492E-03, wHPWL 7.001358E+07, Overflow 3.326019E-01, MaxDensity 5.807E+00, gamma 5.558530E+01, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  494, ( 494,  0,  0), Obj 5.937589E+07, DensityWeight 1.125203E-03, wHPWL 7.000875E+07, Overflow 3.303686E-01, MaxDensity 6.341E+00, gamma 5.489444E+01, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  495, ( 495,  0,  0), Obj 5.948030E+07, DensityWeight 1.157834E-03, wHPWL 6.999852E+07, Overflow 3.276884E-01, MaxDensity 6.715E+00, gamma 5.427071E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  496, ( 496,  0,  0), Obj 5.957664E+07, DensityWeight 1.191412E-03, wHPWL 6.999078E+07, Overflow 3.253889E-01, MaxDensity 6.707E+00, gamma 5.353149E+01, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  497, ( 497,  0,  0), Obj 5.968744E+07, DensityWeight 1.225963E-03, wHPWL 6.998180E+07, Overflow 3.235836E-01, MaxDensity 6.487E+00, gamma 5.290533E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  498, ( 498,  0,  0), Obj 5.978567E+07, DensityWeight 1.261516E-03, wHPWL 6.997504E+07, Overflow 3.212948E-01, MaxDensity 6.229E+00, gamma 5.241887E+01, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  499, ( 499,  0,  0), Obj 5.986696E+07, DensityWeight 1.298100E-03, wHPWL 6.996702E+07, Overflow 3.188510E-01, MaxDensity 5.602E+00, gamma 5.180853E+01, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  500, ( 500,  0,  0), Obj 5.996388E+07, DensityWeight 1.335745E-03, wHPWL 6.996664E+07, Overflow 3.160375E-01, MaxDensity 5.578E+00, gamma 5.116473E+01, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  501, ( 501,  0,  0), Obj 6.006764E+07, DensityWeight 1.374481E-03, wHPWL 6.996645E+07, Overflow 3.133505E-01, MaxDensity 5.648E+00, gamma 5.043343E+01, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.050 ms
+[INFO   ] DREAMPlace - iteration  502, ( 502,  0,  0), Obj 6.018303E+07, DensityWeight 1.414341E-03, wHPWL 6.996942E+07, Overflow 3.107573E-01, MaxDensity 5.423E+00, gamma 4.974477E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  503, ( 503,  0,  0), Obj 6.029292E+07, DensityWeight 1.484442E-03, wHPWL 6.996530E+07, Overflow 3.082895E-01, MaxDensity 5.425E+00, gamma 4.908908E+01, time 0.574ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.028 ms
+[INFO   ] DREAMPlace - iteration  504, ( 504,  0,  0), Obj 6.039768E+07, DensityWeight 1.527491E-03, wHPWL 6.996098E+07, Overflow 3.058856E-01, MaxDensity 5.567E+00, gamma 4.847309E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  505, ( 505,  0,  0), Obj 6.050489E+07, DensityWeight 1.571789E-03, wHPWL 6.996462E+07, Overflow 3.028163E-01, MaxDensity 5.862E+00, gamma 4.788052E+01, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.002 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  506, ( 506,  0,  0), Obj 6.061196E+07, DensityWeight 1.649539E-03, wHPWL 6.997252E+07, Overflow 2.998247E-01, MaxDensity 5.827E+00, gamma 4.713442E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  507, ( 507,  0,  0), Obj 6.073856E+07, DensityWeight 1.730110E-03, wHPWL 6.997832E+07, Overflow 2.970423E-01, MaxDensity 5.612E+00, gamma 4.641840E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  508, ( 508,  0,  0), Obj 6.086745E+07, DensityWeight 1.815148E-03, wHPWL 6.998966E+07, Overflow 2.935421E-01, MaxDensity 6.669E+00, gamma 4.576221E+01, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  509, ( 509,  0,  0), Obj 6.099470E+07, DensityWeight 1.902896E-03, wHPWL 7.000650E+07, Overflow 2.900999E-01, MaxDensity 6.663E+00, gamma 4.494991E+01, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  510, ( 510,  0,  0), Obj 6.114756E+07, DensityWeight 1.993353E-03, wHPWL 7.003038E+07, Overflow 2.858814E-01, MaxDensity 6.203E+00, gamma 4.416512E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.035 ms
+[INFO   ] DREAMPlace - iteration  511, ( 511,  0,  0), Obj 6.129949E+07, DensityWeight 2.086065E-03, wHPWL 7.005250E+07, Overflow 2.816862E-01, MaxDensity 6.732E+00, gamma 4.322202E+01, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.968 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  512, ( 512,  0,  0), Obj 6.147270E+07, DensityWeight 2.183625E-03, wHPWL 7.007224E+07, Overflow 2.773272E-01, MaxDensity 5.880E+00, gamma 4.230409E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  513, ( 513,  0,  0), Obj 6.164154E+07, DensityWeight 2.286507E-03, wHPWL 7.008392E+07, Overflow 2.733960E-01, MaxDensity 5.716E+00, gamma 4.137098E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.980 ms
+[INFO   ] DREAMPlace - optimizer step 2.045 ms
+[INFO   ] DREAMPlace - iteration  514, ( 514,  0,  0), Obj 6.181028E+07, DensityWeight 2.396926E-03, wHPWL 7.008971E+07, Overflow 2.701162E-01, MaxDensity 5.719E+00, gamma 4.054708E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.965 ms
+[INFO   ] DREAMPlace - optimizer step 2.069 ms
+[INFO   ] DREAMPlace - iteration  515, ( 515,  0,  0), Obj 6.196080E+07, DensityWeight 2.514741E-03, wHPWL 7.008885E+07, Overflow 2.667152E-01, MaxDensity 5.318E+00, gamma 3.987230E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 3.006 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  516, ( 516,  0,  0), Obj 6.208906E+07, DensityWeight 2.587669E-03, wHPWL 7.008850E+07, Overflow 2.631429E-01, MaxDensity 4.874E+00, gamma 3.918441E+01, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.983 ms
+[INFO   ] DREAMPlace - optimizer step 2.034 ms
+[INFO   ] DREAMPlace - iteration  517, ( 517,  0,  0), Obj 6.221818E+07, DensityWeight 2.662711E-03, wHPWL 7.008996E+07, Overflow 2.594831E-01, MaxDensity 4.675E+00, gamma 3.847467E+01, time 0.596ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  518, ( 518,  0,  0), Obj 6.234470E+07, DensityWeight 2.795279E-03, wHPWL 7.008630E+07, Overflow 2.562193E-01, MaxDensity 4.628E+00, gamma 3.776088E+01, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  519, ( 519,  0,  0), Obj 6.246351E+07, DensityWeight 2.876343E-03, wHPWL 7.007138E+07, Overflow 2.539225E-01, MaxDensity 4.694E+00, gamma 3.713550E+01, time 0.601ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.040 ms
+[INFO   ] DREAMPlace - iteration  520, ( 520,  0,  0), Obj 6.257040E+07, DensityWeight 2.959757E-03, wHPWL 7.006026E+07, Overflow 2.510916E-01, MaxDensity 4.817E+00, gamma 3.670161E+01, time 0.612ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  521, ( 521,  0,  0), Obj 6.264792E+07, DensityWeight 3.045590E-03, wHPWL 7.004698E+07, Overflow 2.488565E-01, MaxDensity 4.597E+00, gamma 3.617382E+01, time 0.576ms
+[INFO   ] DREAMPlace - full step 2.969 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  522, ( 522,  0,  0), Obj 6.273550E+07, DensityWeight 3.133912E-03, wHPWL 7.003640E+07, Overflow 2.468042E-01, MaxDensity 4.704E+00, gamma 3.576245E+01, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.138 ms
+[INFO   ] DREAMPlace - iteration  523, ( 523,  0,  0), Obj 6.280501E+07, DensityWeight 3.224795E-03, wHPWL 7.002427E+07, Overflow 2.448613E-01, MaxDensity 4.799E+00, gamma 3.538887E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 3.064 ms
+[INFO   ] DREAMPlace - optimizer step 2.030 ms
+[INFO   ] DREAMPlace - iteration  524, ( 524,  0,  0), Obj 6.286877E+07, DensityWeight 3.318315E-03, wHPWL 7.001434E+07, Overflow 2.429338E-01, MaxDensity 4.698E+00, gamma 3.503878E+01, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.971 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  525, ( 525,  0,  0), Obj 6.292990E+07, DensityWeight 3.414546E-03, wHPWL 7.000835E+07, Overflow 2.408042E-01, MaxDensity 4.781E+00, gamma 3.469492E+01, time 0.576ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  526, ( 526,  0,  0), Obj 6.299206E+07, DensityWeight 3.513568E-03, wHPWL 7.000602E+07, Overflow 2.385782E-01, MaxDensity 4.425E+00, gamma 3.431891E+01, time 0.571ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  527, ( 527,  0,  0), Obj 6.305976E+07, DensityWeight 3.615462E-03, wHPWL 7.000670E+07, Overflow 2.364148E-01, MaxDensity 4.333E+00, gamma 3.393023E+01, time 0.569ms
+[INFO   ] DREAMPlace - full step 2.955 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  528, ( 528,  0,  0), Obj 6.313047E+07, DensityWeight 3.795870E-03, wHPWL 7.000780E+07, Overflow 2.340550E-01, MaxDensity 4.034E+00, gamma 3.355669E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  529, ( 529,  0,  0), Obj 6.319913E+07, DensityWeight 3.985055E-03, wHPWL 7.000822E+07, Overflow 2.318862E-01, MaxDensity 4.257E+00, gamma 3.315395E+01, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  530, ( 530,  0,  0), Obj 6.327975E+07, DensityWeight 4.184060E-03, wHPWL 7.001766E+07, Overflow 2.290406E-01, MaxDensity 4.318E+00, gamma 3.278805E+01, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  531, ( 531,  0,  0), Obj 6.336323E+07, DensityWeight 4.387485E-03, wHPWL 7.003616E+07, Overflow 2.252253E-01, MaxDensity 3.895E+00, gamma 3.231410E+01, time 0.594ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  532, ( 532,  0,  0), Obj 6.346864E+07, DensityWeight 4.594997E-03, wHPWL 7.006101E+07, Overflow 2.210100E-01, MaxDensity 4.008E+00, gamma 3.168937E+01, time 0.607ms
+[INFO   ] DREAMPlace - full step 3.022 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  533, ( 533,  0,  0), Obj 6.359792E+07, DensityWeight 4.808064E-03, wHPWL 7.008438E+07, Overflow 2.166621E-01, MaxDensity 3.943E+00, gamma 3.101318E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  534, ( 534,  0,  0), Obj 6.373350E+07, DensityWeight 5.032042E-03, wHPWL 7.009851E+07, Overflow 2.128136E-01, MaxDensity 3.928E+00, gamma 3.033083E+01, time 0.585ms
+[INFO   ] DREAMPlace - full step 3.001 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  535, ( 535,  0,  0), Obj 6.386514E+07, DensityWeight 5.273248E-03, wHPWL 7.010226E+07, Overflow 2.097258E-01, MaxDensity 3.682E+00, gamma 2.973939E+01, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  536, ( 536,  0,  0), Obj 6.397918E+07, DensityWeight 5.534021E-03, wHPWL 7.009768E+07, Overflow 2.070180E-01, MaxDensity 3.911E+00, gamma 2.927321E+01, time 0.601ms
+[INFO   ] DREAMPlace - full step 3.013 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  537, ( 537,  0,  0), Obj 6.407189E+07, DensityWeight 5.694508E-03, wHPWL 7.009263E+07, Overflow 2.044238E-01, MaxDensity 3.949E+00, gamma 2.887041E+01, time 0.586ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  538, ( 538,  0,  0), Obj 6.415456E+07, DensityWeight 5.859649E-03, wHPWL 7.009072E+07, Overflow 2.015714E-01, MaxDensity 3.836E+00, gamma 2.848972E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  539, ( 539,  0,  0), Obj 6.422794E+07, DensityWeight 6.029579E-03, wHPWL 7.008509E+07, Overflow 1.992108E-01, MaxDensity 3.713E+00, gamma 2.807692E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.030 ms
+[INFO   ] DREAMPlace - iteration  540, ( 540,  0,  0), Obj 6.430019E+07, DensityWeight 6.204437E-03, wHPWL 7.007454E+07, Overflow 1.974640E-01, MaxDensity 3.682E+00, gamma 2.773983E+01, time 0.598ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  541, ( 541,  0,  0), Obj 6.435796E+07, DensityWeight 6.384366E-03, wHPWL 7.006130E+07, Overflow 1.962525E-01, MaxDensity 3.486E+00, gamma 2.749298E+01, time 0.597ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  542, ( 542,  0,  0), Obj 6.440219E+07, DensityWeight 6.569513E-03, wHPWL 7.005085E+07, Overflow 1.949986E-01, MaxDensity 3.384E+00, gamma 2.732307E+01, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  543, ( 543,  0,  0), Obj 6.443634E+07, DensityWeight 6.760029E-03, wHPWL 7.004578E+07, Overflow 1.934980E-01, MaxDensity 3.587E+00, gamma 2.714833E+01, time 0.592ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.024 ms
+[INFO   ] DREAMPlace - iteration  544, ( 544,  0,  0), Obj 6.447348E+07, DensityWeight 6.956070E-03, wHPWL 7.004754E+07, Overflow 1.913851E-01, MaxDensity 3.705E+00, gamma 2.694068E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.949 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  545, ( 545,  0,  0), Obj 6.451760E+07, DensityWeight 7.302081E-03, wHPWL 7.005355E+07, Overflow 1.892253E-01, MaxDensity 3.746E+00, gamma 2.665098E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.077 ms
+[INFO   ] DREAMPlace - iteration  546, ( 546,  0,  0), Obj 6.457554E+07, DensityWeight 7.660757E-03, wHPWL 7.006126E+07, Overflow 1.871384E-01, MaxDensity 3.736E+00, gamma 2.635807E+01, time 0.589ms
+[INFO   ] DREAMPlace - full step 3.011 ms
+[INFO   ] DREAMPlace - optimizer step 2.052 ms
+[INFO   ] DREAMPlace - iteration  547, ( 547,  0,  0), Obj 6.463976E+07, DensityWeight 8.035152E-03, wHPWL 7.007381E+07, Overflow 1.841815E-01, MaxDensity 3.581E+00, gamma 2.607811E+01, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  548, ( 548,  0,  0), Obj 6.470633E+07, DensityWeight 8.422169E-03, wHPWL 7.009000E+07, Overflow 1.807770E-01, MaxDensity 3.337E+00, gamma 2.568651E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  549, ( 549,  0,  0), Obj 6.479150E+07, DensityWeight 8.823339E-03, wHPWL 7.010639E+07, Overflow 1.770664E-01, MaxDensity 3.235E+00, gamma 2.524292E+01, time 0.580ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  550, ( 550,  0,  0), Obj 6.488402E+07, DensityWeight 9.243360E-03, wHPWL 7.011798E+07, Overflow 1.736986E-01, MaxDensity 3.171E+00, gamma 2.476816E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.975 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  551, ( 551,  0,  0), Obj 6.497876E+07, DensityWeight 9.689867E-03, wHPWL 7.012227E+07, Overflow 1.706623E-01, MaxDensity 3.095E+00, gamma 2.434500E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  552, ( 552,  0,  0), Obj 6.506351E+07, DensityWeight 1.016827E-02, wHPWL 7.012138E+07, Overflow 1.679713E-01, MaxDensity 3.155E+00, gamma 2.396970E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer step 2.042 ms
+[INFO   ] DREAMPlace - iteration  553, ( 553,  0,  0), Obj 6.513965E+07, DensityWeight 1.046315E-02, wHPWL 7.011909E+07, Overflow 1.654060E-01, MaxDensity 3.288E+00, gamma 2.364191E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  554, ( 554,  0,  0), Obj 6.520850E+07, DensityWeight 1.076658E-02, wHPWL 7.011925E+07, Overflow 1.627625E-01, MaxDensity 3.312E+00, gamma 2.333361E+01, time 0.571ms
+[INFO   ] DREAMPlace - full step 2.951 ms
+[INFO   ] DREAMPlace - optimizer step 2.021 ms
+[INFO   ] DREAMPlace - iteration  555, ( 555,  0,  0), Obj 6.526898E+07, DensityWeight 1.130466E-02, wHPWL 7.011396E+07, Overflow 1.609774E-01, MaxDensity 3.229E+00, gamma 2.302011E+01, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.958 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  556, ( 556,  0,  0), Obj 6.532568E+07, DensityWeight 1.163249E-02, wHPWL 7.010561E+07, Overflow 1.596669E-01, MaxDensity 3.098E+00, gamma 2.281080E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.979 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  557, ( 557,  0,  0), Obj 6.537049E+07, DensityWeight 1.196984E-02, wHPWL 7.010268E+07, Overflow 1.575353E-01, MaxDensity 2.983E+00, gamma 2.265835E+01, time 0.566ms
+[INFO   ] DREAMPlace - full step 2.974 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  558, ( 558,  0,  0), Obj 6.540461E+07, DensityWeight 1.231696E-02, wHPWL 7.010222E+07, Overflow 1.554919E-01, MaxDensity 3.045E+00, gamma 2.241255E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.037 ms
+[INFO   ] DREAMPlace - iteration  559, ( 559,  0,  0), Obj 6.545273E+07, DensityWeight 1.267415E-02, wHPWL 7.010266E+07, Overflow 1.535687E-01, MaxDensity 3.093E+00, gamma 2.217944E+01, time 0.579ms
+[INFO   ] DREAMPlace - full step 2.958 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  560, ( 560,  0,  0), Obj 6.549761E+07, DensityWeight 1.330706E-02, wHPWL 7.010162E+07, Overflow 1.521272E-01, MaxDensity 3.150E+00, gamma 2.196224E+01, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.978 ms
+[INFO   ] DREAMPlace - optimizer step 2.078 ms
+[INFO   ] DREAMPlace - iteration  561, ( 561,  0,  0), Obj 6.553898E+07, DensityWeight 1.369297E-02, wHPWL 7.009758E+07, Overflow 1.509126E-01, MaxDensity 3.140E+00, gamma 2.180084E+01, time 0.601ms
+[INFO   ] DREAMPlace - full step 3.025 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  562, ( 562,  0,  0), Obj 6.557819E+07, DensityWeight 1.409006E-02, wHPWL 7.010275E+07, Overflow 1.485714E-01, MaxDensity 3.079E+00, gamma 2.166578E+01, time 0.576ms
+[INFO   ] DREAMPlace - full step 2.993 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  563, ( 563,  0,  0), Obj 6.561110E+07, DensityWeight 1.478391E-02, wHPWL 7.010531E+07, Overflow 1.464139E-01, MaxDensity 3.008E+00, gamma 2.140778E+01, time 0.595ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  564, ( 564,  0,  0), Obj 6.566089E+07, DensityWeight 1.551757E-02, wHPWL 7.010774E+07, Overflow 1.445901E-01, MaxDensity 2.930E+00, gamma 2.117275E+01, time 0.597ms
+[INFO   ] DREAMPlace - full step 3.009 ms
+[INFO   ] DREAMPlace - optimizer step 2.064 ms
+[INFO   ] DREAMPlace - iteration  565, ( 565,  0,  0), Obj 6.571084E+07, DensityWeight 1.628794E-02, wHPWL 7.011029E+07, Overflow 1.424373E-01, MaxDensity 2.838E+00, gamma 2.097608E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.995 ms
+[INFO   ] DREAMPlace - optimizer step 2.056 ms
+[INFO   ] DREAMPlace - iteration  566, ( 566,  0,  0), Obj 6.575888E+07, DensityWeight 1.709625E-02, wHPWL 7.011930E+07, Overflow 1.398647E-01, MaxDensity 2.741E+00, gamma 2.074629E+01, time 0.586ms
+[INFO   ] DREAMPlace - full step 3.000 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  567, ( 567,  0,  0), Obj 6.581411E+07, DensityWeight 1.792852E-02, wHPWL 7.012916E+07, Overflow 1.370451E-01, MaxDensity 2.632E+00, gamma 2.047497E+01, time 0.600ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.047 ms
+[INFO   ] DREAMPlace - iteration  568, ( 568,  0,  0), Obj 6.587563E+07, DensityWeight 1.879910E-02, wHPWL 7.013907E+07, Overflow 1.344250E-01, MaxDensity 2.525E+00, gamma 2.018169E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  569, ( 569,  0,  0), Obj 6.593850E+07, DensityWeight 1.971180E-02, wHPWL 7.014338E+07, Overflow 1.321456E-01, MaxDensity 2.479E+00, gamma 1.991293E+01, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.997 ms
+[INFO   ] DREAMPlace - optimizer step 2.067 ms
+[INFO   ] DREAMPlace - iteration  570, ( 570,  0,  0), Obj 6.599630E+07, DensityWeight 2.068495E-02, wHPWL 7.014634E+07, Overflow 1.297608E-01, MaxDensity 2.495E+00, gamma 1.968202E+01, time 0.593ms
+[INFO   ] DREAMPlace - full step 3.015 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  571, ( 571,  0,  0), Obj 6.604713E+07, DensityWeight 2.171026E-02, wHPWL 7.014754E+07, Overflow 1.274142E-01, MaxDensity 2.523E+00, gamma 1.944332E+01, time 0.602ms
+[INFO   ] DREAMPlace - full step 3.008 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  572, ( 572,  0,  0), Obj 6.609963E+07, DensityWeight 2.279196E-02, wHPWL 7.015082E+07, Overflow 1.251079E-01, MaxDensity 2.535E+00, gamma 1.921124E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.049 ms
+[INFO   ] DREAMPlace - iteration  573, ( 573,  0,  0), Obj 6.615064E+07, DensityWeight 2.392059E-02, wHPWL 7.015348E+07, Overflow 1.229713E-01, MaxDensity 2.527E+00, gamma 1.898587E+01, time 0.585ms
+[INFO   ] DREAMPlace - full step 2.984 ms
+[INFO   ] DREAMPlace - optimizer step 2.053 ms
+[INFO   ] DREAMPlace - iteration  574, ( 574,  0,  0), Obj 6.620027E+07, DensityWeight 2.510732E-02, wHPWL 7.015678E+07, Overflow 1.208174E-01, MaxDensity 2.475E+00, gamma 1.877944E+01, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  575, ( 575,  0,  0), Obj 6.624603E+07, DensityWeight 2.635057E-02, wHPWL 7.015874E+07, Overflow 1.187081E-01, MaxDensity 2.498E+00, gamma 1.857360E+01, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.981 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  576, ( 576,  0,  0), Obj 6.629212E+07, DensityWeight 2.766051E-02, wHPWL 7.016219E+07, Overflow 1.164605E-01, MaxDensity 2.329E+00, gamma 1.837421E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.991 ms
+[INFO   ] DREAMPlace - optimizer step 2.051 ms
+[INFO   ] DREAMPlace - iteration  577, ( 577,  0,  0), Obj 6.633690E+07, DensityWeight 2.902957E-02, wHPWL 7.016526E+07, Overflow 1.144648E-01, MaxDensity 2.304E+00, gamma 1.816410E+01, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  578, ( 578,  0,  0), Obj 6.638386E+07, DensityWeight 3.046800E-02, wHPWL 7.016930E+07, Overflow 1.123908E-01, MaxDensity 2.455E+00, gamma 1.797957E+01, time 0.590ms
+[INFO   ] DREAMPlace - full step 2.996 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  579, ( 579,  0,  0), Obj 6.642576E+07, DensityWeight 3.197342E-02, wHPWL 7.017165E+07, Overflow 1.103920E-01, MaxDensity 2.260E+00, gamma 1.778977E+01, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.127 ms
+[INFO   ] DREAMPlace - iteration  580, ( 580,  0,  0), Obj 6.646886E+07, DensityWeight 3.356109E-02, wHPWL 7.017523E+07, Overflow 1.083206E-01, MaxDensity 2.236E+00, gamma 1.760875E+01, time 0.585ms
+[INFO   ] DREAMPlace - full step 3.064 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  581, ( 581,  0,  0), Obj 6.650988E+07, DensityWeight 3.522154E-02, wHPWL 7.017752E+07, Overflow 1.065025E-01, MaxDensity 2.360E+00, gamma 1.742310E+01, time 0.578ms
+[INFO   ] DREAMPlace - full step 2.986 ms
+[INFO   ] DREAMPlace - optimizer step 2.044 ms
+[INFO   ] DREAMPlace - iteration  582, ( 582,  0,  0), Obj 6.655195E+07, DensityWeight 3.697082E-02, wHPWL 7.018118E+07, Overflow 1.046993E-01, MaxDensity 2.178E+00, gamma 1.726176E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.076 ms
+[INFO   ] DREAMPlace - iteration  583, ( 583,  0,  0), Obj 6.658897E+07, DensityWeight 3.879954E-02, wHPWL 7.018318E+07, Overflow 1.028314E-01, MaxDensity 2.149E+00, gamma 1.710323E+01, time 0.590ms
+[INFO   ] DREAMPlace - full step 3.010 ms
+[INFO   ] DREAMPlace - optimizer step 2.062 ms
+[INFO   ] DREAMPlace - iteration  584, ( 584,  0,  0), Obj 6.662648E+07, DensityWeight 4.072820E-02, wHPWL 7.018746E+07, Overflow 1.008396E-01, MaxDensity 2.122E+00, gamma 1.694053E+01, time 0.593ms
+[INFO   ] DREAMPlace - full step 3.005 ms
+[INFO   ] DREAMPlace - optimizer step 2.058 ms
+[INFO   ] DREAMPlace - iteration  585, ( 585,  0,  0), Obj 6.666395E+07, DensityWeight 4.273910E-02, wHPWL 7.019053E+07, Overflow 9.893207E-02, MaxDensity 2.162E+00, gamma 1.676876E+01, time 0.593ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  586, ( 586,  0,  0), Obj 6.670378E+07, DensityWeight 4.485685E-02, wHPWL 7.019494E+07, Overflow 9.710006E-02, MaxDensity 2.210E+00, gamma 1.660588E+01, time 0.582ms
+[INFO   ] DREAMPlace - full step 2.972 ms
+[INFO   ] DREAMPlace - optimizer step 2.061 ms
+[INFO   ] DREAMPlace - iteration  587, ( 587,  0,  0), Obj 6.674116E+07, DensityWeight 4.707070E-02, wHPWL 7.019766E+07, Overflow 9.528337E-02, MaxDensity 2.236E+00, gamma 1.645095E+01, time 0.589ms
+[INFO   ] DREAMPlace - full step 2.992 ms
+[INFO   ] DREAMPlace - optimizer step 2.055 ms
+[INFO   ] DREAMPlace - iteration  588, ( 588,  0,  0), Obj 6.677786E+07, DensityWeight 4.940549E-02, wHPWL 7.020160E+07, Overflow 9.355473E-02, MaxDensity 2.205E+00, gamma 1.629873E+01, time 0.588ms
+[INFO   ] DREAMPlace - full step 2.988 ms
+[INFO   ] DREAMPlace - optimizer step 2.031 ms
+[INFO   ] DREAMPlace - iteration  589, ( 589,  0,  0), Obj 6.681327E+07, DensityWeight 5.184731E-02, wHPWL 7.020456E+07, Overflow 9.187190E-02, MaxDensity 2.146E+00, gamma 1.615520E+01, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.962 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  590, ( 590,  0,  0), Obj 6.684782E+07, DensityWeight 5.441721E-02, wHPWL 7.020856E+07, Overflow 9.031864E-02, MaxDensity 2.055E+00, gamma 1.601669E+01, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.964 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  591, ( 591,  0,  0), Obj 6.688042E+07, DensityWeight 5.710622E-02, wHPWL 7.021115E+07, Overflow 8.879779E-02, MaxDensity 2.022E+00, gamma 1.588989E+01, time 0.583ms
+[INFO   ] DREAMPlace - full step 2.965 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  592, ( 592,  0,  0), Obj 6.691196E+07, DensityWeight 5.993986E-02, wHPWL 7.021472E+07, Overflow 8.726104E-02, MaxDensity 2.021E+00, gamma 1.576672E+01, time 0.571ms
+[INFO   ] DREAMPlace - full step 2.949 ms
+[INFO   ] DREAMPlace - optimizer step 2.060 ms
+[INFO   ] DREAMPlace - iteration  593, ( 593,  0,  0), Obj 6.694091E+07, DensityWeight 6.290556E-02, wHPWL 7.021668E+07, Overflow 8.574972E-02, MaxDensity 2.011E+00, gamma 1.564323E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.985 ms
+[INFO   ] DREAMPlace - optimizer step 2.041 ms
+[INFO   ] DREAMPlace - iteration  594, ( 594,  0,  0), Obj 6.697034E+07, DensityWeight 6.603279E-02, wHPWL 7.021807E+07, Overflow 8.428355E-02, MaxDensity 1.982E+00, gamma 1.552272E+01, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.963 ms
+[INFO   ] DREAMPlace - optimizer step 4.003 ms
+[INFO   ] DREAMPlace - iteration  595, ( 595,  0,  0), Obj 6.699824E+07, DensityWeight 6.932098E-02, wHPWL 7.021671E+07, Overflow 8.292276E-02, MaxDensity 1.997E+00, gamma 1.540670E+01, time 0.572ms
+[INFO   ] DREAMPlace - full step 4.934 ms
+[INFO   ] DREAMPlace - optimizer step 2.039 ms
+[INFO   ] DREAMPlace - iteration  596, ( 596,  0,  0), Obj 6.702070E+07, DensityWeight 7.133128E-02, wHPWL 7.020542E+07, Overflow 8.144095E-02, MaxDensity 2.012E+00, gamma 1.529980E+01, time 0.591ms
+[INFO   ] DREAMPlace - full step 2.976 ms
+[INFO   ] DREAMPlace - optimizer step 2.084 ms
+[INFO   ] DREAMPlace - iteration  597, ( 597,  0,  0), Obj 6.704944E+07, DensityWeight 7.339989E-02, wHPWL 7.020622E+07, Overflow 8.021139E-02, MaxDensity 1.984E+00, gamma 1.518423E+01, time 0.580ms
+[INFO   ] DREAMPlace - full step 3.019 ms
+[INFO   ] DREAMPlace - optimizer step 2.054 ms
+[INFO   ] DREAMPlace - iteration  598, ( 598,  0,  0), Obj 6.707739E+07, DensityWeight 7.706130E-02, wHPWL 7.020754E+07, Overflow 7.928233E-02, MaxDensity 1.923E+00, gamma 1.508900E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.989 ms
+[INFO   ] DREAMPlace - optimizer step 2.059 ms
+[INFO   ] DREAMPlace - iteration  599, ( 599,  0,  0), Obj 6.709839E+07, DensityWeight 8.089956E-02, wHPWL 7.020536E+07, Overflow 7.856242E-02, MaxDensity 1.956E+00, gamma 1.501744E+01, time 0.577ms
+[INFO   ] DREAMPlace - full step 2.994 ms
+[INFO   ] DREAMPlace - optimizer step 2.046 ms
+[INFO   ] DREAMPlace - iteration  600, ( 600,  0,  0), Obj 6.712657E+07, DensityWeight 8.324565E-02, wHPWL 7.021631E+07, Overflow 7.726357E-02, MaxDensity 1.890E+00, gamma 1.496222E+01, time 0.575ms
+[INFO   ] DREAMPlace - full step 2.968 ms
+[INFO   ] DREAMPlace - optimizer step 2.048 ms
+[INFO   ] DREAMPlace - iteration  601, ( 601,  0,  0), Obj 6.714451E+07, DensityWeight 8.727458E-02, wHPWL 7.022078E+07, Overflow 7.605872E-02, MaxDensity 1.858E+00, gamma 1.486311E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 2.982 ms
+[INFO   ] DREAMPlace - optimizer step 2.066 ms
+[INFO   ] DREAMPlace - iteration  602, ( 602,  0,  0), Obj 6.716950E+07, DensityWeight 9.158120E-02, wHPWL 7.022558E+07, Overflow 7.514520E-02, MaxDensity 1.808E+00, gamma 1.477176E+01, time 0.584ms
+[INFO   ] DREAMPlace - full step 2.999 ms
+[INFO   ] DREAMPlace - optimizer step 2.038 ms
+[INFO   ] DREAMPlace - iteration  603, ( 603,  0,  0), Obj 6.719826E+07, DensityWeight 9.609593E-02, wHPWL 7.023523E+07, Overflow 7.394650E-02, MaxDensity 1.802E+00, gamma 1.470288E+01, time 0.573ms
+[INFO   ] DREAMPlace - full step 2.970 ms
+[INFO   ] DREAMPlace - optimizer step 2.043 ms
+[INFO   ] DREAMPlace - iteration  604, ( 604,  0,  0), Obj 6.722054E+07, DensityWeight 1.007651E-01, wHPWL 7.024244E+07, Overflow 7.253468E-02, MaxDensity 1.782E+00, gamma 1.461297E+01, time 0.599ms
+[INFO   ] DREAMPlace - full step 2.987 ms
+[INFO   ] DREAMPlace - optimizer step 2.072 ms
+[INFO   ] DREAMPlace - iteration  605, ( 605,  0,  0), Obj 6.724858E+07, DensityWeight 1.056971E-01, wHPWL 7.025144E+07, Overflow 7.109774E-02, MaxDensity 1.778E+00, gamma 1.450778E+01, time 0.581ms
+[INFO   ] DREAMPlace - full step 3.004 ms
+[INFO   ] DREAMPlace - optimizer step 2.057 ms
+[INFO   ] DREAMPlace - iteration  606, ( 606,  0,  0), Obj 6.727859E+07, DensityWeight 1.108428E-01, wHPWL 7.026047E+07, Overflow 6.969853E-02, MaxDensity 1.746E+00, gamma 1.440151E+01, time 0.587ms
+[INFO   ] DREAMPlace - full step 2.990 ms
+[INFO   ] DREAMPlace - optimizer nesterov takes 2.175 seconds
+[INFO   ] DREAMPlace - writing raw GP solution to results/comparison/mg/adaptec1/adaptec1.gp_raw.pl
+[INFO   ] DREAMPlace - Start legalization
+[WARNING] DEF input file not specified, cannot output DEF file; set to DEFSIMPLE
+[INFO   ] lef_input = 
+[INFO   ] def_input = 
+[INFO   ] verilog_input = 
+[INFO   ] bookshelf_aux_input = benchmarks/ispd2005/adaptec1/adaptec1.aux
+[INFO   ] bookshelf_pl_input = 
+[INFO   ] def_size_input = 
+[INFO   ] def_output = -out.def
+[INFO   ] rpt_output = 
+[INFO   ] target_util = 0
+[INFO   ] max_displace = 0
+[INFO   ] bin size = (10, 10) #rows
+[INFO   ] sbin size = (5, 5) #rows
+[INFO   ] bin_space_threshold = 0.2
+[INFO   ] abu = 2,10 5,5 10,2 20,1 
+[INFO   ] def_ignore_cells = 
+[INFO   ] macro_obs_aware_layers = 
+[INFO   ] enable_place = true
+[INFO   ] enable_legalize = true
+[INFO   ] evaluate_overlap = false
+[INFO   ] move_multi_row_cell = true
+[INFO   ] align_power_line = true
+[INFO   ] cluster_cell = false
+[INFO   ] sort_nets_by_degree = false
+[INFO   ] file_format = BOOKSHELF
+[INFO   ] max_iters = 6
+[WARNING] no DEF file specified
+[WARNING] no Verilog file specified
+[INFO   ] reading benchmarks/ispd2005/adaptec1/adaptec1.aux
+[WARNING] no additional Bookshelf .pl file specified
+[WARNING] 20285 nets with 24352 pins from same nodes
+[WARNING] 4210 nets should be ignored due to not enough pins
+[INFO   ] sort nodes in the order of movable and fixed
+[INFO   ] Group cells for fence regions
+[INFO   ] Construct 0 groups
+[INFO   ] Fence region groups done
+[DEBUG  ] num_terminals 543, numFixed 543, numPlaceBlockages 0, num_terminal_NIs 0
+[INFO   ] -- Converting Node Orientation --
+[INFO   ] ---------------------------------
+[INFO   ] -------- Area Statistics --------
+[INFO   ] fixed area overlap = 4.91641e+07
+[INFO   ] fixed area total = 6.4094e+07
+[INFO   ] space area = 6.50265e+07
+[INFO   ] ---------------------------------
+[DEBUG  ] deterministic mode: integer 32 bits, fraction 32 bits, scale factor 4294967296
+[DEBUG  ] deterministic mode: integer 32 bits, fraction 32 bits, scale factor 4294967296
+[INFO   ] Macro legalization: regard 0 cells as dummy fixed (movable macros)
+[INFO   ] Macro legalization takes 0.889693 ms
+[DEBUG  ] Standard cell legalization blank_num_bins_y = 890
+[DEBUG  ] Standard cell legalization iteration 0 with 1x1 bins
+[DEBUG  ] Standard cell legalization #bin_blanks
+[DEBUG  ] #bin_objs = 10792
+[INFO   ] Standard cell legalization legalizeBin takes 9472.842 ms
+[DEBUG  ] Standard cell legalization num_unplaced_cells = 0
+[DEBUG  ] Standard cell legalization blank_num_bins_y = 890
+[DEBUG  ] Standard cell legalization iteration 0 with 1x1 bins
+[DEBUG  ] Standard cell legalization #bin_blanks
+[DEBUG  ] #bin_objs = 10792
+[INFO   ] Standard cell legalization legalizeBin takes 3191.284 ms
+[DEBUG  ] Standard cell legalization num_unplaced_cells = 0
+[INFO   ] Greedy legalization takes 291.793 ms
+[INFO   ] Legality check takes 15.1459 ms
+[DEBUG  ] average displace = 13.4673
+[INFO   ] Abacus legalization takes 28.1756 ms
+[INFO   ] DREAMPlace - legalization takes 0.355 seconds
+[INFO   ] DREAMPlace - iteration  607, wHPWL 7.369568E+07, time 0.315ms
+[INFO   ] DREAMPlace - Start ABCDPlace for refinement
+[INFO   ] Legality check takes 15.1418 ms
+[INFO   ] DREAMPlace - ABCDPlace input legal flag = 1
+[INFO   ] Legality check takes 15.1077 ms
+[DEBUG  ] 4-reorder
+[DEBUG  ] 24 permutations
+[DEBUG  ] initializing CPU DB takes 14.8553 ms
+[DEBUG  ] computing independent rows takes 34.558 ms
+[DEBUG  ] computing reorder instances takes 0.765972 ms
+[DEBUG  ] initializing CUDA state takes 1.87467 ms
+[INFO   ] initial hpwl = 73780080.000
+[DEBUG  ] enumeration takes 189.519 ms for 218 runs, average 0.869352 ms
+[DEBUG  ] apply_reorder takes 3.37329 ms for 218 runs, average 0.0154738 ms
+[INFO   ] Iteration time(ms) 	 193.128
+[INFO   ] iteration 0: hpwl 73780080.000 => 73550824.000 (imp. 0.310729%)
+[DEBUG  ] enumeration takes 189.265 ms for 218 runs, average 0.86819 ms
+[DEBUG  ] apply_reorder takes 3.36217 ms for 218 runs, average 0.0154228 ms
+[INFO   ] Iteration time(ms) 	 192.868
+[INFO   ] iteration 1: hpwl 73780080.000 => 73507808.000 (imp. 0.369032%)
+[DEBUG  ] destroying CUDA state takes 0.66723 ms
+[DEBUG  ] destroying CPU state takes 0.00377 ms
+[INFO   ] Kernel time: 386.527 ms
+[INFO   ] K-reorder time: 439.299 ms
+[INFO   ] DREAMPlace - K-Reorder legal flag = 1
+[INFO   ] Legality check takes 15.3201 ms
+[INFO   ] diamond search grid size 64, sequence length 2048
+[INFO   ] initializing GPU memory takes 13.5077 ms
+[INFO   ] initial hpwl 7.35078e+07
+[DEBUG  ] allocate 1883391 bytes in shuffler for length 210904*(4+4)
+[DEBUG  ] from 53721 nodes, collect 419 sets, avg 110 nodes, min/max 18/128 nodes
+[INFO   ] iteration 0, target hpwl 7.34614e+07, delta -46384(-0.0631008%), 419 independent sets, moved 3.274% cells, runtime 25.7272 ms
+[DEBUG  ] from 53885 nodes, collect 420 sets, avg 107 nodes, min/max 15/128 nodes
+[DEBUG  ] from 53659 nodes, collect 419 sets, avg 108 nodes, min/max 19/128 nodes
+[DEBUG  ] from 53713 nodes, collect 419 sets, avg 105 nodes, min/max 16/128 nodes
+[DEBUG  ] from 53619 nodes, collect 418 sets, avg 107 nodes, min/max 22/128 nodes
+[DEBUG  ] from 53755 nodes, collect 419 sets, avg 109 nodes, min/max 9/128 nodes
+[INFO   ] iteration 5, target hpwl 7.32598e+07, delta -248024(-0.337412%), 419 independent sets, moved 15.3534% cells, runtime 14.7327 ms
+[DEBUG  ] from 53561 nodes, collect 418 sets, avg 109 nodes, min/max 3/128 nodes
+[DEBUG  ] from 53755 nodes, collect 419 sets, avg 108 nodes, min/max 14/128 nodes
+[DEBUG  ] from 53631 nodes, collect 418 sets, avg 105 nodes, min/max 11/128 nodes
+[DEBUG  ] from 53495 nodes, collect 417 sets, avg 107 nodes, min/max 15/128 nodes
+[DEBUG  ] from 53614 nodes, collect 418 sets, avg 107 nodes, min/max 7/128 nodes
+[INFO   ] iteration 10, target hpwl 7.31811e+07, delta -326752(-0.444513%), 418 independent sets, moved 25.4628% cells, runtime 33.4266 ms
+[DEBUG  ] from 53628 nodes, collect 418 sets, avg 109 nodes, min/max 12/128 nodes
+[DEBUG  ] from 53710 nodes, collect 419 sets, avg 108 nodes, min/max 22/128 nodes
+[DEBUG  ] from 53598 nodes, collect 418 sets, avg 108 nodes, min/max 20/128 nodes
+[DEBUG  ] from 53659 nodes, collect 419 sets, avg 107 nodes, min/max 25/128 nodes
+[DEBUG  ] from 53678 nodes, collect 419 sets, avg 108 nodes, min/max 14/128 nodes
+[INFO   ] iteration 15, target hpwl 7.31313e+07, delta -376464(-0.512142%), 419 independent sets, moved 34.6229% cells, runtime 19.7143 ms
+[DEBUG  ] from 53689 nodes, collect 419 sets, avg 107 nodes, min/max 14/128 nodes
+[DEBUG  ] from 53548 nodes, collect 418 sets, avg 108 nodes, min/max 17/128 nodes
+[DEBUG  ] from 53501 nodes, collect 417 sets, avg 106 nodes, min/max 26/128 nodes
+[DEBUG  ] from 53649 nodes, collect 419 sets, avg 109 nodes, min/max 14/128 nodes
+[DEBUG  ] from 53684 nodes, collect 419 sets, avg 107 nodes, min/max 23/128 nodes
+[INFO   ] iteration 20, target hpwl 7.30926e+07, delta -415200(-0.564838%), 419 independent sets, moved 43.434% cells, runtime 15.7609 ms
+[DEBUG  ] from 53616 nodes, collect 418 sets, avg 108 nodes, min/max 23/128 nodes
+[DEBUG  ] from 53719 nodes, collect 419 sets, avg 108 nodes, min/max 18/128 nodes
+[DEBUG  ] from 53511 nodes, collect 418 sets, avg 107 nodes, min/max 15/128 nodes
+[DEBUG  ] from 53549 nodes, collect 418 sets, avg 107 nodes, min/max 9/128 nodes
+[DEBUG  ] from 53524 nodes, collect 418 sets, avg 109 nodes, min/max 12/128 nodes
+[INFO   ] iteration 25, target hpwl 7.307e+07, delta -437856(-0.595659%), 418 independent sets, moved 51.8492% cells, runtime 15.6653 ms
+[DEBUG  ] from 53619 nodes, collect 418 sets, avg 108 nodes, min/max 18/128 nodes
+[DEBUG  ] from 53476 nodes, collect 417 sets, avg 108 nodes, min/max 18/128 nodes
+[DEBUG  ] from 53679 nodes, collect 419 sets, avg 107 nodes, min/max 23/128 nodes
+[DEBUG  ] from 53584 nodes, collect 418 sets, avg 109 nodes, min/max 22/128 nodes
+[DEBUG  ] from 53699 nodes, collect 419 sets, avg 108 nodes, min/max 4/128 nodes
+[INFO   ] iteration 30, target hpwl 7.30476e+07, delta -460192(-0.626045%), 419 independent sets, moved 60.0515% cells, runtime 23.0943 ms
+[DEBUG  ] from 53439 nodes, collect 417 sets, avg 108 nodes, min/max 27/128 nodes
+[DEBUG  ] from 53712 nodes, collect 419 sets, avg 109 nodes, min/max 24/128 nodes
+[DEBUG  ] from 53649 nodes, collect 419 sets, avg 108 nodes, min/max 16/128 nodes
+[DEBUG  ] from 53585 nodes, collect 418 sets, avg 107 nodes, min/max 17/128 nodes
+[DEBUG  ] from 53715 nodes, collect 419 sets, avg 108 nodes, min/max 17/128 nodes
+[INFO   ] iteration 35, target hpwl 7.30338e+07, delta -474000(-0.644829%), 419 independent sets, moved 68.1054% cells, runtime 20.5383 ms
+[DEBUG  ] from 53805 nodes, collect 420 sets, avg 107 nodes, min/max 12/128 nodes
+[DEBUG  ] from 53565 nodes, collect 418 sets, avg 107 nodes, min/max 7/128 nodes
+[DEBUG  ] from 53769 nodes, collect 420 sets, avg 104 nodes, min/max 2/128 nodes
+[DEBUG  ] from 53624 nodes, collect 418 sets, avg 105 nodes, min/max 24/128 nodes
+[DEBUG  ] from 53518 nodes, collect 418 sets, avg 107 nodes, min/max 24/128 nodes
+[INFO   ] iteration 40, target hpwl 7.30203e+07, delta -487464(-0.663146%), 418 independent sets, moved 75.8364% cells, runtime 12.9391 ms
+[DEBUG  ] from 53821 nodes, collect 420 sets, avg 108 nodes, min/max 11/128 nodes
+[DEBUG  ] from 53480 nodes, collect 417 sets, avg 106 nodes, min/max 14/128 nodes
+[DEBUG  ] from 53539 nodes, collect 418 sets, avg 108 nodes, min/max 13/128 nodes
+[DEBUG  ] from 53595 nodes, collect 418 sets, avg 108 nodes, min/max 20/128 nodes
+[DEBUG  ] from 53663 nodes, collect 419 sets, avg 108 nodes, min/max 9/128 nodes
+[INFO   ] iteration 45, target hpwl 7.29966e+07, delta -511200(-0.695436%), 419 independent sets, moved 83.3185% cells, runtime 30.4913 ms
+[DEBUG  ] from 53434 nodes, collect 417 sets, avg 104 nodes, min/max 11/128 nodes
+[DEBUG  ] from 53601 nodes, collect 418 sets, avg 108 nodes, min/max 27/128 nodes
+[DEBUG  ] from 53698 nodes, collect 419 sets, avg 107 nodes, min/max 14/128 nodes
+[DEBUG  ] from 53643 nodes, collect 419 sets, avg 107 nodes, min/max 12/128 nodes
+[INFO   ] iteration 49, target hpwl 7.29869e+07, delta -520928(-0.70867%), 419 independent sets, moved 89.3075% cells, runtime 13.421 ms
+[DEBUG  ] random_shuffle takes 10.9867 ms, 50 runs, average 0.219734 ms
+[DEBUG  ] maximal_independent_set takes 56.3312 ms, 50 runs, average 1.12662 ms
+[DEBUG  ] collect_independent_sets takes 53.2899 ms, 50 runs, average 1.0658 ms
+[DEBUG  ] cost_matrix_construction takes 51.4538 ms, 50 runs, average 1.02908 ms
+[DEBUG  ] independent_sets_solving takes 955.437 ms, 50 runs, average 19.1087 ms
+[DEBUG  ] apply_solution takes 2.56446 ms, 50 runs, average 0.0512892 ms
+[INFO   ] destroying GPU memory takes 7.51389 ms
+[INFO   ] Kernel time 1144.19 ms
+[INFO   ] Independent set matching time 1180.52 ms
+[INFO   ] DREAMPlace - Independent set matching legal flag = 1
+[INFO   ] Legality check takes 15.3171 ms
+[DEBUG  ] bins 256x256, bin sizes 41.7656x41.7188, die size 0, 0, 10692, 10680
+[DEBUG  ] batch_size = 256, max_num_nodes_per_bin = 24, max_num_candidates = 120, max_num_candidates_all = 30720
+[DEBUG  ] estimate_memory_usage = 370742960, use fast pair HPWL computation strategy requires additional memory
+[INFO   ] initial hpwl = 72986880.000
+[DEBUG  ] compute_search_bins takes 0.358485 ms
+[INFO   ] Iteration time(ms) 	 88.4281
+[INFO   ] iteration 0: hpwl 72986880.000 => 72941088.000 (imp. 0.06274%)
+[DEBUG  ] compute_search_bins takes 0.011931 ms
+[INFO   ] Iteration time(ms) 	 127.226
+[INFO   ] iteration 1: hpwl 72986880.000 => 72783856.000 (imp. 0.278165%)
+[INFO   ] Kernel time: 216.407 ms
+[INFO   ] Global swap time: 248.922 ms
+[INFO   ] DREAMPlace - Global swap legal flag = 1
+[INFO   ] Legality check takes 15.1374 ms
+[DEBUG  ] 4-reorder
+[DEBUG  ] 24 permutations
+[DEBUG  ] initializing CPU DB takes 14.7495 ms
+[DEBUG  ] computing independent rows takes 34.4453 ms
+[DEBUG  ] computing reorder instances takes 0.786951 ms
+[DEBUG  ] initializing CUDA state takes 1.26155 ms
+[INFO   ] initial hpwl = 72783856.000
+[DEBUG  ] enumeration takes 186.061 ms for 214 runs, average 0.869442 ms
+[DEBUG  ] apply_reorder takes 3.29987 ms for 214 runs, average 0.01542 ms
+[INFO   ] Iteration time(ms) 	 189.594
+[INFO   ] iteration 0: hpwl 72783856.000 => 72725560.000 (imp. 0.0800947%)
+[DEBUG  ] enumeration takes 187.997 ms for 214 runs, average 0.878491 ms
+[DEBUG  ] apply_reorder takes 3.29054 ms for 214 runs, average 0.0153764 ms
+[INFO   ] Iteration time(ms) 	 191.519
+[INFO   ] iteration 1: hpwl 72783856.000 => 72714640.000 (imp. 0.095098%)
+[DEBUG  ] destroying CUDA state takes 0.69034 ms
+[DEBUG  ] destroying CPU state takes 0.00329 ms
+[INFO   ] Kernel time: 381.571 ms
+[INFO   ] K-reorder time: 433.552 ms
+[INFO   ] DREAMPlace - K-Reorder legal flag = 1
+[INFO   ] DREAMPlace - detailed placement takes 2.385 seconds
+[INFO   ] DREAMPlace - iteration  608, wHPWL 7.263024E+07, time 0.305ms
+[INFO   ] DREAMPlace - non-linear placement takes 7.52 seconds
+[INFO   ] DREAMPlace - writing to results/comparison/mg/adaptec1/adaptec1.gp.pl
+[INFO   ] DREAMPlace - write SolutionFileFormat.BOOKSHELF takes 0.048 seconds
+[INFO   ] DREAMPlace - placement takes 11.986 seconds
+[INFO   ] Legality check takes 15.2233 ms
+[INFO   ] writing placement to results/comparison/mg/adaptec1/adaptec1.gp.pl
